@@ -3,7 +3,7 @@ from sqlalchemy import UUID, Column, String
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import relationship
 from app.db.session import Base
-from app.models import website_categories
+from app.models.website_categories import website_category
 
 class Website(Base):
     __tablename__ = "websites"
@@ -12,5 +12,5 @@ class Website(Base):
     name = Column(String, unique=True, index=True)
     domain = Column(String, unique=True, index=True)
     
-    categories = relationship("Category", secondary=website_categories, back_populates="websites")
+    categories = relationship("Category", secondary=website_category, back_populates="websites")
     prices = relationship("ProductPrice", back_populates="website", cascade="all, delete")

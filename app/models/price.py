@@ -14,7 +14,7 @@ class ProductPrice(Base):
     price = Column(Float, nullable=False)
     currency = Column(String, default="BGN")
     url = Column(String, nullable=False)
-    timestamp = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+    timestamp = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
 
     product = relationship("Product", back_populates="prices")
     website = relationship("Website", back_populates="prices")

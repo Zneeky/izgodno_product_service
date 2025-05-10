@@ -2,7 +2,7 @@ import uuid
 from sqlalchemy import UUID, Column, String, ForeignKey
 from sqlalchemy.orm import relationship
 from app.db.session import Base
-from app.models import website_categories
+from app.models.website_categories import website_category
 
 class Category(Base):
     __tablename__ = "categories"
@@ -14,4 +14,4 @@ class Category(Base):
 
     parent = relationship("Category", remote_side=[id], backref="subcategories")
     products = relationship("Product", back_populates="category")
-    websites = relationship("Website", secondary=website_categories, back_populates="categories")
+    websites = relationship("Website", secondary=website_category, back_populates="categories")

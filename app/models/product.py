@@ -16,8 +16,9 @@ class Product(Base):
     sku = Column(String, unique=True, index=True)
     attributes = Column(JSONB, nullable=True)
     category_id = Column(UUID(as_uuid=True), ForeignKey("categories.id"), nullable=True)
+    product_group_id = Column(UUID(as_uuid=True), nullable=True, index=True)
 
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+    created_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
 
     category = relationship("Category", back_populates="products")
     prices = relationship("ProductPrice", back_populates="product", cascade="all, delete")
