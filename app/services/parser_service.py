@@ -75,6 +75,21 @@ class ParserService(IParserService):
 
         return parent
 
+    def is_similar_attributes(self, attrs1: dict, attrs2: dict, threshold: float = 0.95) -> bool:
+        print(f"🔍 Comparing attribute values:\n→ {attrs1}\n→ {attrs2}")
+
+        if not attrs1 or not attrs2:
+            return False
+
+        values1 = set(str(v).lower() for v in attrs1.values())
+        values2 = set(str(v).lower() for v in attrs2.values())
+
+        common_values = values1.intersection(values2)
+        total_values = len(values1.union(values2))
+
+        print(f"🔍 Value match: {len(common_values)}/{total_values} common")
+        return (len(common_values) / total_values) >= threshold
+    
 
     async def handle_product_parsing(self, name: str) -> ParsedProductResponse:
         # Step 1: Translate entry
@@ -86,34 +101,36 @@ class ParserService(IParserService):
         print("🔍 LLM Raw Output:", fields)
 
         # Step 3: Generate SKU
-        sku = str(generate_sku(fields.get("brand"), fields.get("model")))
+        sku = str(generate_sku(fields.get("brand"), fields.get("model"), fields.get("attributes", {})))
         print("🔑 Generated SKU:", sku)
 
         # Step 4: Check for existing product
-        existing = await self.repo.get_by_sku(sku)
-        if existing:
-            matched_category = await self.repo.get_category_by_id(existing.category_id) if existing.category_id else None
-            return ParsedProductResponse(
-                id=existing.id,
-                brand=existing.brand,
-                model=existing.model,
-                sku=existing.sku,
-                attributes=existing.attributes,
-                category_name=matched_category.name
-            )
+        candidates = await self.repo.get_by_brand_and_model(fields["brand"], fields["model"])
+        for existing in candidates:
+            if self.is_similar_attributes(existing.attributes, {k.lower(): v for k, v in fields.get("attributes", {}).items()}):
+                matched_category = await self.repo.get_category_by_id(existing.category_id) if existing.category_id else None
+                return ParsedProductResponse(
+                    id=existing.id,
+                    brand=existing.brand,
+                    model=existing.model,
+                    sku=existing.sku,
+                    attributes=existing.attributes,
+                    category_name=matched_category.name
+                )
 
         # Step 5: Find best category match
         matched_category = await self.get_or_create_category(fields.get("category"))
         print("🏷️ Matched Category:", matched_category.name if matched_category else "None")
         
         parsed_product = ProductBaseModel(
+            name = f"{fields.get('brand')} {fields.get('model')}",
             brand = fields.get("brand"),
             model = fields.get("model"),
-            category = matched_category.id if matched_category else None,
             attributes = {k.lower(): v for k, v in fields.get("attributes", {}).items()},
-            sku=sku,
+            category_id = matched_category.id if matched_category else None,  # required!
+            sku = sku,
         )
 
         # Step 6: Save new product if it doesn't exist
-        created = await self.repo.create(parsed_product, matched_category.name)
+        created = await self.repo.create(parsed_product, matched_category.id, matched_category.name)
         return created

@@ -67,3 +67,46 @@ class LLMService(ILLMService):
         except Exception as e:
             print("❌ JSON parsing failed:", text)
             raise ValueError("❌ Could not extract valid JSON.") from e
+        
+    
+    async def llm_match_products(self, new_product: dict, existing_products: list[dict]) -> dict:
+        """
+        Compares a new product to existing ones and returns a dict indicating match status and matched ID.
+        """
+        comparison_prompt = f"""
+        You are an intelligent product comparison agent.
+
+        You will be given a new product and a list of existing products in the database that share the same brand and model.
+
+        Your job is to decide, for each existing product, whether the new product is effectively the same product.
+
+        Return a valid JSON array of match decisions. Each object must have:
+        - `"match"` (true/false)
+        - `"matched_id"` (UUID of the existing product)
+
+        Here is the new product:
+        {json.dumps(new_product, indent=2)}
+
+        Here are the existing products:
+        {json.dumps(existing_products, indent=2)}
+
+        Only return the JSON. No comments. No explanation.
+        """
+
+        # using specific model for comparison
+        completion = self.client.chat.completions.create(
+            model="meta-llama/llama-4-scout-17b-16e-instruct",
+            messages=[{
+                "role": "user",
+                "content": comparison_prompt
+            }]
+        )
+
+        content = completion.choices[0].message.content.strip()
+        print("🤖 LLM Match Check Output:", content)
+
+        try:
+            return json.loads(content)
+        except json.JSONDecodeError:
+            print("❌ Failed to parse LLM output.")
+            return []

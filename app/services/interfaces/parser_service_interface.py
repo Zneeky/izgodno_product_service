@@ -6,3 +6,5 @@ class IParserService(ABC):
     @abstractmethod
     async def handle_product_parsing(self, name: str) -> ParsedProductResponse:
         pass
+
+    

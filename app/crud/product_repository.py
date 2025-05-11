@@ -16,17 +16,23 @@ class ProductRepository(AbstractRepository[Product]):
     async def get_by_sku(self, sku: str) -> Product | None:
         result = await self.db.execute(select(Product).where(Product.sku == sku))
         return result.scalars().first()
+    
+    async def get_by_brand_and_model(self, brand: str, model: str) -> list[Product]:
+        stmt = select(Product).where(Product.brand == brand, Product.model == model)
+        result = await self.db.execute(stmt)
+        return result.scalars().all()
 
-    async def create(self, parsed: ProductBaseModel, category_name: str) -> ParsedProductResponse:
+
+    async def create(self, parsed: ProductBaseModel, category_id: UUID ,category_name: str) -> ParsedProductResponse:
         product = Product(
             name = f"{parsed.brand} {parsed.model}",
             brand = parsed.brand,
             model = parsed.model,
-            category_id = parsed.category_id,
+            category_id = category_id,
             sku = parsed.sku,
             attributes = parsed.attributes,
         )
-        await self.db.add(product)
+        self.db.add(product)
         await self.db.commit()
         return ParsedProductResponse(
                 id = product.id,

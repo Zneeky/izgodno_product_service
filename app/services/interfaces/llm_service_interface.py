@@ -8,3 +8,7 @@ class ILLMService(ABC):
     @abstractmethod
     def extract_json_from_response(response: str) -> dict:
         pass
+
+    @abstractmethod
+    def llm_match_products(self, new_product: dict, existing_products: list[dict]) -> dict:
+        pass

@@ -9,6 +9,9 @@ class AbstractRepository(ABC, Generic[T]):
     async def get_by_sku(self, sku: str) -> T | None: ...
 
     @abstractmethod
+    async def get_by_brand_and_model(self, brand: str, model: str) -> list[T]: ...
+
+    @abstractmethod
     async def create(self, obj: T, category_name: str) -> T: ...
 
     @abstractmethod
