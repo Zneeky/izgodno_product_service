@@ -6,6 +6,7 @@ from app.crud.product_repository import ProductRepository
 from app.services.utils import generate_sku
 from deep_translator import GoogleTranslator
 from rapidfuzz import process, fuzz
+from rapidfuzz.fuzz import partial_ratio
 
 from uuid import UUID
 
@@ -117,8 +118,13 @@ class ParserService(IParserService):
                     attributes=existing.attributes,
                     category_name=matched_category.name
                 )
+            
+        # ✅ Proceed to LLM matching
+        matched_by_llm = await self.match_with_llm_candidates(fields, candidates)
+        if matched_by_llm:
+            return matched_by_llm
 
-        # Step 5: Find best category match
+        # Step 5: Find best category match if the product is new
         matched_category = await self.get_or_create_category(fields.get("category"))
         print("🏷️ Matched Category:", matched_category.name if matched_category else "None")
         
@@ -134,3 +140,50 @@ class ParserService(IParserService):
         # Step 6: Save new product if it doesn't exist
         created = await self.repo.create(parsed_product, matched_category.id, matched_category.name)
         return created
+    
+
+    def is_similar_sku(self, sku1: str, sku2: str, threshold: float = 90.0) -> bool:
+        if not sku1 or not sku2:
+            return False
+        score = partial_ratio(sku1.lower(), sku2.lower())
+        print(f"🔍 SKU similarity: {sku1} vs {sku2} → {score}%")
+        return score >= threshold
+
+    async def match_with_llm_candidates(self, fields: dict, candidates: list[ProductBaseModel]) -> ParsedProductResponse | None:
+        if not candidates:
+            print("⚠️ No candidates available for LLM matching.")
+            return None
+
+        input_attrs = {k.lower(): v for k, v in fields.get("attributes", {}).items()}
+
+        llm_result = await self.llm_service.llm_match_products(
+            new_product={
+                "brand": fields.get("brand"),
+                "model": fields.get("model"),
+                "attributes": input_attrs,
+            },
+            existing_products=[
+                {
+                    "id": str(p.id),
+                    "brand": p.brand,
+                    "model": p.model,
+                    "attributes": p.attributes,
+                } for p in candidates
+            ]
+        )
+
+        for match in llm_result:
+            if match.get("match") is True:
+                matched = next((p for p in candidates if str(p.id) == match.get("matched_id")), None)
+                if matched:
+                    matched_category = await self.repo.get_category_by_id(matched.category_id) if matched.category_id else None
+                    return ParsedProductResponse(
+                        id=matched.id,
+                        brand=matched.brand,
+                        model=matched.model,
+                        sku=matched.sku,
+                        attributes=matched.attributes,
+                        category_name=matched_category.name if matched_category else None
+                    )
+
+        return None

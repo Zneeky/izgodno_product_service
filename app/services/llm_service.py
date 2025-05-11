@@ -105,8 +105,24 @@ class LLMService(ILLMService):
         content = completion.choices[0].message.content.strip()
         print("🤖 LLM Match Check Output:", content)
 
+        return self.extract_json_structued_list(content)
+    
+    def extract_json_structued_list(self, text: str) -> dict | list:
         try:
-            return json.loads(content)
-        except json.JSONDecodeError:
-            print("❌ Failed to parse LLM output.")
-            return []
+            # 🧹 Strip triple backticks (``` ... ```)
+            cleaned = re.sub(r"^```[\s\n]*|[\s\n]*```$", "", text.strip())
+
+            # 🧪 Parse as JSON
+            parsed = json.loads(cleaned)
+
+            # ✅ Ensure it's a list of dicts
+            if isinstance(parsed, dict):
+                return [parsed]  # Single object wrapped in list
+            elif isinstance(parsed, list) and all(isinstance(item, dict) for item in parsed):
+                return parsed
+            else:
+                raise ValueError("Expected a list of JSON objects.")
+        
+        except Exception as e:
+            print("❌ Failed to extract valid JSON array:\n", text)
+            raise ValueError("❌ Could not extract valid JSON array.") from e
