@@ -6,6 +6,8 @@ from app.api.v1.endpoints import parser
 from app.db.seed_categories import seed_categories_from_txt
 from app.db.session import AsyncSessionLocal, get_db
 from app.models.category import Category
+from app.logging_config import setup_logging
+setup_logging()
 
 # @asynccontextmanager
 # async def lifespan(app: FastAPI):

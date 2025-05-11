@@ -4,6 +4,7 @@ import json
 import re
 from app.services.interfaces.llm_service_interface import ILLMService
 from app.core.config import settings
+from app.services.llm_logger import log_llm_decision
 
 class LLMService(ILLMService):
     def __init__(self):
@@ -104,8 +105,9 @@ class LLMService(ILLMService):
 
         content = completion.choices[0].message.content.strip()
         print("🤖 LLM Match Check Output:", content)
-
-        return self.extract_json_structued_list(content)
+        llm_result = self.extract_json_structued_list(content)
+        log_llm_decision(new_product, existing_products, llm_result)
+        return llm_result
     
     def extract_json_structued_list(self, text: str) -> dict | list:
         try:
