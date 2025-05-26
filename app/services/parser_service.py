@@ -1,4 +1,5 @@
 from app.models.category import Category
+from app.models.product_variation import ProductVariation
 from app.schemas.product import ParsedProductResponse, ProductBaseModel
 from app.services.interfaces.parser_service_interface import IParserService
 from app.services.interfaces.llm_service_interface import ILLMService
@@ -76,7 +77,7 @@ class ParserService(IParserService):
 
         return parent
 
-    def is_similar_attributes(self, attrs1: dict, attrs2: dict, threshold: float = 0.95) -> bool:
+    def is_similar_attributes(self, attrs1: dict, attrs2: dict, threshold: float = 0.98) -> bool:
         print(f"🔍 Comparing attribute values:\n→ {attrs1}\n→ {attrs2}")
 
         if not attrs1 or not attrs2:
@@ -100,58 +101,95 @@ class ParserService(IParserService):
         # Step 2: Extract product fields using LLM
         fields = await self.llm_service.extract_product_fields(translated_title)
         print("🔍 LLM Raw Output:", fields)
+        brand = fields.get("brand")
+        model = fields.get("model")
+        raw_attributes = fields.get("attributes", {})
+        attributes = {k.lower(): v for k, v in raw_attributes.items()}
+        category_path = fields.get("category")
+        sku = generate_sku(brand, model, attributes)
 
-        # Step 3: Generate SKU
-        sku = str(generate_sku(fields.get("brand"), fields.get("model"), fields.get("attributes", {})))
-        print("🔑 Generated SKU:", sku)
-
-        # Step 4: Check for existing product
+        # Step 3: Check for existing product
         candidates = await self.repo.get_by_brand_and_model(fields["brand"], fields["model"])
-        for existing in candidates:
-            if self.is_similar_attributes(existing.attributes, {k.lower(): v for k, v in fields.get("attributes", {}).items()}):
-                matched_category = await self.repo.get_category_by_id(existing.category_id) if existing.category_id else None
-                return ParsedProductResponse(
-                    id=existing.id,
-                    brand=existing.brand,
-                    model=existing.model,
-                    sku=existing.sku,
-                    attributes=existing.attributes,
-                    category_name=matched_category.name
-                )
-            
-        # ✅ Proceed to LLM matching
-        matched_by_llm = await self.match_with_llm_candidates(fields, candidates)
-        if matched_by_llm:
-            return matched_by_llm
+        if candidates:
+            print(f"🧩 Found {len(candidates)} candidate products")
 
-        # Step 5: Find best category match if the product is new
-        matched_category = await self.get_or_create_category(fields.get("category"))
-        print("🏷️ Matched Category:", matched_category.name if matched_category else "None")
-        
-        parsed_product = ProductBaseModel(
-            name = f"{fields.get('brand')} {fields.get('model')}",
-            brand = fields.get("brand"),
-            model = fields.get("model"),
-            attributes = {k.lower(): v for k, v in fields.get("attributes", {}).items()},
-            category_id = matched_category.id if matched_category else None,  # required!
-            sku = sku,
+            # For now, take the first candidate (you can later implement better disambiguation)
+            product = candidates[0]
+
+            # Step 1: Get variations for the matched product
+            variations = await self.repo.get_variations_by_product_id(product.id)
+
+            # Step 2: Use LLM or attribute comparison to match variation
+            matched_variation = await self.match_variation(fields, variations)
+
+            if matched_variation:
+                print("✅ Matched existing variation")
+                return ParsedProductResponse(
+                    id=product.id,
+                    brand=brand,
+                    model=model,
+                    sku=matched_variation.sku,
+                    attributes=matched_variation.specs,
+                    category_name=product.category.name if product.category else None
+                )
+
+            print("➕ Product found, but variation was not recongised.")
+
+        # Step 4: Product doesn't exist — create product and variation
+        print("📦 Product does not exist. Let's create it")
+
+        category = await self.get_or_create_category(category_path)
+
+        new_product = await self.repo.create_product(
+            brand=brand,
+            model=model,
+            category_id=category.id
         )
 
-        # Step 6: Save new product if it doesn't exist
-        created = await self.repo.create(parsed_product, matched_category.id, matched_category.name)
-        return created
+        new_variation = await self.repo.create_variation(
+            product_id=new_product.id,
+            specs=attributes,
+            sku=sku
+        )
+
+        return ParsedProductResponse(
+            brand=brand,
+            model=model,
+            category_name=category.name
+        )
+
     
 
-    def is_similar_sku(self, sku1: str, sku2: str, threshold: float = 90.0) -> bool:
+    async def match_variation(self, fields: dict, variations: list[ProductVariation]) -> ProductVariation | None:
+        input_specs = {k.lower(): v for k, v in fields.get("attributes", {}).items()}
+        input_sku = generate_sku(fields["brand"], fields["model"], input_specs)
+
+        # Step 1: Direct matching (specs or SKU)
+        for variation in variations:
+            if self.is_similar_attributes(variation.specs, input_specs) or self.is_similar_sku(variation.sku, input_sku):
+                print("✅ Found variation via attribute or SKU similarity")
+                return variation
+
+        # Step 2: LLM fallback
+        llm_result = await self.match_with_llm_candidates_variations(fields, variations)
+        if llm_result:
+            print("✅ Found variation via LLM")
+            # Convert ParsedProductResponse back to ProductVariation reference
+            return next((v for v in variations if str(v.id) == str(llm_result.id)), None)
+
+        print("❌ No matching variation found")
+        return None
+
+    def is_similar_sku(self, sku1: str, sku2: str, threshold: float = 98.0) -> bool:
         if not sku1 or not sku2:
             return False
         score = partial_ratio(sku1.lower(), sku2.lower())
         print(f"🔍 SKU similarity: {sku1} vs {sku2} → {score}%")
         return score >= threshold
 
-    async def match_with_llm_candidates(self, fields: dict, candidates: list[ProductBaseModel]) -> ParsedProductResponse | None:
+    async def match_with_llm_candidates_variations(self, fields: dict, candidates: list[ProductVariation]) -> ParsedProductResponse | None:
         if not candidates:
-            print("⚠️ No candidates available for LLM matching.")
+            print("⚠️ No variation candidates available for LLM matching.")
             return None
 
         input_attrs = {k.lower(): v for k, v in fields.get("attributes", {}).items()}
@@ -164,25 +202,27 @@ class ParserService(IParserService):
             },
             existing_products=[
                 {
-                    "id": str(p.id),
-                    "brand": p.brand,
-                    "model": p.model,
-                    "attributes": p.attributes,
-                } for p in candidates
+                    "id": str(v.id),
+                    "brand": v.product.brand,
+                    "model": v.product.model,
+                    "attributes": v.specs,
+                } for v in candidates
             ]
         )
 
         for match in llm_result:
             if match.get("match") is True:
-                matched = next((p for p in candidates if str(p.id) == match.get("matched_id")), None)
-                if matched:
-                    matched_category = await self.repo.get_category_by_id(matched.category_id) if matched.category_id else None
+                matched_id = match.get("matched_id")
+                matched_variation = next((v for v in candidates if str(v.id) == matched_id), None)
+                if matched_variation:
+                    product = matched_variation.product
+                    matched_category = await self.repo.get_category_by_id(product.category_id) if product.category_id else None
                     return ParsedProductResponse(
-                        id=matched.id,
-                        brand=matched.brand,
-                        model=matched.model,
-                        sku=matched.sku,
-                        attributes=matched.attributes,
+                        id=matched_variation.id,
+                        brand=product.brand,
+                        model=product.model,
+                        sku=matched_variation.sku,
+                        attributes=matched_variation.specs,
                         category_name=matched_category.name if matched_category else None
                     )
 

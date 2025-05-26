@@ -11,13 +11,9 @@ class ParsedProductResponse(BaseModel):
     brand: str
     model: str
     category_name: Optional[str]
-    attributes: Optional[Dict[str, Any]]
-    sku: str
 
 class ProductBaseModel(BaseModel):
     name: str
     brand: str
     model: str
-    sku: str
-    attributes: Optional[Dict[str, Any]] = None
     category_id: UUID 

@@ -5,6 +5,8 @@ class Settings(BaseSettings):
     GROQ_API_KEY: str
     GROQ_API_URL: str
     GROQ_MODEL: str
+    OPENAI_API_KEY: str
+    OPENAI_MODEL: str
 
     class Config:
         env_file = ".env"

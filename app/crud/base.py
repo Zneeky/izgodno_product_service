@@ -1,6 +1,7 @@
 # app/crud/base.py
 from abc import ABC, abstractmethod
 from typing import Generic, TypeVar
+from uuid import UUID
 
 T = TypeVar("T")
 
@@ -25,3 +26,9 @@ class AbstractRepository(ABC, Generic[T]):
 
     @abstractmethod
     async def create_category(self, name: str, parent_id: str | None = None) -> T: ...
+
+    @abstractmethod
+    async def get_variations_by_product_id(self, product_id: UUID) -> list[T]: ...
+
+    @abstractmethod
+    async def create_variation(self, product_id: UUID, specs: dict, sku: str) -> T: ...

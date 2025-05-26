@@ -2,14 +2,18 @@ from groq import Groq
 import httpx
 import json
 import re
+
+from openai import OpenAI
 from app.services.interfaces.llm_service_interface import ILLMService
 from app.core.config import settings
 from app.services.llm_logger import log_llm_decision
 
 class LLMService(ILLMService):
     def __init__(self):
-        self.client = Groq(api_key=settings.GROQ_API_KEY)
-        self.model = settings.GROQ_MODEL
+        self.groq = Groq(api_key=settings.GROQ_API_KEY)
+        self.openai = OpenAI(api_key=settings.OPENAI_API_KEY)
+        self.groq_model = settings.GROQ_MODEL
+        self.openai_model = settings.OPENAI_MODEL
         #self.model = model model: str = "mistral"
 
     async def extract_product_fields(self, title: str) -> dict:
@@ -23,7 +27,7 @@ class LLMService(ILLMService):
 
         1. **"brand"** – Brand/manufacturer.
         2. **"model"** – Model name
-        3. **"category"** – General category like Smartphone, Mobile Phone, Laptop, Monitor, Lotion, Headphone etc. Make sure to use the most common category name.
+        3. **"category"** – General category like Smartphone, Mobile Phone, Laptop, Monitor, Lotion, Headphones etc.
         4. **"attributes"** – Extract every detail 
 
 
@@ -32,19 +36,19 @@ class LLMService(ILLMService):
 
         Return ONLY a valid JSON object:
         {{
-        "brand": "...",
-        "model": "...", 
-        "category": "...",
-        "attributes": {{ 
-        }}
+            "brand": "...",
+            "model": "...", 
+            "category": "...",
+            "attributes": {{ 
+            }}
         }}
 
         Avoid explanations. 
         Only return the JSON. Do not add any other text or comments. Use only english.
         """
 
-        completion = self.client.chat.completions.create(
-            model=self.model,
+        completion = self.groq.chat.completions.create(
+            model=self.groq_model,
             messages=[{
                 "role": "user",
                 "content": prompt
@@ -95,7 +99,7 @@ class LLMService(ILLMService):
         """
 
         # using specific model for comparison
-        completion = self.client.chat.completions.create(
+        response = self.groq.chat.completions.create(
             model="meta-llama/llama-4-scout-17b-16e-instruct",
             messages=[{
                 "role": "user",
@@ -103,7 +107,7 @@ class LLMService(ILLMService):
             }]
         )
 
-        content = completion.choices[0].message.content.strip()
+        content = response.choices[0].message.content.strip()
         print("🤖 LLM Match Check Output:", content)
         llm_result = self.extract_json_structued_list(content)
         log_llm_decision(new_product, existing_products, llm_result)
