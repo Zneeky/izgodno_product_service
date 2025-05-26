@@ -1,13 +1,19 @@
 import os
+import sys
 from fastapi import FastAPI
 from fastapi.concurrency import asynccontextmanager
 from sqlalchemy import select
-from app.api.v1.endpoints import parser
+from uvicorn import Config
+from app.api.v1.endpoints import parser, crawler
 from app.db.seed_categories import seed_categories_from_txt
 from app.db.session import AsyncSessionLocal, get_db
 from app.models.category import Category
 from app.logging_config import setup_logging
 setup_logging()
+
+import asyncio
+
+
 
 # @asynccontextmanager
 # async def lifespan(app: FastAPI):
@@ -29,3 +35,16 @@ setup_logging()
 app = FastAPI(title="Izgodno Product Service")
 
 app.include_router(parser.router, prefix="/api/v1/parser", tags=["Parser"])
+app.include_router(crawler.router, prefix="/api/v1/crawler", tags=["Crawler"])
+
+# if sys.platform == "win32":
+#     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
+
+# if __name__ == "__main__":
+#     import uvicorn
+
+#     uvicorn.run(
+#         "app.main:app",
+#         host="0.0.0.0",
+#         port=8000,
+#     )

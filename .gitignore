@@ -15,3 +15,7 @@ __pycache__/
 
 # Ignore log files
 logs/
+
+# Ignore Chrome TMP files
+tmp-chrome-profile/
+tmp-chrome-profile-*/
