@@ -17,3 +17,11 @@ class ProductBaseModel(BaseModel):
     brand: str
     model: str
     category_id: UUID 
+
+class ParsedProductWithVariationResponse(BaseModel):
+    product_id: UUID
+    variation_id: UUID
+    brand: str
+    model: str
+    attributes: Dict[str, str]
+    category_name: Optional[str] = None

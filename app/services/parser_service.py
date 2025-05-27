@@ -1,6 +1,6 @@
 from app.models.category import Category
 from app.models.product_variation import ProductVariation
-from app.schemas.product import ParsedProductResponse, ProductBaseModel
+from app.schemas.product import ParsedProductResponse, ParsedProductWithVariationResponse, ProductBaseModel
 from app.services.interfaces.parser_service_interface import IParserService
 from app.services.interfaces.llm_service_interface import ILLMService
 from app.crud.product_repository import ProductRepository
@@ -93,7 +93,7 @@ class ParserService(IParserService):
         return (len(common_values) / total_values) >= threshold
     
 
-    async def handle_product_parsing(self, name: str) -> ParsedProductResponse:
+    async def handle_product_parsing(self, name: str) -> ParsedProductWithVariationResponse:
         # Step 1: Translate entry
         translated_title = self.translate_to_english(name)
         print("🌍 Translated Title:", translated_title)
@@ -124,8 +124,9 @@ class ParserService(IParserService):
 
             if matched_variation:
                 print("✅ Matched existing variation")
-                return ParsedProductResponse(
-                    id=product.id,
+                return ParsedProductWithVariationResponse(
+                    product_id=product.id,
+                    variation_id=matched_variation.id,
                     brand=brand,
                     model=model,
                     sku=matched_variation.sku,
@@ -138,24 +139,17 @@ class ParserService(IParserService):
         # Step 4: Product doesn't exist — create product and variation
         print("📦 Product does not exist. Let's create it")
 
+        variations = await self.llm_service.get_variations_from_web(brand, model)
         category = await self.get_or_create_category(category_path)
 
-        new_product = await self.repo.create_product(
-            brand=brand,
-            model=model,
-            category_id=category.id
-        )
 
-        new_variation = await self.repo.create_variation(
-            product_id=new_product.id,
-            specs=attributes,
-            sku=sku
-        )
-
-        return ParsedProductResponse(
-            brand=brand,
-            model=model,
-            category_name=category.name
+        return ParsedProductWithVariationResponse(
+            product_id="11111111-1111-1111-1111-111111111111",
+            variation_id= "44444444-4444-4444-4444-444444444444",
+            brand= "Apple",
+            model= "iPhone 16 Pro",
+            attributes= {"storage": "512GB"},
+            category_name= "Smartphones"
         )
 
     

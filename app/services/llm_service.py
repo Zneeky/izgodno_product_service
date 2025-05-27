@@ -132,3 +132,55 @@ class LLMService(ILLMService):
         except Exception as e:
             print("❌ Failed to extract valid JSON array:\n", text)
             raise ValueError("❌ Could not extract valid JSON array.") from e
+        
+    async def get_variations_from_web(self, brand: str, model: str) -> list[dict]:
+        """
+         Uses OpenAI GPT-4o with web browsing to discover real product variations online.
+        """
+
+        prompt = f"""
+        You are a product research assistant with access to the web.
+
+        Your task is to **find all real-world variations** of the following product:  
+        → **{brand} {model}**
+
+        A **variation** is a specific version of the same product that differs in an attribute that significantly affects its price or performance (e.g., storage size, RAM, processor, screen size, included accessories). Do **not** treat color, minor design tweaks, or packaging as separate variations unless they directly impact the product’s value.
+        Use your reasoning to determine the **smallest set of meaningful variations**. Only return distinct configurations where a buyer would pay a significantlly different price.
+
+        Sources to consult:
+        - Official product pages (search for "{brand}")
+        - Retailers like Amazon, BestBuy, Target, Walmart, Notino, Sephora, etc.
+        - Product comparison/review sites 
+
+        Return a JSON array of objects, each representing a variation with the field name, keep the variation amount as low as possible:
+        [
+            {{
+                "name": "...",
+            }},
+        ...
+        ]
+
+        Return **only** the JSON. No explanations, no comments, no Markdown. Respond in English.
+        """
+
+        response = self.openai.responses.create(
+            model="gpt-4o-mini",
+            input=prompt,
+            tools=[
+                {
+                    "type": "web_search_preview",
+                    "user_location": {
+                        "type": "approximate",
+                        "country": "BG",
+                        "city": "Sofia"
+                    },
+                    "search_context_size": "medium"
+                }
+            ],
+            temperature=0.2
+        )
+
+        content = response.output_text
+        print("🌐 GPT-4o Discovered Variations:\n", content)
+
+        return self.extract_json_structued_list(content)

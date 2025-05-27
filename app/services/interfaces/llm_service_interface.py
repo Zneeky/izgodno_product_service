@@ -12,3 +12,7 @@ class ILLMService(ABC):
     @abstractmethod
     def llm_match_products(self, new_product: dict, existing_products: list[dict]) -> dict:
         pass
+
+    @abstractmethod
+    async def get_variations_from_web(self, brand: str, model: str) -> list[dict]:
+        pass
