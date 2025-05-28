@@ -4,6 +4,7 @@ import json
 import re
 
 from openai import OpenAI
+from regex import match
 from app.services.interfaces.llm_service_interface import ILLMService
 from app.core.config import settings
 from app.services.llm_logger import log_llm_decision
@@ -116,7 +117,10 @@ class LLMService(ILLMService):
     def extract_json_structued_list(self, text: str) -> dict | list:
         try:
             # 🧹 Strip triple backticks (``` ... ```)
-            cleaned = re.sub(r"^```[\s\n]*|[\s\n]*```$", "", text.strip())
+            cleaned = re.search(r"\[.*\]", text.strip(), re.DOTALL)
+            cleaned = cleaned.group(0) if cleaned else text.strip()
+            cleaned = re.sub(r',\s*([\]}])', r'\1', cleaned)
+            print("🧹 Cleaned JSON text:", cleaned)
 
             # 🧪 Parse as JSON
             parsed = json.loads(cleaned)
@@ -132,6 +136,7 @@ class LLMService(ILLMService):
         except Exception as e:
             print("❌ Failed to extract valid JSON array:\n", text)
             raise ValueError("❌ Could not extract valid JSON array.") from e
+    
         
     async def get_variations_from_web(self, brand: str, model: str) -> list[dict]:
         """
@@ -152,15 +157,19 @@ class LLMService(ILLMService):
         - Retailers like Amazon, BestBuy, Target, Walmart, Notino, Sephora, etc.
         - Product comparison/review sites 
 
-        Return a JSON array of objects, each representing a variation with the field name, keep the variation amount as low as possible:
+        Return a JSON array of objects, each representing a variation, keep the variation amount as low as possible
+        - objects with two keys:
+        • `"name"`: The title of the variation, including brand and model
+        • `"specs"`: An object with the relevant specs parsed from the title
         [
             {{
                 "name": "...",
+                "specs": {{}}
             }},
         ...
         ]
 
-        Return **only** the JSON. No explanations, no comments, no Markdown. Respond in English.
+        Return **only** the JSON. No explanations, just pure JSON. Respond in English.
         """
 
         response = self.openai.responses.create(
@@ -177,7 +186,7 @@ class LLMService(ILLMService):
                     "search_context_size": "medium"
                 }
             ],
-            temperature=0.2
+            temperature=0
         )
 
         content = response.output_text

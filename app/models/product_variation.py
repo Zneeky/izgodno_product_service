@@ -12,7 +12,7 @@ class ProductVariation(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4, index=True)
     product_id = Column(UUID(as_uuid=True), ForeignKey("products.id"), nullable=False)
     sku = Column(String, index=True, nullable=True)
-    specs = Column(JSONB, nullable=True)  # Includes both primary + secondary specs
+    specs = Column(JSONB, nullable=True)  # Primary specifications of the variation
 
     created_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
 
