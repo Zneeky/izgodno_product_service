@@ -12,8 +12,9 @@ class Website(Base):
     name = Column(String, unique=True, index=True)
     domain = Column(String, unique=True, index=True)
     logo_url = Column(String, nullable=True)
-    sitemap_products_url = Column(String, nullable=True)
     search_url = Column(String, nullable=True)
+    affiliate_link = Column(String, nullable=True)
+    affiliate_id = Column(String, nullable=True)
 
     categories = relationship("Category", secondary=website_category, back_populates="websites")
     prices = relationship("ProductPrice", back_populates="website", cascade="all, delete")

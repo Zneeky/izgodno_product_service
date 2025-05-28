@@ -101,7 +101,6 @@ class ParserService(IParserService):
 
         # Step 2: Extract product fields using LLM
         fields = await self.llm_service.extract_product_fields(translated_title)
-        print("🔍 LLM Raw Output:", fields)
         brand = fields.get("brand")
         model = fields.get("model")
         category_path = fields.get("category")
@@ -114,10 +113,10 @@ class ParserService(IParserService):
             # For now, take the first candidate (you can later implement better disambiguation)
             product = candidates[0]
 
-            # Step 1: Get variations for the matched product
+            # Get variations for the matched product
             variations = await self.repo.get_variations_by_product_id(product.id)
 
-            # Step 2: Use LLM or attribute comparison to match variation
+            # Use LLM or attribute comparison to match variation
             matched_variation = await self.match_variation(fields, variations)
 
             if matched_variation:
@@ -140,7 +139,7 @@ class ParserService(IParserService):
         variations = await self.llm_service.get_variations_from_web(brand, model)
         category = await self.get_or_create_category(category_path)
 
-        # Step 5: Create the base Product
+        # Create the base Product
         new_product = await self.repo.create_product(
             brand=brand,
             model=model,
@@ -148,7 +147,7 @@ class ParserService(IParserService):
             category_name=category.name
         )
 
-         # 4. Create each variation in the DB
+         # Create each variation in the DB
         created_variations = []
         for var in variations:
             variation = await self.repo.create_variation(
