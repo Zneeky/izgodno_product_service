@@ -154,17 +154,17 @@ class LLMService(ILLMService):
 
         Sources to consult:
         - Official product pages (search for "{brand}")
-        - Retailers like Amazon, BestBuy, Target, Walmart, Notino, Sephora, etc.
+        - Retailers like Emag.bg, Ozone.bg, Amazon.com, BestBuy, Target, Walmart, Notino, Sephora, etc.
         - Product comparison/review sites 
 
         Return a JSON array of objects, each representing a variation, keep the variation amount as low as possible
         - objects with two keys:
-        • `"name"`: The title of the variation, including brand and model
-        • `"specs"`: An object with the relevant specs parsed from the title
+        • `"name"`: The title of the variation, including brand
+        • `"variation"`:  the specific differentiating part that distinguishes this variation from the others
         [
             {{
                 "name": "...",
-                "specs": {{}}
+                "variation": "..."
             }},
         ...
         ]
@@ -186,7 +186,7 @@ class LLMService(ILLMService):
                     "search_context_size": "medium"
                 }
             ],
-            temperature=0
+            temperature=0.1
         )
 
         content = response.output_text
