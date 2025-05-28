@@ -28,14 +28,12 @@ class ProductRepository(AbstractRepository[Product]):
         return result.scalars().all()
 
 
-    async def create(self, parsed: ProductBaseModel, category_id: UUID ,category_name: str) -> ParsedProductResponse:
+    async def create_product(self, brand: str, model:str, category_id: UUID ,category_name: str) -> ParsedProductResponse:
         product = Product(
-            name = f"{parsed.brand} {parsed.model}",
-            brand = parsed.brand,
-            model = parsed.model,
+            name = f"{brand} {model}",
+            brand = brand,
+            model = model,
             category_id = category_id,
-            sku = parsed.sku,
-            attributes = parsed.attributes,
         )
         self.db.add(product)
         await self.db.commit()
@@ -43,8 +41,6 @@ class ProductRepository(AbstractRepository[Product]):
                 id = product.id,
                 brand = product.brand,
                 model = product.model,
-                sku = product.sku,
-                attributes = product.attributes,
                 category_name = category_name
             )
     
@@ -80,10 +76,11 @@ class ProductRepository(AbstractRepository[Product]):
         result = await self.db.execute(stmt)
         return result.scalars().all()
 
-    async def create_variation(self, product_id: UUID, specs: dict, sku: str) -> ProductVariation:
+    async def create_variation(self, product_id: UUID, variation_name: str, variation_key: str, sku: str) -> ProductVariation:
         variation = ProductVariation(
             product_id=product_id,
-            specs=specs,
+            variation_name=variation_name,
+            variation_key=variation_key,
             sku=sku
         )
         self.db.add(variation)

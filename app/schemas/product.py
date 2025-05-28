@@ -23,5 +23,5 @@ class ParsedProductWithVariationResponse(BaseModel):
     variation_id: UUID
     brand: str
     model: str
-    attributes: Dict[str, str]
+    variation: str
     category_name: Optional[str] = None

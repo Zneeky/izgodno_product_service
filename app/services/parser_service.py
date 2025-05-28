@@ -1,3 +1,4 @@
+from slugify import slugify
 from app.models.category import Category
 from app.models.product_variation import ProductVariation
 from app.schemas.product import ParsedProductResponse, ParsedProductWithVariationResponse, ProductBaseModel
@@ -103,10 +104,7 @@ class ParserService(IParserService):
         print("🔍 LLM Raw Output:", fields)
         brand = fields.get("brand")
         model = fields.get("model")
-        raw_attributes = fields.get("attributes", {})
-        attributes = {k.lower(): v for k, v in raw_attributes.items()}
         category_path = fields.get("category")
-        sku = generate_sku(brand, model, attributes)
 
         # Step 3: Check for existing product
         candidates = await self.repo.get_by_brand_and_model(fields["brand"], fields["model"])
@@ -130,7 +128,7 @@ class ParserService(IParserService):
                     brand=brand,
                     model=model,
                     sku=matched_variation.sku,
-                    attributes=matched_variation.specs,
+                    variation=matched_variation.variation_key,
                     category_name=product.category.name if product.category else None
                 )
 
@@ -142,28 +140,52 @@ class ParserService(IParserService):
         variations = await self.llm_service.get_variations_from_web(brand, model)
         category = await self.get_or_create_category(category_path)
 
+        # Step 5: Create the base Product
+        new_product = await self.repo.create_product(
+            brand=brand,
+            model=model,
+            category_id=category.id,
+            category_name=category.name
+        )
 
+         # 4. Create each variation in the DB
+        created_variations = []
+        for var in variations:
+            variation = await self.repo.create_variation(
+                product_id=new_product.id,
+                variation_name=var["name"],
+                variation_key=var["variation"].lower(),
+                sku=slugify(var["name"], lowercase=True)
+            )
+            created_variations.append(variation)
+
+        print(f"✅ Created {len(created_variations)} variations for product")
+        for v in created_variations:
+            print(f"  - Variation: {v.variation_name} (SKU: {v.sku})")
+        
         return ParsedProductWithVariationResponse(
-            product_id="11111111-1111-1111-1111-111111111111",
-            variation_id= "44444444-4444-4444-4444-444444444444",
-            brand= "Apple",
-            model= "iPhone 16 Pro",
-            attributes= {"storage": "512GB"},
-            category_name= "Smartphones"
+            product_id= new_product.id,
+            variation_id= created_variations[0].id,
+            brand= new_product.brand,
+            model= new_product.model,
+            variation= created_variations[0].variation_key,
+            category_name= category.name if category else None,
         )
 
     
 
     async def match_variation(self, fields: dict, variations: list[ProductVariation]) -> ProductVariation | None:
-        input_specs = {k.lower(): v for k, v in fields.get("attributes", {}).items()}
-        input_sku = generate_sku(fields["brand"], fields["model"], input_specs)
+        brand = fields.get("brand", "").lower().strip()
+        model = fields.get("model", "").lower().strip()
+        expected_full = f"{brand} {model}"
 
         # Step 1: Direct matching (specs or SKU)
-        for variation in variations:
-            if self.is_similar_attributes(variation.specs, input_specs) or self.is_similar_sku(variation.sku, input_sku):
-                print("✅ Found variation via attribute or SKU similarity")
-                return variation
-
+        for v in variations:
+            name = (v.variation_name or "").lower().strip()
+            if name == expected_full:
+                print("✅ Exact variation_name match:", v.variation_name)
+                return v
+        
         # Step 2: LLM fallback
         llm_result = await self.match_with_llm_candidates_variations(fields, variations)
         if llm_result:
@@ -199,7 +221,7 @@ class ParserService(IParserService):
                     "id": str(v.id),
                     "brand": v.product.brand,
                     "model": v.product.model,
-                    "attributes": v.specs,
+                    "variation_name": v.variation_name,
                 } for v in candidates
             ]
         )
@@ -215,8 +237,6 @@ class ParserService(IParserService):
                         id=matched_variation.id,
                         brand=product.brand,
                         model=product.model,
-                        sku=matched_variation.sku,
-                        attributes=matched_variation.specs,
                         category_name=matched_category.name if matched_category else None
                     )
 

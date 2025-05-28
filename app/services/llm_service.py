@@ -15,7 +15,6 @@ class LLMService(ILLMService):
         self.openai = OpenAI(api_key=settings.OPENAI_API_KEY)
         self.groq_model = settings.GROQ_MODEL
         self.openai_model = settings.OPENAI_MODEL
-        #self.model = model model: str = "mistral"
 
     async def extract_product_fields(self, title: str) -> dict:
         
@@ -120,7 +119,6 @@ class LLMService(ILLMService):
             cleaned = re.search(r"\[.*\]", text.strip(), re.DOTALL)
             cleaned = cleaned.group(0) if cleaned else text.strip()
             cleaned = re.sub(r',\s*([\]}])', r'\1', cleaned)
-            print("🧹 Cleaned JSON text:", cleaned)
 
             # 🧪 Parse as JSON
             parsed = json.loads(cleaned)
