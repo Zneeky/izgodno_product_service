@@ -32,3 +32,9 @@ class AbstractRepository(ABC, Generic[T]):
 
     @abstractmethod
     async def create_variation(self, product_id: UUID, specs: dict, sku: str) -> T: ...
+
+    @abstractmethod
+    async def get_website_by_id(self, website_id: UUID) -> T | None: ...
+
+    @abstractmethod
+    async def get_websites_by_category_id(self, category_id: UUID) -> list[T]: ...

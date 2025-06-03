@@ -18,5 +18,6 @@ async def get_parser_service(db: AsyncSession = Depends(get_db)) -> IParserServi
     llm_service = LLMService()
     return ParserService(repo=repo, llm_service=llm_service)
 
-def get_crawling_service() -> ICrawlingService:
-    return CrawlingService()
+def get_crawling_service(db: AsyncSession = Depends(get_db)) -> ICrawlingService:
+    repo = ProductRepository(db)
+    return CrawlingService(repo=repo)

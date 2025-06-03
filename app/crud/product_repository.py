@@ -3,8 +3,10 @@ from uuid import UUID
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from app.models import Product
+from app.models.website_categories import website_category
 from app.models.category import Category
 from app.models.product_variation import ProductVariation
+from app.models.website import Website
 from app.schemas.product import ParsedProductResponse, ProductBaseModel
 from app.crud.base import AbstractRepository
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -87,3 +89,18 @@ class ProductRepository(AbstractRepository[Product]):
         await self.db.commit()
         await self.db.refresh(variation)
         return variation
+    
+    async def get_website_by_id(self, website_id: UUID) -> Website | None:
+        stmt = select(Website).where(Website.id == website_id)
+        result = await self.db.execute(stmt)
+        return result.scalar_one_or_none()
+
+    async def get_websites_by_category_id(self, category_id: UUID) -> list[Website]:
+        stmt = (
+            select(Website)
+            .join(website_category, Website.id == website_category.c.website_id)
+            .where(website_category.c.category_id == category_id)
+            .options(joinedload(Website.categories))
+        )
+        result = await self.db.execute(stmt)
+        return result.unique().scalars().all()

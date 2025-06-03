@@ -1,5 +1,6 @@
+from datetime import datetime, timezone
 import uuid
-from sqlalchemy import UUID, Column, String
+from sqlalchemy import UUID, Column, DateTime, String
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import relationship
 from app.db.session import Base
@@ -15,6 +16,8 @@ class Website(Base):
     search_url = Column(String, nullable=True)
     affiliate_link = Column(String, nullable=True)
     affiliate_id = Column(String, nullable=True)
+    schema = Column(JSONB, nullable=True)
+    schema_timestamp = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
 
     categories = relationship("Category", secondary=website_category, back_populates="websites")
     prices = relationship("ProductPrice", back_populates="website", cascade="all, delete")
