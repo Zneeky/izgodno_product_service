@@ -3,6 +3,8 @@ from datetime import datetime
 import json
 import random
 from uuid import UUID
+
+from fastapi import HTTPException
 from app.crud.product_repository import ProductRepository
 from app.models.website import Website
 from app.services.interfaces.crawling_service_interface import ICrawlingService
@@ -13,10 +15,12 @@ from typing import Optional
 from app.core.config import settings
 
 HER_PATH = "page.har"
-CLOUDFLARE_SITES = ['plesio']
+CLOUDFLARE_SITES = ['/challenges.cloudflare.com/', '/cdn-cgi/', 'https://stantek.com/static/assets/no-image.svg', 'https://bestpc.bg/images/no-preview.jpg']
 BLOCKED_RESOURCE_TYPES = ["image", "media", "font", "stylesheet"]
 BLOCKED_EXTENSIONS = (".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".woff", ".woff2", ".ttf", ".eot", ".otf", ".mp4", ".webm", ".css", ".js")
 BLOCKED_DOMAINS = ["googletagmanager.com", "google-analytics.com", "doubleclick.net", "facebook.net", "adservice.google.com"]
+# Place the semaphore at the module level
+browser_semaphore = asyncio.Semaphore(5)
 class CrawlingService(ICrawlingService):
     def __init__(self, repo: ProductRepository, proxy: Optional[str] = None):
         self.repo = repo
@@ -45,8 +49,7 @@ class CrawlingService(ICrawlingService):
 
         async def route_handler(route):
             nonlocal cloudflare_route_detected
-            url = route.request.url
-            if '/challenges.cloudflare.com/' in url or '/cdn-cgi/' in url or 'https://stantek.com/static/assets/no-image.svg' in url:
+            if any(cloudflare_site in route.request.url for cloudflare_site in CLOUDFLARE_SITES):
                 cloudflare_route_detected = True
                 await route.continue_()
             elif route.request.resource_type in BLOCKED_RESOURCE_TYPES:
@@ -61,7 +64,7 @@ class CrawlingService(ICrawlingService):
             print(f"🌐 Fetching with JS: {url}")
             await page.goto(url)  # Increase timeout if needed
 
-            wait_time = 10000 if cloudflare_route_detected else 2000
+            wait_time = 10000 if cloudflare_route_detected else 500
             print(f"⏳ Waiting for {wait_time / 1000} seconds...")
             await page.wait_for_timeout(wait_time)
 
@@ -75,52 +78,62 @@ class CrawlingService(ICrawlingService):
         return html
     
     async def crawl_all_search_pages(self, category_id: UUID, query: str) -> list[dict]:
-        await self.start_browser()
+        try:
+            # Acquire the semaphore with timeout manually
+            semaphore_acquired = await asyncio.wait_for(browser_semaphore.acquire(), timeout=30)  # 30 seconds timeout
+            if not semaphore_acquired:
+                raise HTTPException(status_code=503, detail="All crawlers are currently busy. Please try again later.")
+            
+            await self.start_browser()
 
-        all_websites = await self.repo.get_websites_by_category_id(category_id)
-        websites = [site for site in all_websites if site.schema and site.search_url]
-        #websites = [site for site in all_websites if site.name == "Stantek"]
-        print(f"[crawl4ai] Found {len(websites)} websites with schema for category {category_id}")
+            all_websites = await self.repo.get_websites_by_category_id(category_id)
+            websites = [site for site in all_websites if site.name == "Stantek"]
+            print(f"[crawl4ai] Found {len(websites)} websites with schema for category {category_id}")
 
-        async with AsyncWebCrawler() as crawler:
+            async with AsyncWebCrawler() as crawler:
 
-            # Concurrently fetch HTML pages using the same browser context
-            async def fetch_html(site):
-                url = f"{site.search_url}{query}"
-                html = await self.fetch_raw_html_search_page(url)
-                return (site, html)
+                # Concurrently fetch HTML pages using the same browser context
+                async def fetch_html(site):
+                    url = f"{site.search_url}{query}"
+                    html = await self.fetch_raw_html_search_page(url)
+                    return (site, html)
 
-            fetch_tasks = [fetch_html(site) for site in websites]
-            fetched_results = await asyncio.gather(*fetch_tasks)
+                fetch_tasks = [fetch_html(site) for site in websites]
+                fetched_results = await asyncio.gather(*fetch_tasks)
 
-            valid_results = [(site, html) for site, html in fetched_results if html.strip()]
+                valid_results = [(site, html) for site, html in fetched_results if html.strip()]
 
-            # Crawl concurrently as before
-            async def crawl(site, html):
-                run_config = CrawlerRunConfig(
-                    extraction_strategy=JsonCssExtractionStrategy(site.schema, verbose=True),
-                )
-                try:
-                    raw_url = f"raw:{html}"
-                    result = await crawler.arun(url=raw_url, config=run_config)
-                    if result.success:
-                        return {
-                            "domain": site.domain,
-                            "extracted_data": json.loads(result.extracted_content)
-                        }
-                    else:
-                        print(f"[crawl4ai] Failed for {site.domain}: {result.error_message}")
+                # Crawl concurrently as before
+                async def crawl(site, html):
+                    run_config = CrawlerRunConfig(
+                        extraction_strategy=JsonCssExtractionStrategy(site.schema, verbose=True),
+                    )
+                    try:
+                        raw_url = f"raw:{html}"
+                        result = await crawler.arun(url=raw_url, config=run_config)
+                        if result.success:
+                            return {
+                                "domain": site.domain,
+                                "extracted_data": json.loads(result.extracted_content)
+                            }
+                        else:
+                            print(f"[crawl4ai] Failed for {site.domain}: {result.error_message}")
+                            return None
+                    except Exception as e:
+                        print(f"[Exception] Failed to crawl {site.domain}: {str(e)}")
                         return None
-                except Exception as e:
-                    print(f"[Exception] Failed to crawl {site.domain}: {str(e)}")
-                    return None
 
-            crawl_tasks = [crawl(site, html) for site, html in valid_results]
-            crawl_results = await asyncio.gather(*crawl_tasks)
+                crawl_tasks = [crawl(site, html) for site, html in valid_results]
+                crawl_results = await asyncio.gather(*crawl_tasks)
 
-        await self.stop_browser()
+            await self.stop_browser()
 
-        return [res for res in crawl_results if res is not None]
+            # Release the semaphore when done
+            browser_semaphore.release()
+
+            return [res for res in crawl_results if res is not None]
+        except asyncio.TimeoutError:
+            raise HTTPException(status_code=503, detail="All crawlers are currently busy. Please try again later.")
 
       
     # Function to fetch raw HTML with minimized network traffic
@@ -195,9 +208,12 @@ class CrawlingService(ICrawlingService):
                 "Analyze this eCommerce HTML page and generate a JSON schema for extracting products. "
                 "Each object should represent a single product and should contain the following fields: "
                 "`item`, `item_current_price`, `item_page_url`, `item_image_url`, `price_currency`, and `item_available`."
+                "Do not use regex for type, when creating the schema"
+                "`item` should be a string that contains the full name of the product, "
+                "`item_current_price` should be the current price of the product sould contain the full price, including any floatings, example: '123.45'"
+                "Ensure that `item_current_price` gets the newest and most relevant price for the item, the type should be text"
                 "Include item_available if there is an idicator for availability, look for text like 'налично', 'в наличност', 'изчерпано', 'available', 'out of stock' etc. Don't include if not clear idicator is present. "
                 "Create selectors that are as universal as possible, so they can be used for any item on the page. Make sure you are specific enough so that the correct data is extracted."
-                "Ensure that `item_current_price` gets the newest and most relevant price for the item, the type should be text"
                 "Make it as universal as possible, so it can be used for any item on the page."
                 "Ensure you get the price currency where it is BGN or ЛВ (Bulgarian Lev) "
             ),
