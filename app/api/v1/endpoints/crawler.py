@@ -32,3 +32,12 @@ async def generate_json_css_strategy(
 ):
     return await crawling_service.generate_json_css_strategy(website_id, html)
 
+
+@router.post("/crawl/generate/json-xpath-strategy")
+async def generate_json_css_strategy(
+    website_id: str,
+    html: str,
+    crawling_service: ICrawlingService = Depends(get_crawling_service)
+):
+    return await crawling_service.generate_json_xpath_strategy(website_id, html)
+

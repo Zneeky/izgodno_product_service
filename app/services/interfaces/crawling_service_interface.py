@@ -21,3 +21,7 @@ class ICrawlingService(ABC):
     @abstractmethod
     async def generate_json_css_strategy(self, website_id: UUID, html: str) -> dict:
         pass
+
+    @abstractmethod
+    async def generate_json_xpath_strategy(self, website_id: UUID, html: str) -> None:
+        pass

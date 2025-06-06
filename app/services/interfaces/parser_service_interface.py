@@ -7,4 +7,8 @@ class IParserService(ABC):
     async def handle_product_parsing(self, name: str) -> ParsedProductWithVariationResponse:
         pass
 
+    @abstractmethod
+    async def parse_product_and_find_best_offer(self, product_data: ParsedProductWithVariationResponse):
+        pass
+
     

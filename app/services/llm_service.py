@@ -135,6 +135,72 @@ class LLMService(ILLMService):
             print("❌ Failed to extract valid JSON array:\n", text)
             raise ValueError("❌ Could not extract valid JSON array.") from e
     
+    async def choose_best_offer_per_domain(
+        self,
+        original_product: dict,
+        offers: list[dict]
+    ) -> list[dict]:
+        """
+        From a list of offers (already filtered by brand/model/variation match),
+        return the best offer per domain. The lowest price wins, unless the cheapest
+        option is a likely refurbished product and a slightly higher-priced option exists.
+        """
+        prompt = f"""
+    You are a product comparison expert.
+
+    Your task is to analyze multiple product offers grouped by domain (website), and for each domain select **the single most relevant offer**.
+
+    Selection rules:
+    1. The offer **must be the same product** as the original (same brand, model, variation).
+    2. Prefer the **lowest price**.
+    3. If two offers have the **same price**, pick any.
+    4. If there are two **very similar offers in therms of item name but one is cheaper**, prefer the slightly more expensive one (assuming it is new).
+    5. Only return **one offer per domain**.
+    6. The price currency should be BGN (лв, лева, BGN, BG).
+    7. Different websites have differnt ways of describing the price, so make sure you analize what the price and it's format should be and parse it in the correct format so every offer has the same price format.
+    8.  Some domains (like ardes.bg) mistakenly omit the decimal dot in the price field, leading to inflated prices. For example, "item_current_price": 227900 is most likely meant to be 2279.00.
+        Use the distribution of other domain prices to intelligently detect and correct such formatting errors.
+        If a price seems 10x or 100x higher than the average of other offers, it's likely missing a decimal point — assume the last 2 digits are the fractional part and convert accordingly.
+        When fixing, do not touch prices that seem valid or that are only slightly higher/lower than others. Focus on obvious outliers.
+    9. The item page URL should be the direct link to the product page, if it does not start with https://, add it with the domain name.
+
+    Here is the product we're comparing to:
+    {json.dumps(original_product, indent=2)}
+
+    Here are the offers:
+    {json.dumps(offers, indent=2)}
+
+    Return an array of offers, each in this format:
+    [
+        {{
+            "domain": "example.com",
+            "item": "...",
+            "item_page_url": "...",
+            "item_current_price": ...,
+        }},
+        ...
+    ]
+
+    Only return the JSON array. No explanations. No comments.
+    """
+
+        response = self.groq.chat.completions.create(
+            model="meta-llama/llama-4-scout-17b-16e-instruct",
+            messages=[{
+                "role": "user",
+                "content": prompt
+            }],
+            temperature=0.3,
+            max_tokens=2048
+        )
+
+        content = response.choices[0].message.content.strip()
+        print("📦 Best Offer Selection Output:", content)
+
+        # Parse and return structured list
+        best_offers = self.extract_json_structued_list(content)
+        log_llm_decision(original_product, offers, best_offers)
+        return best_offers
         
     async def get_variations_from_web(self, brand: str, model: str) -> list[dict]:
         """

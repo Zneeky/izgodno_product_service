@@ -14,5 +14,9 @@ class ILLMService(ABC):
         pass
 
     @abstractmethod
+    async def choose_best_offer_per_domain(self, original_product: dict, offers: list[dict]) -> list[dict]:
+        pass
+    
+    @abstractmethod
     async def get_variations_from_web(self, brand: str, model: str) -> list[dict]:
         pass

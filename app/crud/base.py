@@ -1,6 +1,6 @@
 # app/crud/base.py
 from abc import ABC, abstractmethod
-from typing import Generic, TypeVar
+from typing import Generic, List, TypeVar
 from uuid import UUID
 
 T = TypeVar("T")
@@ -38,3 +38,7 @@ class AbstractRepository(ABC, Generic[T]):
 
     @abstractmethod
     async def get_websites_by_category_id(self, category_id: UUID) -> list[T]: ...
+
+    @abstractmethod
+    async def save_best_offers_to_db(self, flat_offers: list[dict], variation_id: UUID) -> List[T]: ...
+    

@@ -1,8 +1,11 @@
 # app/crud/product.py
+from datetime import datetime, timedelta, timezone
+from typing import List
 from uuid import UUID
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from app.models import Product
+from app.models.price import ProductPrice
 from app.models.website_categories import website_category
 from app.models.category import Category
 from app.models.product_variation import ProductVariation
@@ -104,3 +107,59 @@ class ProductRepository(AbstractRepository[Product]):
         )
         result = await self.db.execute(stmt)
         return result.unique().scalars().all()
+    
+    async def save_best_offers_to_db(
+        self,
+        flat_offers: list[dict],
+        variation_id: UUID,
+    ):
+        for offer in flat_offers:
+            domain = offer.get("domain")
+            price = offer.get("item_current_price")
+            url = offer.get("item_page_url")
+            item_name = offer.get("item")
+            currency = offer.get("price_currency", "BGN")  # Optional fallback
+
+            if not (domain and price and url):
+                print(f"[SKIP] Incomplete offer data: {offer}")
+                continue
+
+            # Get matching Website by domain
+            website_result = await self.db.execute(
+                select(Website).where(Website.domain == domain.lower())
+            )
+            website = website_result.scalars().first()
+
+            if not website:
+                print(f"[SKIP] No Website found for domain '{domain}'")
+                continue
+
+            product_price = ProductPrice(
+                variation_id = variation_id,
+                website_id = website.id,
+                price = float(price),
+                currency = currency,
+                url = url,
+                in_stock = "available",
+                offer_metadata = {"item": item_name}
+            )
+
+            self.db.add(product_price)
+
+        await self.db.commit()
+
+
+    async def get_recent_prices_for_variation(
+        self,
+        variation_id: UUID,
+        hours: int = 36
+    ) -> List[ProductPrice]:
+        time_threshold = datetime.now(timezone.utc) - timedelta(hours=hours)
+
+        stmt = select(ProductPrice).where(
+            ProductPrice.variation_id == variation_id,
+            ProductPrice.timestamp >= time_threshold
+        )
+
+        result = await self.db.execute(stmt)
+        return result.scalars().all()

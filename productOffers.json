@@ -1,0 +1,2321 @@
+{
+  "results": [
+    {
+      "domain": "technopolis.bg",
+      "extracted_data": [
+        {
+          "item_current_price": "2289",
+          "item_image_url": "https://api.technopolis.bg/medias/Listing-grid-505175.jpg?context=bWFzdGVyfHJvb3R8MjA0NTN8aW1hZ2UvanBlZ3xhRFEwTDJnek1TOHpOVEUyTlRVME1EUXhOelUyTmk5TWFYTjBhVzVuTFdkeWFXUmZOVEExTVRjMUxtcHdad3xiZGE3MTdiZWZhOWRjODE1MmEzYTI1ZjRhNTNiYjQ3NjAwMmY0OGIzNjYxZGRhMDk4OGI0NDM1NWI4NTc5ZjUx",
+          "price_currency": "2289"
+        },
+        {
+          "item_current_price": "2289",
+          "item_image_url": "https://api.technopolis.bg/medias/Listing-grid-505177.jpg?context=bWFzdGVyfHJvb3R8MjE3NTd8aW1hZ2UvanBlZ3xhRGcwTDJneVpTOHpOVEUyTlRVME1URXpPRFEyTWk5TWFYTjBhVzVuTFdkeWFXUmZOVEExTVRjM0xtcHdad3wxMGRhMWIwMTVlYzVlNTU0OTMwNzNkNWI4MjEyZWYwODRlZGQ5NTU3ZTkwZGZmM2UxZDczMDVmYmYxYzk1MmM5",
+          "price_currency": "2289"
+        },
+        {
+          "item_current_price": "2289",
+          "item_image_url": "https://api.technopolis.bg/medias/Listing-grid-505174.jpg?context=bWFzdGVyfHJvb3R8MjEyMTh8aW1hZ2UvanBlZ3xhRGRoTDJnelpTOHpOVEUyTlRVME1EQTFOekV4T0M5TWFYTjBhVzVuTFdkeWFXUmZOVEExTVRjMExtcHdad3xkNWFiNjA1ODFjYjk0NTg4OWY4YTc2MTIzNTUyYjIwMWQwOTI2M2VkYTVkMmI0ZGVkNmRlZjMwOWZhYTU3NDBl",
+          "price_currency": "2289"
+        },
+        {
+          "item_current_price": "2289",
+          "item_image_url": "https://api.technopolis.bg/medias/Listing-grid-505176.jpg?context=bWFzdGVyfHJvb3R8MjQ4OTZ8aW1hZ2UvanBlZ3xhRFZrTDJneU5pOHpOVEUyTlRVME1EYzNPREF4TkM5TWFYTjBhVzVuTFdkeWFXUmZOVEExTVRjMkxtcHdad3wxOGQwZjFiMzFiYmRhZDFmODQyZmFiMDE4NDFmM2UyZTQ3NTAxMWU2NTI1ZjMyNDJkZDkxYjJhYTA1MzNiMjFh",
+          "price_currency": "2289"
+        }
+      ]
+    },
+    {
+      "domain": "ozone.bg",
+      "extracted_data": [
+        {
+          "item": "СмартфонApple-iPhone16Pro, 6.3'', 8GB/128GB, Desert Titanium",
+          "item_current_price": "2289,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-16-pro-128gb-desert-titanium",
+          "item_image_url": "https://cdn.ozone.bg/media/catalog/product/s/m/smartfon_apple_iphone_16_pro_6_3_8gb_128gb_desert_titanium_1726246844_0.jpg"
+        },
+        {
+          "item": "СмартфонApple-iPhone16Pro, 6.3'', 8GB/128GB, Natural Titanium",
+          "item_current_price": "2174,55",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/ltph0002898n-1",
+          "item_image_url": "https://cdn.ozone.bg/media/catalog/product/s/m/smartfon_apple_iphone_16_pro_6_3_8gb_128gb_natural_titanium_1726246772_0_1.jpg"
+        },
+        {
+          "item": "СмартфонApple-iPhone16Pro, 6.3'', 8GB/256GB, Black Titanium",
+          "item_current_price": "2589,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-16-pro-256gb-black-titanium",
+          "item_image_url": "https://cdn.ozone.bg/media/catalog/product/s/m/smartfon_apple_iphone_16_pro_6_3_8gb_256gb_black_titanium_1726246718_0.jpg",
+          "item_available": ""
+        },
+        {
+          "item": "СмартфонApple-iPhone16ProMax, 6.9'', 8GB/512GB, Natural Titanium",
+          "item_current_price": "3295,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-16-pro-max-512gb-natural-titanium",
+          "item_image_url": "https://cdn.ozone.bg/media/catalog/product/s/m/smartfon_apple_iphone_16_pro_max_6_9_8gb_512gb_natural_titanium_1726241038_0.jpg",
+          "item_available": ""
+        },
+        {
+          "item": "СмартфонApple-iPhone16ProMax, 6.9'', 8GB/512GB, Black Titanium",
+          "item_current_price": "3295,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-16-pro-max-512gb-black-titanium",
+          "item_image_url": "https://cdn.ozone.bg/media/catalog/product/s/m/smartfon_apple_iphone_16_pro_max_6_9_8gb_512gb_black_titanium_1726241144_0.jpg",
+          "item_available": ""
+        },
+        {
+          "item": "СмартфонApple-iPhone16Pro, 6.3'', 8GB/256GB, Natural Titanium",
+          "item_current_price": "2589,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-16-pro-256gb-natural-titanium",
+          "item_image_url": "https://cdn.ozone.bg/media/catalog/product/s/m/smartfon_apple_iphone_16_pro_6_3_8gb_256gb_natural_titanium_1726246360_0.jpg",
+          "item_available": ""
+        },
+        {
+          "item": "СмартфонApple-iPhone16Pro, 6.3'', 8GB/256GB, Desert Titanium",
+          "item_current_price": "2589,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-16-pro-256gb-desert-titanium",
+          "item_image_url": "https://cdn.ozone.bg/media/catalog/product/s/m/smartfon_apple_iphone_16_pro_6_3_8gb_256gb_desert_titanium_1726246500_0.jpg",
+          "item_available": ""
+        },
+        {
+          "item": "СмартфонApple-iPhone16Pro, 6.3'', 8GB/256GB, White Titanium",
+          "item_current_price": "2589,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-16-pro-256gb-white-titanium",
+          "item_available": ""
+        },
+        {
+          "item": "СмартфонApple-iPhone16ProMax, 6.9'', 8GB/512GB, Desert Titanium",
+          "item_current_price": "3295,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-16-pro-max-512gb-desert-titanium",
+          "item_available": ""
+        },
+        {
+          "item": "СмартфонApple-iPhone16ProMax, 6.9'', 8GB/512GB, White Titanium",
+          "item_current_price": "3295,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-16-pro-max-512gb-white-titanium",
+          "item_available": ""
+        },
+        {
+          "item": "СмартфонApple-iPhone16Pro, 6.3'', 8GB/256GB, Black Titanium",
+          "item_current_price": "2537,22",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/ltph0002899n-2"
+        },
+        {
+          "item": "СмартфонApple-iPhone16e, 6.1'', 8GB/128GB, бял",
+          "item_current_price": "1415,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/iphone-16e-128gb-white"
+        },
+        {
+          "item": "КалъфApple- Silicone MagSafe,iPhone16ProMax, Denim",
+          "item_current_price": "110,39",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/maac0013027n-1"
+        },
+        {
+          "item": "СмартфонApple-iPhone16e, 6.1'', 8GB/128GB, черен",
+          "item_current_price": "1415,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/iphone-16e-128gb-black"
+        },
+        {
+          "item": "СмартфонApple-iPhone16ProMax, 6.9'', 8GB/256GB, Desert Titanium",
+          "item_current_price": "2745,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-16-pro-max-256gb-desert-titanium"
+        },
+        {
+          "item": "СмартфонApple-iPhone16Pro, 6.3'', 8GB/256GB, Black Titanium",
+          "item_current_price": "2459,55",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/ltph0002899n-1"
+        },
+        {
+          "item": "СмартфонApple-iPhone16, 6.1'', 8GB/128GB, Black",
+          "item_current_price": "1789,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-iphone-16-128gb-black"
+        },
+        {
+          "item": "СмартфонApple-iPhone16ProMax, 6.9'', 8GB/256GB, Black Titanium",
+          "item_current_price": "2745,00",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/smartfon-apple-16-pro-max-256gb-black-titanium"
+        },
+        {
+          "item": "КалъфApple- Silicone MagSafe,iPhone16Pro, Denim",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-silicone-case-with-magsafe-denim"
+        },
+        {
+          "item": "КалъфApple- Silicone MagSafe,iPhone16Pro, Ultramarine",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-silicone-case-with-magsafe-ultramarine-seasonal"
+        },
+        {
+          "item": "КалъфApple- Silicone MagSafe,iPhone16Pro, Star Fruit",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-silicone-case-with-magsafe-star-fruit-seasonal"
+        },
+        {
+          "item": "КалъфApple- Silicone MagSafe,iPhone16Pro, Lake Green",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-silicone-case-with-magsafe-lake-green-seasonal"
+        },
+        {
+          "item": "КалъфApple- Silicone MagSafe,iPhone16ProMax, черен",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-max-silicone-case-with-magsafe-black"
+        },
+        {
+          "item": "КалъфApple- Silicone MagSafe,iPhone16ProMax, Denim",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-max-silicone-case-with-magsafe-denim"
+        },
+        {
+          "item": "КалъфApple- Silicone MagSafe,iPhone16ProMax, Stone Gray",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-max-silicone-case-with-magsafe-stone-gray"
+        },
+        {
+          "item": "КалъфApple- Silicone MagSafe,iPhone16ProMax, Plum",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-max-silicone-case-with-magsafe-plum"
+        },
+        {
+          "item": "КалъфApple- Silicone MagSafe,iPhone16ProMax, Fuchsia",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-max-silicone-case-with-magsafe-fuchsia-seasonal"
+        },
+        {
+          "item": "КалъфApple- Silicone MagSafe,iPhone16ProMax, Ultramarine",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-max-silicone-case-with-magsafe-ultramarine-seasonal"
+        },
+        {
+          "item": "КалъфApple- Silicone Case,iPhone16ProMax, MagSafe, Star Fruit",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-max-silicone-case-with-magsafe-star-fruit-seasonal"
+        },
+        {
+          "item": "КалъфApple- Silicone Case,iPhone16ProMax, MagSafe, Lake Green",
+          "item_current_price": "114,99",
+          "price_currency": "лв.",
+          "item_page_url": "https://www.ozone.bg/product/apple-iphone-16-pro-max-silicone-case-with-magsafe-lake-green-seasonal"
+        }
+      ]
+    },
+    {
+      "domain": "emag.bg",
+      "extracted_data": [
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 128GB, 5G, Desert Titanium",
+          "item_current_price": "2.121,54",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-128gb-5g-desert-titanium-mynf3zd-a/pd/DH367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827249/images/res_43264b7008b32c46f8138d48f1b964c1.jpg?width=720&height=720&hash=1C1A9198FDF45E7F469617B8F54C1C73",
+          "price_currency": "2.121,54лв."
+        },
+        {
+          "item": "Смартфон CUBOT Kingkong ES, Android 14 16GB RAM + 128GB ROM, 48MP камера, 6.56'' дисплей, 5000mAh батерия, Dual SIM 4G, водоустойчив IP68/IP69K, orange",
+          "item_current_price": "206,63",
+          "item_page_url": "https://www.emag.bg/smartfon-cubot-kingkong-es-android-14-16gb-ram-128gb-rom-48mp-kamera-6-56-displej-5000mah-baterija-dual-sim-4g-vodoustojchiv-ip68-ip69k-orange-cubot-kkes/pd/DYMJP1YBM/?ref=sponsored_products_search_r_k_ra_1_1&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=fdc8b743-1676-11f0-bf75-027149f53803_eyJicGQiOjAuMX0%3D-7ddd7e40fd7b875166f92d0202f6127d70f93012e432dd91d0d79db895cfc891&oid=217668217&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/78873/78872186/images/res_b01e85ac81e1910851984d93549822ec.jpg?width=720&height=720&hash=4BED1E894C0571F9E98501AFAABB28E1",
+          "price_currency": "206,63лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 128GB, 5G, Black Titanium",
+          "item_current_price": "2.096,76",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-128gb-5g-black-titanium-mynd3zd-a/pd/DN367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827247/images/res_8d2028a84a99e32106c6286f4f51abac.jpg?width=720&height=720&hash=E74D092090D0897BD34C6E5211F6170E",
+          "price_currency": "2.096,76лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 128GB, 5G, Natural Titanium",
+          "item_current_price": "2.121,54",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-128gb-5g-natural-titanium-myng3zd-a/pd/DX367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827251/images/res_ce88acf66cdd789032b142e267edd912.jpg?width=720&height=720&hash=7A768CEE142E83A68DF1FF69FDFD6577",
+          "price_currency": "2.121,54лв."
+        },
+        {
+          "item": "Мобилен телефон CUBOT A20 2024, две SIM карти, 12GB+128GB/1TB, 6.745\" HD екран + 90Hz, Android 14, 13MP камера, 4G смартфон, Octa-Core/Face ID/GPS, черен",
+          "item_current_price": "192,31",
+          "item_page_url": "https://www.emag.bg/mobilen-telefon-cubot-a20-2024-dve-sim-karti-12gb-128gb-1tb-6-745-hd-ekran-90hz-android-14-13mp-kamera-4g-smartfon-octa-core-face-id-gps-cheren-cubota20-black/pd/DK5FP1YBM/?ref=sponsored_products_search_r_k_ra_1_2&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=dbce77bc-31a0-11f0-bf75-027149f53803_eyJicGQiOjAuMTF9-4a84665d86993ac05dfe92c42acaba43ed22c81d66a1ffcf2ef9cd01463293b1&oid=218130030&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/78873/78872006/images/res_36eee4d8c89c06af13116b87481c6849.jpg?width=720&height=720&hash=B3925501C4253C2C7A7D20A4ABB1FF52",
+          "price_currency": "192,31лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 128GB, 5G, White",
+          "item_current_price": "1.689,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-128gb-5g-white-mye93zd-a/pd/DPY67LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827219/images/res_ffac4e59735d37326f4b1e7cb4e4db47.jpg?width=720&height=720&hash=BEC4F7FB97B0002B4E6D4BBF2EE63A3A",
+          "price_currency": "1.689,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 128GB, 5G, Pink",
+          "item_current_price": "1.619,32",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-128gb-5g-pink-myea3zd-a/pd/DXY67LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827220/images/res_41ac93d716ec11baeeb0b5d95ebeb465.jpg?width=720&height=720&hash=FBBE8141782BC1AB9C09D57994FB9410",
+          "price_currency": "1.619,32лв."
+        },
+        {
+          "item": "Мобилен телефон CUBOT A20 2024, две SIM карти, 12GB+128GB/1TB, 6.745\" HD екран + 90Hz, Android 14, 13MP камера, 4G смартфон, осемядрен/Face ID/GPS, син",
+          "item_current_price": "192,31",
+          "item_page_url": "https://www.emag.bg/mobilen-telefon-cubot-a20-2024-dve-sim-karti-12gb-128gb-1tb-6-745-hd-ekran-90hz-android-14-13mp-kamera-4g-smartfon-osemjadren-face-id-gps-sin-cubota20-blue/pd/D0H9P1YBM/?ref=sponsored_products_search_r_k_ra_1_3&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=dbce7193-31a0-11f0-bf75-027149f53803_eyJicGQiOjAuMTZ9-0cfefbd79007ed8415f94ede93b1c62ccc047a4e2c48471bcddb2782e0158045&oid=217811670&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/78871/78870582/images/res_4986e1421b2d1a0977a93a5f873b5ed5.jpg?width=720&height=720&hash=0FA652D2D9FB2EBCACCE333121050452",
+          "price_currency": "192,31лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 14, 128GB, 6GB RAM, 5G, Midnight",
+          "item_current_price": "1.221,73",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-14-128gb-6gb-ram-5g-midnight-mpuf3rx-a/pd/DR2Y4LMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/48592/48591192/images/res_749904e2b5777dea6eb322cfb68742a1.jpg?width=720&height=720&hash=A31AEC0C4CD4D28F3C10772C8315D943",
+          "price_currency": "1.221,73лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 15, 128GB, 5G, Black",
+          "item_current_price": "1.437,04",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-15-128gb-5g-black-mtp03rx-a/pd/DZ4H93YBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/60458/60457121/images/res_9e07439d21e460f9570cfe181e6280c2.jpg?width=720&height=720&hash=F305EF62487A655E79E8D31F77CAA5B6",
+          "price_currency": "1.437,04лв."
+        },
+        {
+          "item": "Смартфон OUKITEL WP36, Отключен, Със 128dB стерео високоговорител, 16GB+256GB/1TB разширяем, IP68 водоустойчив, 10600mAh 6.52\" HD+ екран Android 13, 13MP камера, Две SIM карти, OTG, 4G",
+          "item_current_price": "301,32",
+          "item_page_url": "https://www.emag.bg/smartfon-oukitel-wp36-otkljuchen-sys-128db-stereo-visokogovoritel-16gb-256gb-1tb-razshirjaem-ip68-vodoustojchiv-10600mah-6-52-hd-ekran-android-13-13mp-kamera-dve-sim-karti-otg-4g-oukitelwp36/pd/D1JJPVYBM/?ref=sponsored_products_search_r_k_ra_1_4&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=26354748-39fe-11f0-bf75-027149f53803%7Ck%7C227115464_eyJicGQiOjAuMDl9-d555e06a4817d5188d570b877c6d2e87ceacfc016402e95b084e3d2650e47a4f&oid=227115464&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/74256/74255067/images/res_d8ba3aef0f94749213e24ce13f49b0e5.jpg?width=720&height=720&hash=A1B2FC23136E1145FC088BB2CCE47ACD",
+          "price_currency": "301,32лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 14, 128GB, 6GB RAM, 5G, Starlight",
+          "item_current_price": "1.259,38",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-14-128gb-6gb-ram-5g-starlight-mpur3rx-a/pd/D52Y4LMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/48592/48591193/images/res_467c241e448b89e2882bb298bcdac506.jpg?width=720&height=720&hash=80149EC336DEEFD324DC852B5BC5E4A7",
+          "price_currency": "1.259,38лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 128GB, 5G, White Titanium",
+          "item_current_price": "2.242,70",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-128gb-5g-white-titanium-myne3zd-a/pd/D0367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827248/images/res_94bd24240ffa9e2a5b1d01233578b4e0.jpg?width=720&height=720&hash=703BE5FA1693654B2988B796D1CEE841",
+          "price_currency": "2.242,70лв."
+        },
+        {
+          "item": "Смартфон CUBOT King Kong X, 32GB RAM, 256GB ROM, 100MP камера, 10200mAh батерия, 6.58'' FHD+, 5G, черен",
+          "item_current_price": "631,91",
+          "item_page_url": "https://www.emag.bg/smartfon-cubot-king-kong-x-32gb-ram-256gb-rom-100mp-kamera-10200mah-baterija-6-58-fhd-5g-cheren-cubotkkx-256g/pd/D8BJP1YBM/?ref=sponsored_products_search_r_k_ra_1_5&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=e3ef44db-31a0-11f0-bf75-027149f53803_eyJicGQiOjAuMDV9-151415fdf705b956b03e1d2c62793c3fa97ff6fb1e4c3e73adcc3e10ffe4d9fb&oid=217668246&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/78873/78872181/images/res_fc73e5540ece8f55ebe20eb4eebb8050.jpg?width=720&height=720&hash=F58403253BFDB119B9035D7844E20AF3",
+          "price_currency": "631,91лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 128GB, 5G, Black",
+          "item_current_price": "1.619,32",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-128gb-5g-black-mye73zd-a/pd/DHY67LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827218/images/res_e74f88f45f2837aeecbaac4974a50afa.jpg?width=720&height=720&hash=E42849028EDE45ECDCC6DF1EAF9F5879",
+          "price_currency": "1.619,32лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 128GB, 5G, Teal",
+          "item_current_price": "1.619,32",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-128gb-5g-teal-myed3zd-a/pd/DFY67LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827222/images/res_2b48580a1b85d2b3e7c5c41f5f6c8d42.jpg?width=720&height=720&hash=CEA683847A73520D4DC103A0EC55225D",
+          "price_currency": "1.619,32лв."
+        },
+        {
+          "item": "Мобилен телефон за възрастни SweetLink S2 Plus, меню на румънски, големи клавиши, SOS бутон, 1400 mAh, За възрастни, SOS бутон, фенерче, радио, стойка за зареждане, черен",
+          "item_current_price": "52,03",
+          "item_page_url": "https://www.emag.bg/mobilen-telefon-za-vyzrastni-sweetlink-s2-plus-menju-na-rumynski-golemi-klavishi-sos-buton-1400-mah-za-vyzrastni-sos-buton-fenerche-radio-stojka-za-zarezhdane-cheren-sweetlinks2plus/pd/DMVMYCYBM/?ref=sponsored_products_search_r_k_ra_1_6&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=f9c9c9ab-1b78-11f0-bf75-027149f53803_eyJicGQiOjAuMTZ9-0cfefbd79007ed8415f94ede93b1c62ccc047a4e2c48471bcddb2782e0158045&oid=206747818&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/75790/75789824/images/res_d97ecf57426dcaead0bef0249726e7d8.jpg?width=720&height=720&hash=8032B795AFCDFBF2930D00FD8AD0743C",
+          "price_currency": "52,03лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 128GB, 5G, Ultramarine",
+          "item_current_price": "1.639,81",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-128gb-5g-ultramarine-myec3zd-a/pd/D9Y67LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827221/images/res_a5c8fbacbd8ad36c1b79f2c55d36bf9f.jpg?width=720&height=720&hash=9507D7E8F46451E8F6A95F88F1DCDED1",
+          "price_currency": "1.639,81лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 15, 128GB, 5G, Pink",
+          "item_current_price": "1.416,49",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-15-128gb-5g-pink-mtp13rx-a/pd/D14H93YBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/60458/60457122/images/res_a34b30b780dd109b981753e94838c86c.jpg?width=720&height=720&hash=0AB50BDA2DD50B4FA704BDE0A10DC35B",
+          "price_currency": "1.416,49лв."
+        },
+        {
+          "item": "Смартфон OUKITEL WP32 Pro, Отключен, 24GB+256GB/1TB разширяем, 20MP камера, С Android 14, 6.0'' HD, 6300mAh батерия, С две SIM карти 4G, IP68, GPS, OTG, NFC, Wi-Fi, Черен",
+          "item_current_price": "286,30",
+          "item_page_url": "https://www.emag.bg/smartfon-oukitel-wp32-pro-otkljuchen-24gb-256gb-1tb-razshirjaem-20mp-kamera-s-android-14-6-0-hd-6300mah-baterija-s-dve-sim-karti-4g-ip68-gps-otg-nfc-wi-fi-cheren-oukitelwp32pro-black/pd/DW8MKWYBM/?ref=sponsored_products_search_r_k_ra_1_7&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=26354748-39fe-11f0-bf75-027149f53803%7Ck%7C227136506_eyJicGQiOjAuMDJ9-7d3119a9c5f42aa5e0c8042dde893ceddd6ab9470810d132195c692e9b7d27a0&oid=227136506&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/85205/85204119/images/res_fc1f7bab6b776bdbac124149670b0965.jpg?width=720&height=720&hash=394AD95590DA72C18F08C86626872F88",
+          "price_currency": "286,30лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 13, 128GB, 4GB RAM, 5G, Starlight",
+          "item_current_price": "1.029,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-13-128gb-4gb-ram-5g-starlight-mlpg3rm-a/pd/D1FCMXMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/40685/40684412/images/res_587e5e15698135f41c0340e80496bf67.jpg?width=720&height=720&hash=C4FD117245354CED278B13039E0293CF",
+          "price_currency": "1.029,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 14, 128GB, 6GB RAM, 5G, Blue",
+          "item_current_price": "1.249,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-14-128gb-6gb-ram-5g-blue-mpvn3rx-a/pd/DG2Y4LMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/48592/48591196/images/res_4fe7d2a075236c7c332d2c663bf09c26.jpg?width=720&height=720&hash=7E503FF0EC48272C19A1D3387F621B5A",
+          "price_currency": "1.249,99лв."
+        },
+        {
+          "item": "SweetLink F1 Plus Мобилен телефон за възрастни хора, големи клавиши, меню на румънски, две SIM карти, SOS бутон, за възрастни хора, Bluetooth, фенерче, радио, стойка за зареждане, черен",
+          "item_current_price": "65,13",
+          "item_page_url": "https://www.emag.bg/sweetlink-f1-plus-mobilen-telefon-za-vyzrastni-hora-golemi-klavishi-menju-na-rumynski-dve-sim-karti-sos-buton-za-vyzrastni-hora-bluetooth-fenerche-radio-stojka-za-zarezhdane-cheren-sweetlinkf1plus/pd/DVM1YCYBM/?ref=sponsored_products_search_r_k_ra_1_8&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=fdc63e54-1b78-11f0-bf75-027149f53803_eyJicGQiOjAuMDF9-b7a1d1e62fec2f52e8a487774c4f56ffca29f22259a468ca7192fef4f0bc6af7&oid=220554565&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/75811/75810456/images/res_94a73124c28b0ab3aa20d112588f0a8e.jpg?width=720&height=720&hash=BDE9130DA2F50F3EB6DDBA144058C19A",
+          "price_currency": "65,13лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 14, 128GB, 6GB RAM, 5G, Purple",
+          "item_current_price": "1.219,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-14-128gb-6gb-ram-5g-purple-mpv03rx-a/pd/D62Y4LMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/48592/48591194/images/res_386d8b602076b952c56b1d3411c2e473.jpg?width=720&height=720&hash=0CAE43D3D9DA08F8D44D298826D7C9CF",
+          "price_currency": "1.219,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 13, 128GB, 4GB RAM, 5G, Midnight",
+          "item_current_price": "1.029,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-13-128gb-4gb-ram-5g-midnight-mlpf3rm-a/pd/DQFCMXMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/40685/40684414/images/res_974dc0e4b6a1180b612c24afef8eb494.jpg?width=720&height=720&hash=27A6CA20492D41746C0C8A0226456760",
+          "price_currency": "1.029,99лв."
+        },
+        {
+          "item": "SweetLink мобилен телефон за възрастни хора, F3 Plus, 4G, големи клавиши, меню на румънски, две SIM карти, SOS бутон, За възрастни хора, Bluetooth, фенерче, радио, стойка за зареждане, черен",
+          "item_current_price": "107,53",
+          "item_page_url": "https://www.emag.bg/sweetlink-mobilen-telefon-za-vyzrastni-hora-f3-plus-4g-golemi-klavishi-menju-na-rumynski-dve-sim-karti-sos-buton-za-vyzrastni-hora-bluetooth-fenerche-radio-stojka-za-zarezhdane-cheren-sweetlinkf3plus/pd/D6L3ZT3BM/?ref=sponsored_products_search_r_k_ra_1_9&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=fcfd7d29-3a11-11f0-bf75-027149f53803_eyJicGQiOjAuMDV9-151415fdf705b956b03e1d2c62793c3fa97ff6fb1e4c3e73adcc3e10ffe4d9fb&oid=245265235&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/88906/88905546/images/res_78bd8843d2b9a9101e96a8ee010ec3a4.png?width=720&height=720&hash=87C7E764DC8614C6853EA399E4AEAD64",
+          "price_currency": "107,53лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Plus, 128GB, 5G, Black",
+          "item_current_price": "1.939,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-plus-128gb-5g-black-mxvu3zd-a/pd/D5Y67LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827233/images/res_dabc5bab75934ef960cb8f7ce09dfff1.jpg?width=720&height=720&hash=BD973104AB9B38E26C0E81F28E6467A8",
+          "price_currency": "1.939,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16e, 128GB, 5G, White",
+          "item_current_price": "1.334,48",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16e-128gb-5g-white-md1r4zd-a/pd/DCXPCB3BM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/86496/86495228/images/res_c33fa5d00e84c0d9a583ccec696fc2a3.jpg?width=720&height=720&hash=C79B4E5A86DA461F5AD53BD2DC8C218F",
+          "price_currency": "1.334,48лв."
+        },
+        {
+          "item": "SweetLink S3 Plus Мобилен телефон за възрастни хора, 4G, големи клавиши, SOS бутон, 1400 mAh, За възрастни хора, SOS бутон, фенерче, радио, стойка за зареждане, две Nano SIM карти, меню на румънски, черен",
+          "item_current_price": "84,78",
+          "item_page_url": "https://www.emag.bg/sweetlink-s3-plus-mobilen-telefon-za-vyzrastni-hora-4g-golemi-klavishi-sos-buton-1400-mah-za-vyzrastni-hora-sos-buton-fenerche-radio-stojka-za-zarezhdane-dve-nano-sim-karti-menju-na-rumynski-cheren-sw/pd/DZL3ZT3BM/?ref=sponsored_products_search_r_k_ra_1_10&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=fca68a39-3a11-11f0-bf75-027149f53803_eyJicGQiOjAuMDJ9-7d3119a9c5f42aa5e0c8042dde893ceddd6ab9470810d132195c692e9b7d27a0&oid=246457916&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/93012/93011058/images/res_44b35af4fd0780bc56c36a11f43e8bbd.jpg?width=720&height=720&hash=DD918126A06DDAD5B341C455B11860AE",
+          "price_currency": "84,78лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 15, 128GB, 5G, Blue",
+          "item_current_price": "1.426,56",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-15-128gb-5g-blue-mtp43rx-a/pd/DR4H93YBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/60458/60457124/images/res_710aa5e925b96dc436201454c55598f8.jpg?width=720&height=720&hash=158019B3C12F394F7E05373E31BA6724",
+          "price_currency": "1.426,56лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16e, 128GB, 5G, Black",
+          "item_current_price": "1.369,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16e-128gb-5g-black-md1q4zd-a/pd/D4XPCB3BM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/86496/86495227/images/res_502bd68a81c5240a92c811e8797db6af.jpg?width=720&height=720&hash=1E5A4A429B8B2F291930C0B87BB83725",
+          "price_currency": "1.369,99лв."
+        },
+        {
+          "item": "CUBOT Kingkong AX Outdoor Mobile Phone Android 14 - 24GB + 256GB/1TB Смартфон за строителна площадка, 5100mAh100MP, 6,58 инча FHD + 120Hz, 1,32 инча гръб, черен",
+          "item_current_price": "476,00",
+          "item_page_url": "https://www.emag.bg/cubot-kingkong-ax-outdoor-mobile-phone-android-14-24gb-256gb-1tb-smartfon-za-stroitelna-ploshtadka-5100mah100mp-6-58-incha-fhd-120hz-1-32-incha-gryb-cheren-cubot-kkax/pd/D68355YBM/?ref=sponsored_products_search_r_k_ra_1_11&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=27a2a62f-1677-11f0-bf75-027149f53803_eyJicGQiOjB9-fe1098be379a358c3b17f7800acfcbbdd251281a76bd1d70665e84fb9c2729b2&oid=218565400&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/82049/82048192/images/res_d1652893ceadf1a13a3121687246d1e8.jpg?width=720&height=720&hash=05D7A63556001641CE0D3899F6E00BD3",
+          "price_currency": "476,00лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Plus, 128GB, 5G, Pink",
+          "item_current_price": "1.989,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-plus-128gb-5g-pink-mxvw3zd-a/pd/DGY67LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827235/images/res_86358098cb663205bf08dba9b5694451.jpg?width=720&height=720&hash=D1B3268BB9C2A51F68DC23C890BCEF27",
+          "price_currency": "1.989,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Plus, 128GB, 5G, Teal",
+          "item_current_price": "1.989,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-plus-128gb-5g-teal-mxvy3zd-a/pd/DB367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827238/images/res_c7626b9e3cd920789e75ea3730db2653.jpg?width=720&height=720&hash=D7D4D52E9FF8FBD6D043385B504D5708",
+          "price_currency": "1.989,99лв."
+        },
+        {
+          "item": "SweetLink Мобилен телефон, F4 PLUS 4G, за възрастни хора с големи бутони, включена станция за зареждане, камера, висока сила на звука",
+          "item_current_price": "115,23",
+          "item_page_url": "https://www.emag.bg/sweetlink-mobilen-telefon-f4-plus-4g-za-vyzrastni-hora-s-golemi-butoni-vkljuchena-stancija-za-zarezhdane-kamera-visoka-sila-na-zvuka-sweetlinkf4plus/pd/D37G3K3BM/?ref=sponsored_products_search_r_k_ra_1_12&recid=recads_1_305c9c363344ba34c44357a5d7218d77332bf215778430d7e943259835913116_1749025015&aid=9c4da43a-31a5-11f0-bf75-027149f53803_eyJicGQiOjB9-fe1098be379a358c3b17f7800acfcbbdd251281a76bd1d70665e84fb9c2729b2&oid=245263244&scenario_ID=1",
+          "item_image_url": "https://s13emagst.akamaized.net/products/75790/75789617/images/res_d56ac1ccbc340a25f68787b14806d52a.png?width=720&height=720&hash=11A1438946E431F4220C9F87D53A69B3",
+          "price_currency": "115,23лв."
+        },
+        {
+          "item": "Мобилен телефон Google Pixel 9 Pro, 128GB, 16GB RAM, 5G, Obsidian",
+          "item_current_price": "1.550,00",
+          "item_page_url": "https://www.emag.bg/mobilen-telefon-google-pixel-9-pro-128gb-16gb-ram-5g-obsidian-ga05227-gb/pd/DBZKQVYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/74606/74605034/images/res_9c09a4c78fb4811a7584a464be0a7f14.jpg?width=720&height=720&hash=D45AB19FF34EA5808842CEFD5E3C68D4",
+          "price_currency": "1.550,00лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Plus, 128GB, 5G, Ultramarine",
+          "item_current_price": "1.989,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-plus-128gb-5g-ultramarine-mxvx3zd-a/pd/DWY67LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827237/images/res_59ce8ce78a3ae56b4fe3d9feee1840fd.jpg?width=720&height=720&hash=5FBFE0A1D79A5843D7A332183280D7C0",
+          "price_currency": "1.989,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Plus, 128GB, 5G, White",
+          "item_current_price": "1.989,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-plus-128gb-5g-white-mxvv3zd-a/pd/D8Y67LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827235/images/res_ebdef1216627cb16f651d5ad0a9f2475.jpg?width=720&height=720&hash=F4CE7158A3DA5A2C6C1F2B05B374D0F5",
+          "price_currency": "1.989,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 256GB, 5G, Black Titanium",
+          "item_current_price": "2.330,00",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-256gb-5g-black-titanium-mynh3zd-a/pd/D9367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827247/images/res_8d2028a84a99e32106c6286f4f51abac.jpg?width=720&height=720&hash=E74D092090D0897BD34C6E5211F6170E",
+          "price_currency": "2.330,00лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 256GB, 5G, Desert Titanium",
+          "item_current_price": "2.388,02",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-256gb-5g-desert-titanium-mynk3zd-a/pd/DJ367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827249/images/res_43264b7008b32c46f8138d48f1b964c1.jpg?width=720&height=720&hash=1C1A9198FDF45E7F469617B8F54C1C73",
+          "price_currency": "2.388,02лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro Max, 256GB, 5G, Desert Titanium",
+          "item_current_price": "2.612,12",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-max-256gb-5g-desert-titanium-mywx3zd-a/pd/DW367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827268/images/res_2e96db7aae423d09717a344bb22a43d2.jpg?width=720&height=720&hash=B94CCA141159617DAEEBC67CF72FF2BC",
+          "price_currency": "2.612,12лв."
+        },
+        {
+          "item": "Мобилен телефон Google Pixel 9 Pro, 128GB, 16GB RAM, 5G, Hazel",
+          "item_current_price": "1.701,93",
+          "item_page_url": "https://www.emag.bg/mobilen-telefon-google-pixel-9-pro-128gb-16gb-ram-5g-hazel-ga05936-gb/pd/DYZKQVYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/74606/74605036/images/res_2013bcd3a5cfbe1e1b5824811da047d2.jpg?width=720&height=720&hash=D62D15E88E77DCFD6DF98727B6AAB94E",
+          "price_currency": "1.701,93лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 256GB, 5G, Natural Titanium",
+          "item_current_price": "2.388,02",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-256gb-5g-natural-titanium-mynl3zd-a/pd/DS367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827251/images/res_ce88acf66cdd789032b142e267edd912.jpg?width=720&height=720&hash=7A768CEE142E83A68DF1FF69FDFD6577",
+          "price_currency": "2.388,02лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 13, 128GB, 4GB RAM, 5G, Pink",
+          "item_current_price": "1.435,24",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-13-128gb-4gb-ram-5g-pink-mlph3rm-a/pd/DZFCMXMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/40685/40684413/images/res_16a3a662e1b74dd715c857686c585cd7.jpg?width=720&height=720&hash=0EE1725B5D96F2775EAC93E895EB5EC9",
+          "price_currency": "1.435,24лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 11, 128GB, 4GB RAM, 4G, White",
+          "item_current_price": "990,50",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-11-128gb-4gb-ram-4g-white-mwm22rm-a/pd/DJ9ZX6BBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/25344/25343942/images/res_8c2a6eaf3c79cab5e883fd97a5b204e0.jpg?width=720&height=720&hash=2A18896E626CEE01F6F3F4C904158EA6",
+          "price_currency": "990,50лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 12, 128GB, 4GB RAM, 5G, White",
+          "item_current_price": "1.206,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-12-128gb-4gb-ram-5g-white-mgjc3rm-a/pd/D1DJ27MBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/33382/33381515/images/res_0c16b5665926e53927f3ebc2ce49c253.jpg?width=720&height=720&hash=2E334010E1D85AB3C71A55A81F5DA9E0",
+          "price_currency": "1.206,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 15, 128GB, 5G, Green",
+          "item_current_price": "1.559,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-15-128gb-5g-green-mtp53rx-a/pd/D54H93YBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/60458/60457125/images/res_ea94415514bc613edcbfe7068bbcba04.jpg?width=720&height=720&hash=2A67A51DB4ABD4F3A74FBFC55F164EA2",
+          "price_currency": "1.559,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 15 Pro, 128GB, 5G, Black Titanium",
+          "item_current_price": "2.602,63",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-15-pro-128gb-5g-black-titanium-mtuv3rx-a/pd/DLCH93YBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/60458/60457151/images/res_44ffbf30efb9dcbd1501e316af596edb.jpg?width=720&height=720&hash=F8B9B844788445D1E92A240F213B0D64",
+          "price_currency": "2.602,63лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 15 Pro, 128GB, 5G, Blue Titanium",
+          "item_current_price": "2.602,63",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-15-pro-128gb-5g-blue-titanium-mtv03rx-a/pd/D5CH93YBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/60458/60457156/images/res_968c9ac33392707226842f4933552b0c.jpg?width=720&height=720&hash=E6495DD6BD702C3B660156F76D2B0FDB",
+          "price_currency": "2.602,63лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 256GB, 5G, Black",
+          "item_current_price": "1.989,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-256gb-5g-black-myee3zd-a/pd/DJY67LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827218/images/res_e74f88f45f2837aeecbaac4974a50afa.jpg?width=720&height=720&hash=E42849028EDE45ECDCC6DF1EAF9F5879",
+          "price_currency": "1.989,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 256GB, 5G, Pink",
+          "item_current_price": "1.989,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-256gb-5g-pink-myeg3zd-a/pd/DVY67LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827220/images/res_41ac93d716ec11baeeb0b5d95ebeb465.jpg?width=720&height=720&hash=FBBE8141782BC1AB9C09D57994FB9410",
+          "price_currency": "1.989,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone SE 2,128GB, 3GB RAM , 4G, Red",
+          "item_current_price": "699,00",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-se-2-128gb-3gb-ram-4g-red-dnv4fmmbm/pd/DNV4FMMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/30019/30018361/images/res_f75e623514d753d198489c7a37d58332.jpg?width=720&height=720&hash=616043C8073773954A4F3274F29F379D",
+          "price_currency": "699,00лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 14 Plus, 128GB, 6GB RAM, 5G, Purple",
+          "item_current_price": "1.640,98",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-14-plus-128gb-6gb-ram-5g-purple-mq503rx-a/pd/DH7Y4LMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/48592/48591209/images/res_b4af6866fae7fa727e79a969f18da045.jpg?width=720&height=720&hash=556307FD53097452D91446AD939757A5",
+          "price_currency": "1.640,98лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 14, 128GB, 6GB RAM, 5G, Yellow",
+          "item_current_price": "1.659,89",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-14-128gb-6gb-ram-5g-yellow-mr3x3rx-a/pd/DYYTV6MBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/54108/54107250/images/res_af48fcbe74f3c7f51c5685066a84f0ff.jpg?width=720&height=720&hash=44A09A6D36542A6918AF797DCB71ABCA",
+          "price_currency": "1.659,89лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 12, 128GB, 4GB RAM, 5G, Black",
+          "item_current_price": "1.609,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-12-128gb-4gb-ram-5g-black-mgja3rm-a/pd/DZDJ27MBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/33382/33381513/images/res_9c502e664bde724a8f8e180bbe1582c9.jpg?width=720&height=720&hash=3BE1B156C2D41341A141AB117BF115D2",
+          "price_currency": "1.609,99лв."
+        },
+        {
+          "item": "Смартфон Google Pixel 9 Pro, 128GB, 16GB RAM, 5G, Porcelain",
+          "item_current_price": "1.701,93",
+          "item_page_url": "https://www.emag.bg/smartfon-google-pixel-9-pro-128gb-16gb-ram-5g-porcelain-ga05931-gb/pd/DMZKQVYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/74606/74605035/images/res_fafba46b866924c922bc4abd8baf38cb.jpg?width=720&height=720&hash=AA3B3872E90B334C953F70D420CF035A",
+          "price_currency": "1.701,93лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 11, 128GB, 4GB RAM, 4G, Black",
+          "item_current_price": "990,00",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-11-128gb-4gb-ram-4g-black-mwm02rm-a/pd/DF9ZX6BBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/25344/25343941/images/res_99d57ec9e3d9bb8d3242f384288ce0a3.jpg?width=720&height=720&hash=A4BC3CE224F32C303B0B287A5784D474",
+          "price_currency": "990,00лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 15, 128GB, 5G, Yellow",
+          "item_current_price": "1.462,85",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-15-128gb-5g-yellow-mtp23rx-a/pd/DQ4H93YBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/60458/60457123/images/res_08e31bca32d86d5f0ca4a3e2f05a7e6c.jpg?width=720&height=720&hash=830C4A5CC6221E7A4F305931E24346AD",
+          "price_currency": "1.462,85лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 15 Plus,128GB, 5G, Black",
+          "item_current_price": "1.739,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-15-plus-128gb-5g-black-mu0y3rx-a/pd/DDCH93YBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/60458/60457136/images/res_1d99112302dd6440c1024a664244cf18.jpg?width=720&height=720&hash=A6C3724BF6560BC9DCEF9F46DEBAB039",
+          "price_currency": "1.739,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro Max, 256GB, 5G, Natural Titanium",
+          "item_current_price": "2.612,12",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-max-256gb-5g-natural-titanium-mywy3zd-a/pd/DB267LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827269/images/res_dedc3059c7fafbc0c53a213406db03b5.jpg?width=720&height=720&hash=C399518E3CB3013E5904C114CA3C20D0",
+          "price_currency": "2.612,12лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro Max, 256GB, 5G, Black Titanium",
+          "item_current_price": "2.692,37",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-max-256gb-5g-black-titanium-mywv3zd-a/pd/D6367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827265/images/res_1100df91ed470fdd72fe277fcc41f172.jpg?width=720&height=720&hash=FA7BFFBF52BB4D93CD59750DCDA2DDDC",
+          "price_currency": "2.692,37лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 256GB, 5G, White Titanium",
+          "item_current_price": "2.388,02",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-256gb-5g-white-titanium-mynj3zd-a/pd/DF367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827248/images/res_94bd24240ffa9e2a5b1d01233578b4e0.jpg?width=720&height=720&hash=703BE5FA1693654B2988B796D1CEE841",
+          "price_currency": "2.388,02лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 13, 128GB, 4GB RAM, 5G, Blue",
+          "item_current_price": "1.435,24",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-13-128gb-4gb-ram-5g-blue-mlpk3rm-a/pd/DCFCMXMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/40685/40684410/images/res_3f88af07401bd01fbb0af9a56adf3845.jpg?width=720&height=720&hash=28C2FD39209B48D13B907FC57F50FEE4",
+          "price_currency": "1.435,24лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro Max, 256GB, 5G, White Titanium",
+          "item_current_price": "2.712,44",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-max-256gb-5g-white-titanium-myww3zd-a/pd/DG367LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827267/images/res_1a48e9c550441f25537743270cc6cfc6.jpg?width=720&height=720&hash=5BB6FD763621955ED3E3B301288CE1B2",
+          "price_currency": "2.712,44лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 15 Plus,128GB, 5G, Pink",
+          "item_current_price": "1.739,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-15-plus-128gb-5g-pink-mu103rx-a/pd/DTCH93YBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/60458/60457137/images/res_2012fec91830bebbf7ed3b6a217c0ef2.jpg?width=720&height=720&hash=3D4FAE6FD3ADB1E0B80C34D23554CFB1",
+          "price_currency": "1.739,99лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 14 Plus, 128GB, 6GB RAM, 5G, Yellow",
+          "item_current_price": "1.737,28",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-14-plus-128gb-6gb-ram-5g-yellow-mr693rx-a/pd/D7YTV6MBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/54108/54107250/images/res_eab616f050611459af818e3a730e831c.jpg?width=720&height=720&hash=1E2EC8D17B906161124458D91D62991D",
+          "price_currency": "1.737,28лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro Max, 512GB, 5G, Black Titanium",
+          "item_current_price": "3.123,74",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-max-512gb-5g-black-titanium-myx03zd-a/pd/DM267LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827265/images/res_1100df91ed470fdd72fe277fcc41f172.jpg?width=720&height=720&hash=FA7BFFBF52BB4D93CD59750DCDA2DDDC",
+          "price_currency": "3.123,74лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro Max, 512GB, 5G, Desert Titanium",
+          "item_current_price": "3.125,76",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-16-pro-max-512gb-5g-desert-titanium-myx23zd-a/pd/D2267LYBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/76828/76827268/images/res_2e96db7aae423d09717a344bb22a43d2.jpg?width=720&height=720&hash=B94CCA141159617DAEEBC67CF72FF2BC",
+          "price_currency": "3.125,76лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 15 Pro Max, 256GB, 5G, Blue Titanium",
+          "item_current_price": "2.350,00",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-15-pro-max-256gb-5g-blue-titanium-mu7a3rx-a/pd/DHLH93YBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/60458/60457156/images/res_968c9ac33392707226842f4933552b0c.jpg?width=720&height=720&hash=E6495DD6BD702C3B660156F76D2B0FDB",
+          "price_currency": "2.350,00лв."
+        },
+        {
+          "item": "Смартфон Huawei P30 Pro, Dual SIM, 128GB, 8GB RAM, 4G, Aurora Blue",
+          "item_current_price": "348,62",
+          "item_page_url": "https://www.emag.bg/smartfon-huawei-p30-pro-dual-sim-128gb-8gb-ram-4g-aurora-blue-huawei-p30-pro-128-8-blue/pd/DGN46DMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/20936/20935294/images/res_ba09711c76ff81bcf7690797cb89a9c6.jpg?width=720&height=720&hash=F72D27F8C824CA4D2E189C7E9BC45B81",
+          "price_currency": "348,62лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 14 Plus, 128GB, 6GB RAM, 5G, RED",
+          "item_current_price": "1.640,98",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-14-plus-128gb-6gb-ram-5g-red-mq513rx-a/pd/DP7Y4LMBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/48592/48591210/images/res_73fcc2d14749f4951a0b11925c7b9b58.jpg?width=720&height=720&hash=4225EDB63E79B36A46CFC765BBC48EAB",
+          "price_currency": "1.640,98лв."
+        },
+        {
+          "item": "Смартфон Apple iPhone 15 Plus,128GB, 5G, Blue",
+          "item_current_price": "1.739,99",
+          "item_page_url": "https://www.emag.bg/smartfon-apple-iphone-15-plus-128gb-5g-blue-mu163rx-a/pd/DNCH93YBM/",
+          "item_image_url": "https://s13emagst.akamaized.net/products/60458/60457139/images/res_40465a8a7f9960c96c98670cba5cae1f.jpg?width=720&height=720&hash=85EB517A39D387BC53AE611A27D81B76",
+          "price_currency": "1.739,99лв."
+        }
+      ]
+    },
+    {
+      "domain": "plesio.bg",
+      "extracted_data": [
+        {
+          "item": "AppleiPhone 16 Pro 128GB 5G Desert Titanium",
+          "item_current_price": "2289.00лв",
+          "item_page_url": "/smartfoni-c-69978016/apple-iphone-16-pro-128gb-5g-desert-titanium-p-377428.html",
+          "item_image_url": "https://plesioimages.fra1.cdn.digitaloceanspaces.com/ProductImages/250x250/688b72a8c0451e4331a8f2d578373dd766e2cd7deb7c9.4620933.jpg",
+          "price_currency": "2289.00лв",
+          "item_available": ""
+        },
+        {
+          "item": "AppleiPhone 16 Pro 128GB 5G White Titanium",
+          "item_current_price": "2289.00лв",
+          "item_page_url": "/smartfoni-c-69978016/apple-iphone-16-pro-128gb-5g-white-titanium-p-377493.html",
+          "item_image_url": "https://plesioimages.fra1.cdn.digitaloceanspaces.com/ProductImages/250x250/8fb6552089b667ba3a6a2147c9c935b966e2cb804b2ec.4620917.jpg",
+          "price_currency": "2289.00лв",
+          "item_available": ""
+        },
+        {
+          "item": "AppleiPhone 16 Pro 128GB 5G Natural Titanium",
+          "item_current_price": "2289.00лв",
+          "item_page_url": "/smartfoni-c-69978016/apple-iphone-16-pro-128gb-5g-natural-titanium-p-377438.html",
+          "item_image_url": "https://plesioimages.fra1.cdn.digitaloceanspaces.com/ProductImages/250x250/a9a3c37f1b74e4503e1f2523aac5651e66e2a485efbbb.4620925.jpg",
+          "price_currency": "2289.00лв",
+          "item_available": ""
+        },
+        {
+          "item": "AppleiPhone 16 Pro 128GB 5G Black Titanium",
+          "item_current_price": "2289.00лв",
+          "item_page_url": "/smartfoni-c-69978016/apple-iphone-16-pro-128gb-5g-black-titanium-p-377516.html",
+          "item_image_url": "https://plesioimages.fra1.cdn.digitaloceanspaces.com/ProductImages/250x250/c8e6116478e4cbe792720d5434f3526966e2c9bf4cbb4.4620909.jpg",
+          "price_currency": "2289.00лв",
+          "item_available": ""
+        }
+      ]
+    },
+    {
+      "domain": "greenmobile.bg",
+      "extracted_data": []
+    },
+    {
+      "domain": "gsm-bg.eu",
+      "extracted_data": [
+        {
+          "item": "Apple iPhone 16 Pro 128GB Black Titanium",
+          "item_page_url": "https://gsm-bg.eu/apple-iphone-16-pro-128gb-black-titanium?search=apple%20iphone%2016%20pro%20128gb",
+          "item_image_url": "https://gsm-bg.eu/image/cache/catalog/apple/Apple%20iPhone%2016%20Pro%20128GB%20Black%20Titanium-228x228.png",
+          "item_available": "наличен"
+        },
+        {
+          "item": "Apple iPhone 16 Pro 128GB Desert Titanium",
+          "item_page_url": "https://gsm-bg.eu/apple-iphone-16-pro-128gb-desert-titanium?search=apple%20iphone%2016%20pro%20128gb",
+          "item_image_url": "https://gsm-bg.eu/image/cache/catalog/apple/Apple%20iPhone%2016%20Pro%20128GB%20Desert%20Titanium-228x228.png",
+          "item_available": "изчерпан"
+        },
+        {
+          "item": "Apple iPhone 16 Pro 128GB Natural Titanium",
+          "item_page_url": "https://gsm-bg.eu/apple-iphone-16-pro-128gb-natural-titanium?search=apple%20iphone%2016%20pro%20128gb",
+          "item_image_url": "https://gsm-bg.eu/image/cache/catalog/apple/Apple%20iPhone%2016%20Pro%20128GB%20Natural%20Titanium-228x228.png",
+          "item_available": "наличен"
+        },
+        {
+          "item": "Apple iPhone 16 Pro 128GB White Titanium",
+          "item_page_url": "https://gsm-bg.eu/apple-iphone-16-pro-128gb-white-titanium?search=apple%20iphone%2016%20pro%20128gb",
+          "item_image_url": "https://gsm-bg.eu/image/cache/catalog/apple/Apple%20iPhone%2016%20Pro%20128GB%20White%20Titanium-228x228.png",
+          "item_available": "изчерпан"
+        }
+      ]
+    },
+    {
+      "domain": "ofisitebg.com",
+      "extracted_data": [
+        {
+          "item": "Asus Zenbook X OLED UX5401ZAS-OLED-KN731X, Num Pad, Intel Core i7-12700H/BGA OLED 14\" 2.8K (2880 x 1800)WQ+ BEND GL TP 400NITS, 16GB LPDDR5(ON BD), PCIEG4 1TB SSD,Windows 11 Pro 64BIT,",
+          "item_current_price": "2,389.00",
+          "item_page_url": "https://ofisitebg.com/product/asus-zenbook-x-oled-ux5401zas-oled-kn731x-num-pad-intel-core-i7-12700hbga-oled-14-28k-2880-x-1800wq-bend-gl-tp-400nits-16gb-lpddr5on-bd-pcieg4-1tb-ssdwindows-11-pro-64bit",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "asus zenbook x oled ux5401zas-oled-kn731x, num pad, intel core i7-12700h/bga oled 14\" 2.8k (2880 x 1800)wq+ bend gl tp 400nits, 16gb lpddr5(on bd), pcieg4 1tb ssd,windows 11 pro 64bit,(0.0)процесор:intel core i7-12700h 3.50 ghzram памет:16gbвидео карта:вграденадисплей:14.0\"любимисравни2,389.00лв.2,635.00лв."
+        },
+        {
+          "item": "HP ProBook 440 G8 i5-1135G7 14.0inch FHD 8GB RAM 512 W10P",
+          "item_current_price": "1,429.00",
+          "item_page_url": "https://ofisitebg.com/product/hp-probook-440-g8-i5-1135g7-140inch-fhd-8gb-ram-512-w10p",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "hp probook 440 g8 i5-1135g7 14.0inch fhd 8gb ram 512 w10p(0.0)процесор:intel core i5 (11th gen) 1135g7ram памет:8gbвидео карта:вграденадисплей:14\"любимисравни1,429.00лв.1,749.00лв."
+        },
+        {
+          "item": "Настолен компютър, Fujitsu ESPRIMO G5011 ~0.86 liters, Intel Pentium G6400, 4GB DDR4-3200, SSD PCIe 128GB M.2 NVMe Value, Mounting Kit for 2,5\"HDD, AC-Adapter 19V/65W, Win10 Pro Entry",
+          "item_current_price": "699.00",
+          "item_page_url": "https://ofisitebg.com/product/nastolen-kompyutar-fujitsu-esprimo-g5011-086-liters-intel-pentium-g6400-4gb-ddr4-3200-ssd-pcie-128gb-m2-nvme-value-mounting-kit-for-25hdd-ac-adapter-19v65w-win10-pro-entry",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "настолен компютър, fujitsu esprimo g5011 ~0.86 liters, intel pentium g6400, 4gb ddr4-3200, ssd pcie 128gb m.2 nvme value, mounting kit for 2,5\"hdd, ac-adapter 19v/65w, win10 pro entry(0.0)процесор:intel pentium g6400 4.00 ghzram памет:4gbвидео карта:вграденаos:windows 10 proлюбимисравни699.00лв.1,199.00лв."
+        },
+        {
+          "item": "HP ProBook 450 G8 i5-1135G7 15.6inch 16GB 1TB SSD W10P (BG)",
+          "item_current_price": "1,759.00",
+          "item_page_url": "https://ofisitebg.com/product/hp-probook-450-g8-i5-1135g7-156inch-16gb-1tb-ssd-w10p-bg",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "hp probook 450 g8 i5-1135g7 15.6inch 16gb 1tb ssd w10p (bg)(0.0)процесор:intel core i5 (11th gen) 1135g7 / 2.4 ghzram памет:16gbвидео карта:вграденадисплей:15.6\"любимисравни1,759.00лв.1,869.00лв."
+        },
+        {
+          "item": "HP ProBook 450 G8 i5-1135G7 15.6inch FHD 8GB RAM 256GB PCIe NVMe SSD W10P (BG)",
+          "item_current_price": "1,399.00",
+          "item_page_url": "https://ofisitebg.com/product/hp-probook-450-g8-i5-1135g7-156inch-fhd-8gb-ram-256gb-pcie-nvme-ssd-w10p-bg",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "hp probook 450 g8 i5-1135g7 15.6inch fhd 8gb ram 256gb pcie nvme ssd w10p (bg)(0.0)процесор:intelcorei5 1135g7ram памет:8gbвидео карта:вграденадисплей:15.6\"любимисравни1,399.00лв.1,959.00лв."
+        },
+        {
+          "item": "HP ProBook 450 G8 i5-1135G7 15.6inch FHD 8GB RAM 512GB PCIe NVMe SSD W10P (BG)",
+          "item_current_price": "1,549.00",
+          "item_page_url": "https://ofisitebg.com/product/hp-probook-450-g8-i5-1135g7-156inch-fhd-8gb-ram-512gb-pcie-nvme-ssd-w10p-bg",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "hp probook 450 g8 i5-1135g7 15.6inch fhd 8gb ram 512gb pcie nvme ssd w10p (bg)(0.0)процесор:intelcorei5 1135g7ram памет:8gbвидео карта:вграденадисплей:15.6\"любимисравни1,549.00лв.2,059.00лв."
+        },
+        {
+          "item": "Dell Vostro 3510, Intel Core i3-1115G4 (6M Cache, up to 4.1 GHz), 15.6\" FHD 8GB, 2666MHz DDR4, 256GB M.2 PCIe NVMe SSD, Intel UHD, 802.11ac, BT, BG KB , Linux, Black, 3Y Pro S",
+          "item_current_price": "819.00",
+          "item_page_url": "https://ofisitebg.com/product/dell-vostro-3510-intel-core-i3-1115g4-6m-cache-up-to-41-ghz-156-fhd-8gb-2666mhz-ddr4-256gb-m2-pcie-nvme-ssd-intel-uhd-80211ac-bt-bg-kb-linux-black-3y-pro-s",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "dell vostro 3510, intel core i3-1115g4 (6m cache, up to 4.1 ghz), 15.6\" fhd 8gb, 2666mhz ddr4, 256gb m.2 pcie nvme ssd, intel uhd, 802.11ac, bt, bg kb , linux, black, 3y pro s(0.0)процесор:intel core i3-1115g4ram памет:8gbвидео карта:вграденадисплей:15.6\"любимисравни819.00лв.999.00лв."
+        },
+        {
+          "item": "Dell Vostro 3510, Intel Core i5-1135G7, 15.6\" FHD, HD Cam, 8GB, 2666MHz DDR4, 256GB M.2 PCIe NVMe SSD, Intel UHD, 802.11ac, BT, BG KB, Ubuntu, Black, 3Y Pro S",
+          "item_current_price": "1,019.00",
+          "item_page_url": "https://ofisitebg.com/product/dell-vostro-3510-intel-core-i5-1135g7-156-fhd-hd-cam-8gb-2666mhz-ddr4-256gb-m2-pcie-nvme-ssd-intel-uhd-80211ac-bt-bg-kb-ubuntu-black-3y-pro-s",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "dell vostro 3510, intel core i5-1135g7, 15.6\" fhd, hd cam, 8gb, 2666mhz ddr4, 256gb m.2 pcie nvme ssd, intel uhd, 802.11ac, bt, bg kb, ubuntu, black, 3y pro s(0.0)процесор:intel core i5-1135g7ram памет:8gbвидео карта:вграденадисплей:15.6\"любимисравни1,019.00лв.1,299.00лв."
+        },
+        {
+          "item": "ASUS PENT 6000 8GB 512GB SSD 15.6'' FHD INT WIN 11 HOME SILVER",
+          "item_current_price": "1,019.00",
+          "item_page_url": "https://ofisitebg.com/product/asus-pent-6000-8gb-512gb-ssd-156-fhd-int-win-11-home-silver",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "asus pent 6000 8gb 512gb ssd 15.6'' fhd int win 11 home silver(0.0)процесор:intel pentium silver n6000 processor 1.1 ghzram памет:8gbвидео карта:вграденадисплей:15.6\"любимисравни1,019.00лв.1,099.00лв."
+        },
+        {
+          "item": "Acer Travelmate TMP215-54-53D0, Core i5-1235U, (3.3GHz up to 4.40Ghz, 12MB), 15.6\" FHD IPS(1920 x 1080), 1*16GB DDR4, 512GB PCIe NVMe SSD, Intel UMA, HD cam, TPM 2.0, Win11 Pro,",
+          "item_current_price": "1,309.00",
+          "item_page_url": "https://ofisitebg.com/product/acer-travelmate-tmp215-54-53d0-core-i5-1235u-33ghz-up-to-440ghz-12mb-156-fhd-ips1920-x-1080-116gb-ddr4-512gb-pcie-nvme-ssd-intel-uma-hd-cam-tpm-20-win11-pro",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "acer travelmate tmp215-54-53d0, core i5-1235u, (3.3ghz up to 4.40ghz, 12mb), 15.6\" fhd ips(1920 x 1080), 1*16gb ddr4, 512gb pcie nvme ssd, intel uma, hd cam, tpm 2.0, win11 pro,(0.0)процесор:intel core i5-1235u 1.30 ghz, 12 mb cacheram памет:16gbвидео карта:вграденадисплей:15.6\"любимисравни1,309.00лв.1,509.00лв."
+        },
+        {
+          "item": "Acer Travelmate TMP215-54-34DU, Intel Core i3 1215U (up to 4.4 GHz, 10MB), 15.6\" FHD IPS, 16GB DDR4, SSD 512GB + HDD kit, AX201, FPR,50Wh, Win 11 Pro,",
+          "item_current_price": "1,209.00",
+          "item_page_url": "https://ofisitebg.com/product/acer-travelmate-tmp215-54-34du-intel-core-i3-1215u-up-to-44-ghz-10mb-156-fhd-ips-16gb-ddr4-ssd-512gb-hdd-kit-ax201-fpr50wh-win-11-pro",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "acer travelmate tmp215-54-34du, intel core i3 1215u (up to 4.4 ghz, 10mb), 15.6\" fhd ips, 16gb ddr4, ssd 512gb + hdd kit, ax201, fpr,50wh, win 11 pro,(0.0)процесор:intel core i3-1215u 3.30 ghz, 10 mb cacheram памет:16gbвидео карта:вграденадисплей:15.6\"любимисравни1,209.00лв.1,279.00лв."
+        },
+        {
+          "item": "HP 250 G8 Asteroid Silver, Core i3-1115G4",
+          "item_current_price": "1,099.00",
+          "item_page_url": "https://ofisitebg.com/product/hp-250-g8-asteroid-silver-core-i3-1115g4",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "hp 250 g8 asteroid silver, core i3-1115g4(0.0)процесор:intel core i3-1115g4 3.00 ghzram памет:8gbвидео карта:вграденадисплей:15.6\"любимисравни1,099.00лв.1,469.00лв."
+        },
+        {
+          "item": "Настолен компютър Dell Vostro 3888 MT (N113VD3888EMEA01_2101)",
+          "item_current_price": "1,269.00",
+          "item_page_url": "https://ofisitebg.com/product/nastolen-kompyutar-dell-vostro-3888-mt-n113vd3888emea01-2101",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "настолен компютър dell vostro 3888 mt (n113vd3888emea01_2101)(0.0)процесор:intel core i5-10400 2.90 ghzram памет:8gbвидео карта:вграденаos:windows 11 proлюбимисравни1,269.00лв.1,450.00лв."
+        },
+        {
+          "item": "Dell Vostro 3535, AMD Ryzen 5 7530U (6-core/12-thread), 15.6\" FHD (1920x1080), 8GB, 1x8GB, DDR4, 3200MHz, 256GB SSD PCIe M.2, Radeon Graphics, Backlit Kb, Win 11 Pro",
+          "item_current_price": "1,279.00",
+          "item_page_url": "https://ofisitebg.com/product/dell-vostro-3535-amd-ryzen-5-7530u-6-core12-thread-156-fhd-1920x1080-8gb-1x8gb-ddr4-3200mhz-256gb-ssd-pcie-m2-radeon-graphics-backlit-kb-win-11-pro",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "dell vostro 3535, amd ryzen 5 7530u (6-core/12-thread), 15.6\" fhd (1920x1080), 8gb, 1x8gb, ddr4, 3200mhz, 256gb ssd pcie m.2, radeon graphics, backlit kb, win 11 pro(0.0)процесор:amd ryzen 5 7530u 2.00 ghzram памет:8gbвидео карта:вграденадисплей:15.6\"любимисравни1,279.00лв.1,599.00лв."
+        },
+        {
+          "item": "Аудио кабел DeTech 3.5 - 2RCA, 1.5м. high quality",
+          "item_current_price": "2.99",
+          "item_page_url": "https://ofisitebg.com/product/audio-kabel-detech-35-2rca-15m-high-quality",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "аудио кабел detech 3.5 - 2rca, 1.5м. high quality(0.0)любимисравни2.99лв.3.50лв."
+        },
+        {
+          "item": "Dell Vostro 3520, Intel Core i3-1215U (10 MB Cache up to 4.40 GHz), 15.6\" FHD (1920x1080) AG 120Hz WVA 250nits, 8GB, 1x8GB DDR4, 256GB PCIe M.2, UHD Graphics, HD Cam and Mic, 802.11ac, BG KB",
+          "item_current_price": "719.00",
+          "item_page_url": "https://ofisitebg.com/product/dell-vostro-3520-intel-core-i3-1215u-10-mb-cache-up-to-440-ghz-156-fhd-1920x1080-ag-120hz-wva-250nits-8gb-1x8gb-ddr4-256gb-pcie-m2-uhd-graphics-hd-cam-and-mic-80211ac-bg-kb",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "dell vostro 3520, intel core i3-1215u (10 mb cache up to 4.40 ghz), 15.6\" fhd (1920x1080) ag 120hz wva 250nits, 8gb, 1x8gb ddr4, 256gb pcie m.2, uhd graphics, hd cam and mic, 802.11ac, bg kb(0.0)процесор:intel core i3-1215u 3.30 ghzram памет:8gbвидео карта:вграденадисплей:15.6\"любимисравни719.00лв.999.00лв."
+        },
+        {
+          "item": "ASUS I3-11 8GB 256GB SSD 15.6'' FHD INT SILVER",
+          "item_current_price": "789.00",
+          "item_page_url": "https://ofisitebg.com/product/asus-i3-11-8gb-256gb-ssd-156-fhd-int-silver-1",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "asus i3-11 8gb 256gb ssd 15.6'' fhd int silver(0.0)процесор:intel core i3-1115g4 3.0 ghzram памет:8gbвидео карта:вграденадисплей:15.6\"любимисравни789.00лв.879.00лв."
+        },
+        {
+          "item": "Dell Vostro 3520, Intel Core i5-1235U (12 MB Cache up to 4.40 GHz), 15.6\" FHD (1920x1080) AG 120Hz WVA 250nits, 8GB, 1x8GB DDR4, 512GB PCIe M.2, UHD Graphics, HD Cam and Mic, 802.11ac, BG KB",
+          "item_current_price": "889.00",
+          "item_page_url": "https://ofisitebg.com/product/dell-vostro-3520-intel-core-i5-1235u-12-mb-cache-up-to-440-ghz-156-fhd-1920x1080-ag-120hz-wva-250nits-8gb-1x8gb-ddr4-512gb-pcie-m2-uhd-graphics-hd-cam-and-mic-80211ac-bg-kb",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "dell vostro 3520, intel core i5-1235u (12 mb cache up to 4.40 ghz), 15.6\" fhd (1920x1080) ag 120hz wva 250nits, 8gb, 1x8gb ddr4, 512gb pcie m.2, uhd graphics, hd cam and mic, 802.11ac, bg kb(0.0)процесор:intel core i5-1235u 1.30 ghz, 12 mb cacheram памет:8gbвидео карта:вграденадисплей:15.6\"любимисравни889.00лв.1,189.00лв."
+        },
+        {
+          "item": "HP 15s-fq5015nu Pale Gold, Core i3-1215U(up to 4.4Ghz/10MB/6C), 15.6\" FHD AG, 16GB 3200Mhz 2DIMM, 512GB PCIe SSD, WiFi 5 + BT4.2, 3C Batt Long Life, Free DOS",
+          "item_current_price": "1,049.00",
+          "item_page_url": "https://ofisitebg.com/product/hp-15s-fq5015nu-pale-gold-core-i3-1215uup-to-44ghz10mb6c-156-fhd-ag-16gb-3200mhz-2dimm-512gb-pcie-ssd-wifi-5-bt42-3c-batt-long-life-free-dos",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "hp 15s-fq5015nu pale gold, core i3-1215u(up to 4.4ghz/10mb/6c), 15.6\" fhd ag, 16gb 3200mhz 2dimm, 512gb pcie ssd, wifi 5 + bt4.2, 3c batt long life, free dos(0.0)процесор:intel core i3-1215u 3.30 ghz, 10 mb cacheram памет:16gbвидео карта:вграденадисплей:15.6\"любимисравни1,049.00лв.1,089.00лв."
+        },
+        {
+          "item": "HP Pavilion 15-eg3001nu Warm Gold, Core i5-1335U(up to 4.6GHz/12MB/10C), 15.6\" FHD IPS AG, 16GB 3200MHz 2DIMM, 512GB PCIe SSD, WiFi 6+BT 5.3, FPR, Backlit Kbd, 3C Batt, Free DOS",
+          "item_current_price": "1,389.00",
+          "item_page_url": "https://ofisitebg.com/product/hp-pavilion-15-eg3001nu-warm-gold-core-i5-1335uup-to-46ghz12mb10c-156-fhd-ips-ag-16gb-3200mhz-2dimm-512gb-pcie-ssd-wifi-6bt-53-fpr-backlit-kbd-3c-batt-free-dos",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "hp pavilion 15-eg3001nu warm gold, core i5-1335u(up to 4.6ghz/12mb/10c), 15.6\" fhd ips ag, 16gb 3200mhz 2dimm, 512gb pcie ssd, wifi 6+bt 5.3, fpr, backlit kbd, 3c batt, free dos(0.0)процесор:intel core i5-1335u 3.40 ghz, 12 mb cacheram памет:16gbвидео карта:вграденадисплей:15.6\"любимисравни1,389.00лв.1,449.00лв."
+        },
+        {
+          "item": "HP ProBook 450 G8 i5-1135G7 15.6inch FHD IPS 8GB RAM 512GB FREE DOS (BG)",
+          "item_current_price": "1,409.00",
+          "item_page_url": "https://ofisitebg.com/product/hp-probook-450-g8-i5-1135g7-156inch-fhd-ips-8gb-ram-512gb-free-dos-bg",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "hp probook 450 g8 i5-1135g7 15.6inch fhd ips 8gb ram 512gb free dos (bg)(0.0)процесор:intel core i5 1135g7 / 2.4 ghzram памет:8gbвидео карта:вграденадисплей:15.6\"любимисравни1,409.00лв.1,759.00лв."
+        },
+        {
+          "item": "Acer Nitro 5, AN515-57-50NF, Intel Core i5-11400H(2.7GHz up to 4.5GHz, 12MB), 15.6\" FHD IPS 144Hz, 8GB DDR4 3200MHz, 512GB SSD PCIe, M.2 free, GTX 1650 4GB GDDR6, Backlit Kbd, Black",
+          "item_current_price": "1,499.00",
+          "item_page_url": "https://ofisitebg.com/product/acer-nitro-5-an515-57-50nf-intel-core-i5-11400h27ghz-up-to-45ghz-12mb-156-fhd-ips-144hz-8gb-ddr4-3200mhz-512gb-ssd-pcie-m2-free-gtx-1650-4gb-gddr6-backlit-kbd-black",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "acer nitro 5, an515-57-50nf, intel core i5-11400h(2.7ghz up to 4.5ghz, 12mb), 15.6\" fhd ips 144hz, 8gb ddr4 3200mhz, 512gb ssd pcie, m.2 free, gtx 1650 4gb gddr6, backlit kbd, black(0.0)процесор:intel core i5-11400h 2.70 ghz, 12 mbram памет:8gbвидео карта:nvidia geforce gtx 1650 4gb gddr6дисплей:15.6\"любимисравни1,499.00лв.1,899.00лв."
+        },
+        {
+          "item": "HP ProBook 450 G8 i5-1135G7 15.6inch FHD IPS 16GB RAM 512 W10P",
+          "item_current_price": "1,619.00",
+          "item_page_url": "https://ofisitebg.com/product/hp-probook-450-g8-i5-1135g7-156inch-fhd-ips-16gb-ram-512-w10p",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "hp probook 450 g8 i5-1135g7 15.6inch fhd ips 16gb ram 512 w10p(0.0)процесор:intel core i5 1135g7ram памет:16gbвидео карта:вграденадисплей:15.6\"любимисравни1,619.00лв.1,859.00лв."
+        },
+        {
+          "item": "HP ProBook 450 G8 Intel Core i5-1135G7 15.6inch FHD 16GB DDR4 3200 RAM 512GB SSD W10P (BG)",
+          "item_current_price": "1,629.00",
+          "item_page_url": "https://ofisitebg.com/product/hp-probook-450-g8-intel-core-i5-1135g7-156inch-fhd-16gb-ddr4-3200-ram-512gb-ssd-w10p-bg",
+          "item_image_url": "https://cdncloudcart.com/11178/logo/2.svg?1699617491",
+          "price_currency": "лв",
+          "item_available": "hp probook 450 g8 intel core i5-1135g7 15.6inch fhd 16gb ddr4 3200 ram 512gb ssd w10p (bg)(0.0)процесор:intel core i5 (11th gen) 1135g7ram памет:16gbвидео карта:вграденадисплей:15.6\"любимисравни1,629.00лв.2,099.00лв."
+        }
+      ]
+    },
+    {
+      "domain": "stantek.com",
+      "extracted_data": [
+        {
+          "item": "Смартфони",
+          "item_current_price": "212800лв.",
+          "item_page_url": "?q=%D0%A1%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%B8",
+          "item_image_url": "/static/assets/no-image.svg",
+          "price_currency": "лв.",
+          "item_available": "безплатна доставка"
+        },
+        {
+          "item": "Смартфони",
+          "item_current_price": "227620лв.",
+          "item_page_url": "?q=%D0%A1%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%B8",
+          "item_image_url": "/static/assets/no-image.svg",
+          "price_currency": "лв.",
+          "item_available": "безплатна доставка"
+        },
+        {
+          "item": "Смартфони",
+          "item_current_price": "168900лв.",
+          "item_page_url": "?q=%D0%A1%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%B8",
+          "item_image_url": "/static/assets/no-image.svg",
+          "price_currency": "лв.",
+          "item_available": "безплатна доставка"
+        },
+        {
+          "item": "Смартфони",
+          "item_current_price": "176270лв.",
+          "item_page_url": "?q=%D0%A1%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%B8",
+          "item_image_url": "/static/assets/no-image.svg",
+          "price_currency": "лв.",
+          "item_available": "безплатна доставка"
+        },
+        {
+          "item": "Смартфони",
+          "item_current_price": "174450лв.",
+          "item_page_url": "?q=%D0%A1%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%B8",
+          "item_image_url": "/static/assets/no-image.svg",
+          "price_currency": "лв.",
+          "item_available": "безплатна доставка"
+        },
+        {
+          "item": "Смартфони",
+          "item_current_price": "174450лв.",
+          "item_page_url": "?q=%D0%A1%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%B8",
+          "item_image_url": "/static/assets/no-image.svg",
+          "price_currency": "лв.",
+          "item_available": "безплатна доставка"
+        }
+      ]
+    },
+    {
+      "domain": "pic.bg",
+      "extracted_data": [
+        {
+          "item": "APPLE iPhone 16 Pro 128GB Desert Titaniu",
+          "item_current_price": "2139 лв",
+          "item_page_url": "/smartfon-apple-iphone-16-pro-128gb-desert-titanium-mynf3zda-773033?search_id=3095491",
+          "item_image_url": "/data/no-image.png",
+          "price_currency": "2139 лв",
+          "item_available": ""
+        },
+        {
+          "item": "APPLE iPhone 16 Pro 128GB Black Titanium",
+          "item_current_price": "2379 лв",
+          "item_page_url": "/smartfon-apple-iphone-16-pro-128gb-black-titanium-mynd3zda-773031?search_id=3095491",
+          "item_image_url": "/data/no-image.png",
+          "price_currency": "2379 лв",
+          "item_available": "с поръчка"
+        },
+        {
+          "item": "APPLE iPhone 16 Pro 128GB White Titanium",
+          "item_current_price": "2379 лв",
+          "item_page_url": "/smartfon-apple-iphone-16-pro-128gb-white-titanium-myne3zda-773032?search_id=3095491",
+          "item_image_url": "/data/no-image.png",
+          "price_currency": "2379 лв",
+          "item_available": "с поръчка"
+        },
+        {
+          "item": "APPLE iPhone 16 Pro 128GB Natural Titani",
+          "item_current_price": "2379 лв",
+          "item_page_url": "/smartfon-apple-iphone-16-pro-128gb-natural-titanium-myng3zda-773034?search_id=3095491",
+          "item_image_url": "/image/show?f=solytron/773034-6148cfa407a363122ab3b8600ba54cb9572e280866be09fdff291ec65d2e19b6a67dda9a6c1c167f4b4360b401c5d458ef06112d0b396f4b7d138d79dca5b95d.jpg&w=220&h=220",
+          "price_currency": "2379 лв",
+          "item_available": "с поръчка"
+        },
+        {
+          "item_current_price": "2139 лв",
+          "item_image_url": "/image/show?f=solytron/773033-5f4d0454ad7e7d074cea2bccbc95e7ae535b018c71c2558418c76c8635079d980fefc4e24d00399f2c7aa0e5b287147759ce796d823ba77eaf72e8061062c707.jpg&w=220&h=220",
+          "price_currency": "2139 лв"
+        },
+        {
+          "item_current_price": "2379 лв",
+          "item_image_url": "/image/show?f=solytron/773031-bf9dc4d82b5e623e60943410ae323e76497fa893867352dc0ae1375222944553d5ef46f7db9a45e2536e26f2e58869c4308930e12a9a5180fa30ea01ed35a43a.jpg&w=220&h=220",
+          "price_currency": "2379 лв"
+        },
+        {
+          "item_current_price": "2379 лв",
+          "item_image_url": "/image/show?f=solytron/773032-0b466f5eb0343327dc52bb73bdd4c9a10a8f7040187ed1c1a0ad46d3425aed8bcbab5c621ec11ff2b7bbfc93dca3549cb661437b3244d9cb7f5feaeab67eb0ad.jpg&w=220&h=220",
+          "price_currency": "2379 лв"
+        },
+        {
+          "item_current_price": "2379 лв",
+          "item_image_url": "/image/show?f=solytron/773034-6148cfa407a363122ab3b8600ba54cb9572e280866be09fdff291ec65d2e19b6a67dda9a6c1c167f4b4360b401c5d458ef06112d0b396f4b7d138d79dca5b95d.jpg&w=220&h=220",
+          "price_currency": "2379 лв"
+        }
+      ]
+    },
+    {
+      "domain": "azo.bg",
+      "extracted_data": [
+        {
+          "item": "Xiaomi Mix Flip 5G Dual Sim 12GB RAM 512GB 6.86\" 50MP",
+          "item_page_url": "https://azo.bg/xiaomi-mix-flip-5g-dual-sim-12gb-ram-512gb-6-86-50mp",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/e25f7ee49a9117beb05ac8ca3fd5b586/s/m/smartfon-xiaomi---mix-flip--686----12gb-512gb--cheren-31.jpg",
+          "item_current_price": "1433,00"
+        },
+        {
+          "item": "Apple iPhone 16e 128GB",
+          "item_page_url": "https://azo.bg/apple-iphone-16e-128gb",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/e25f7ee49a9117beb05ac8ca3fd5b586/s/m/smartfon-apple---iphone-16e--61----8gb-128gb--cheren-30.jpg",
+          "item_current_price": "1266,00"
+        },
+        {
+          "item": "Xiaomi Redmi A5 4G Dual 3GB RAM 64GB 6.88\" 32MP",
+          "item_page_url": "https://azo.bg/xiaomi-redmi-a5-4g-dual-3gb-ram-64gb-6-88-32mp",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/e25f7ee49a9117beb05ac8ca3fd5b586/x/i/xiaomi_redmi_a5_64gb_3gb_ram_dual-sim_black.jpg",
+          "item_current_price": "167,00"
+        },
+        {
+          "item": "Xiaomi Redmi Note 14 Pro 4G Dual 12GB RAM 512GB 6.67\" 200 MP",
+          "item_page_url": "https://azo.bg/xiaomi-redmi-note-14-pro-4g-dual-12gb-ram-512gb-6-67-200-mp",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/e25f7ee49a9117beb05ac8ca3fd5b586/s/m/smartfon-xiaomi---redmi-note-14-pro--667----8gb-256gb--aurora-purple-30-2_1.jpg",
+          "item_current_price": "548,00"
+        },
+        {
+          "item": "Миксер с купа Royalty Line RL-HM19015, 700W, 6 бъркалки, 3 л, Турбо, 5 скорости, Черен/инокс",
+          "item_page_url": "https://azo.bg/mikser-s-kupa-royalty-line-rl-hm19015-700w-6-b-rkalki-3-l-turbo-5-skorosti-cheren-inoks",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/e25f7ee49a9117beb05ac8ca3fd5b586/A/L/ALF_9RLHM19015.jpg",
+          "item_current_price": "84,90"
+        },
+        {
+          "item": "Google Pixel 9 Pro 5G Dual 16GB RAM 128GB 6.3\" 50MP",
+          "item_page_url": "https://azo.bg/google-pixel-9-pro-5g-dual-16gb-ram-128gb-6-3-50mp",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/e25f7ee49a9117beb05ac8ca3fd5b586/9/_/9_pro_blk-1000x1000_1.jpg",
+          "item_current_price": "1540,00"
+        },
+        {
+          "item": "Xiaomi Redmi A3 4G Dual 3GB RAM 64GB 6.71\" 8MP",
+          "item_page_url": "https://azo.bg/xiaomi-redmi-a3-4g-dual-3gb-ram-64gb-6-71-8mp",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/7490601f230522e1da1e7a8d18834e1b/x/i/xiaomi-redmi-a3-542631_1.jpg",
+          "item_current_price": "130,00"
+        },
+        {
+          "item": "Xiaomi Poco X7 5G Dual 8GB RAM 256GB 6.67\" 50MP",
+          "item_page_url": "https://azo.bg/xiaomi-poco-x7-5g-dual-8gb-ram-256gb-6-67-50mp",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/7490601f230522e1da1e7a8d18834e1b/s/m/smartfon-poco---x7-5g--667----8gb-256gb--cheren-30.jpg",
+          "item_current_price": "446,00"
+        },
+        {
+          "item": "myPhone Телефон Hammer 6 LTE 13755",
+          "item_page_url": "https://azo.bg/myphone-telefon-hammer-6-lte-13755",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/7490601f230522e1da1e7a8d18834e1b/I/F/IFT_13755.jpg",
+          "item_current_price": "129,99"
+        },
+        {
+          "item": "MyPhone Телефон myPhone Maestro 2, Черен 9065",
+          "item_page_url": "https://azo.bg/myphone-telefon-myphone-maestro-2-cheren-9065",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/7490601f230522e1da1e7a8d18834e1b/I/F/IFT_9065.jpg",
+          "item_current_price": "71,99"
+        },
+        {
+          "item": "Xiaomi Poco X7 5G Dual 12GB RAM 512GB 6.67\" 50MP",
+          "item_page_url": "https://azo.bg/xiaomi-poco-x7-5g-dual-12gb-ram-512gb-6-67-50mp",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/7490601f230522e1da1e7a8d18834e1b/s/m/smartfon-poco---x7-5g--667----8gb-256gb--cheren-30_1.jpg",
+          "item_current_price": "524,00"
+        },
+        {
+          "item": "Apple iPhone 16e 128GB",
+          "item_page_url": "https://azo.bg/apple-iphone-16e-128gb",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/7490601f230522e1da1e7a8d18834e1b/s/m/smartfon-apple---iphone-16e--61----8gb-128gb--cheren-30.jpg",
+          "item_current_price": "1266,00"
+        },
+        {
+          "item": "Samsung Galaxy S24 S921 5G Dual 8GB RAM 128GB 6.2\" 50MP",
+          "item_page_url": "https://azo.bg/samsung-galaxy-s24-s921-5g-dual-8gb-ram-128gb-6-2-50mp",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/7490601f230522e1da1e7a8d18834e1b/s/m/smartfon-samsung-galaxy-s24-256gb-8gb-ram-dual-sim-65a972db3e127_1280x1280_1_1.png",
+          "item_current_price": "1018,00"
+        },
+        {
+          "item": "Samsung Galaxy S25+ S936 5G Dual 12GB RAM 512GB",
+          "item_page_url": "https://azo.bg/samsung-galaxy-s25-s936-5g-dual-12gb-ram-512gb",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/7490601f230522e1da1e7a8d18834e1b/s/m/smartfon-samsung---galaxy-s25-5g--62----12gb-256gb--silver-shadow-30_1.jpg",
+          "item_current_price": "1714,00"
+        },
+        {
+          "item": "MyPhone Телефон myPhone Hammer Construction 10144",
+          "item_page_url": "https://azo.bg/myphone-telefon-myphone-hammer-construction-10144",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/7490601f230522e1da1e7a8d18834e1b/I/F/IFT_10144.jpg",
+          "item_current_price": "599,99"
+        },
+        {
+          "item": "Samsung Galaxy Z Fold6 F956B 5G 12GB RAM 256GB 7,6\" 50MP",
+          "item_page_url": "https://azo.bg/samsung-galaxy-z-fold6-f956b-5g-12gb-ram-512gb-7-6-50mp-1",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/7490601f230522e1da1e7a8d18834e1b/s/m/smartfon-samsung---galaxy-z-fold6--76---63----12gb-256gb--sin-30-2_1.jpg",
+          "item_current_price": "2369,00"
+        },
+        {
+          "item": "Apple iPhone Leather Case with MagSafe - оригинален кожен кейс (естествена кожа) с MagSafe за iPhone 14 Pro Max (кафяв)",
+          "item_page_url": "https://azo.bg/apple-iphone-leather-case-with-magsafe-originalen-kozhen-kejs-estestvena-kozha-s-magsafe-za-iphone-14-pro-max-cheren",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/fa0765480520e595285de00dad88e456/D/I/DIC_60064.jpg",
+          "item_current_price": "119,00"
+        },
+        {
+          "item": "Apple Ocean Band Extension - оригинална удължителна флуороеластомерна каишка за Apple Watch Ultra 49мм (черен)",
+          "item_page_url": "https://azo.bg/apple-ocean-band-extension-originalna-udlzhitelna-fluoroelastomerna-kaishka-za-apple-watch-ultra-49mm-cheren",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/fa0765480520e595285de00dad88e456/D/I/DIC_58560.jpg",
+          "item_current_price": "129,00"
+        },
+        {
+          "item": "Apple iPhone Leather Case with MagSafe - оригинален кожен кейс (естествена кожа) с MagSafe за iPhone 14 Plus (кафяв)",
+          "item_page_url": "https://azo.bg/apple-iphone-leather-case-with-magsafe-originalen-kozhen-kejs-estestvena-kozha-s-magsafe-za-iphone-14-plus-kafyav",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/fa0765480520e595285de00dad88e456/D/I/DIC_60058.jpg",
+          "item_current_price": "149,00"
+        },
+        {
+          "item": "Apple USB-C to Magsafe 3 Charge Cable - оригинален магнитен захранващ кабел за MacBook Pro 14 (2021) и MacBook Pro 16 (2021) (200 см) (bulk)",
+          "item_page_url": "https://azo.bg/apple-usb-c-to-magsafe-3-charge-cable-originalen-magniten-zakhranvashh-kabel-za-macbook-pro-14-2021-i-macbook-pro-16-2021-200-sm-bulk",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/fa0765480520e595285de00dad88e456/D/I/DIC_59776.jpg",
+          "item_current_price": "99,00"
+        },
+        {
+          "item": "Apple iPhone Leather Case with MagSafe - оригинален кожен кейс (естествена кожа) с MagSafe за iPhone 14 (кафяв)",
+          "item_page_url": "https://azo.bg/apple-iphone-leather-case-with-magsafe-originalen-kozhen-kejs-estestvena-kozha-s-magsafe-za-iphone-14-kafyav",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/fa0765480520e595285de00dad88e456/D/I/DIC_60059.jpg",
+          "item_current_price": "99,00"
+        },
+        {
+          "item": "Apple AirTag Leather Key Ring - стилен оригинален ключодържател от естествена кожа за Apple AirTag (кафяв)",
+          "item_page_url": "https://azo.bg/apple-airtag-leather-key-ring-stilen-originalen-klyuchodrzhatel-ot-estestvena-kozha-za-apple-airtag-kafyav",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/fa0765480520e595285de00dad88e456/D/I/DIC_59564.jpg",
+          "item_current_price": "99,00"
+        },
+        {
+          "item": "Apple 140W USB-C Power Adapter - оригинално захранване за MacBook Pro 16, Pro 14, Pro 13, Air 13 и компютри с USB-C порт (ритейл опаковка)",
+          "item_page_url": "https://azo.bg/apple-140w-usb-c-power-adapter-originalno-zakhranvane-za-macbook-pro-16-pro-14-pro-13-air-13-i-kompyutri-s-usb-c-port-ritejl-opakovka",
+          "item_image_url": "https://azo.bg/media/catalog/product/cache/fa0765480520e595285de00dad88e456/D/I/DIC_59562.jpg",
+          "item_current_price": "219,00"
+        }
+      ]
+    },
+    {
+      "domain": "pcshop.bg",
+      "extracted_data": [
+        {
+          "item": "Apple iPhone 16 Pro 128GB в комплект с безжични слушалки",
+          "item_page_url": "https://pcshop.bg/smart/mobilni-telefoni/vsichki-mobilni-telefoni/apple-iphone-16-pro-bezzhichni-slushalki-ttec-mode",
+          "item_image_url": "https://cdn.mydreamshop.io/resized/private/pcshop/products/images/80712c9c81eee1e349218e5e2b5f7986/B/1738666716859167a1f2dcd1bf2972.png",
+          "item_available": "промо"
+        },
+        {
+          "item": "APPLE iPhone 16 Pro 128GB Desert Titanium",
+          "item_page_url": "https://pcshop.bg/smart/mobilni-telefoni/vsichki-mobilni-telefoni/apple-iphone-16-pro-128gb-desert-titanium",
+          "item_image_url": "https://cdn.mydreamshop.io/resized/shared/also/products/images/40e3d6187e3bac46d19edfd440bac1ae/B/1741332041175167ca9e492ac4812.jpeg",
+          "item_available": "на изчерпване"
+        }
+      ]
+    },
+    {
+      "domain": "vsichkistoki.com",
+      "extracted_data": [
+        {
+          "item": "Apple iPhone 16 Pro 128GB",
+          "item_page_url": "https://www.vsichkistoki.com/apple-iphone-16-pro-128gb?search=apple%20iphone%2016%20pro%20128gb",
+          "item_image_url": "https://www.vsichkistoki.com/image/cache/catalog/apple-iphone-16-pro-1-228x228.jpg",
+          "item_current_price": "957.00",
+          "price_currency": "1,957.00лв.Без данък: 1,957.00лв."
+        }
+      ]
+    },
+    {
+      "domain": "brosbg.com",
+      "extracted_data": [
+        {
+          "item": "Ringke iPhone 16 Pro Case Fusion Clear",
+          "item_current_price": "3929 лв.",
+          "item_page_url": "https://brosbg.com/ringke-iphone-16-pro-case-fusion-clear-product-26576",
+          "item_image_url": "https://brosbg.com/uploads/ringke-iphone-16-pro-case-fusion-clear-product-big-26576-1-3146734245.jpg",
+          "price_currency": "BGN"
+        },
+        {
+          "item": "Ringke iPhone 16 Pro Case Fusion…",
+          "item_current_price": "3935 лв.",
+          "item_page_url": "https://brosbg.com/ringke-iphone-16-pro-case-fusion-magnetic-clear-product-26577",
+          "item_image_url": "https://brosbg.com/uploads/ringke-iphone-16-pro-case-fusion-magnetic-clear-product-big-26577-1-4461264884.jpg",
+          "price_currency": "BGN"
+        },
+        {
+          "item": "Ringke iPhone 16 Pro Case Onyx Black",
+          "item_current_price": "3929 лв.",
+          "item_page_url": "https://brosbg.com/ringke-iphone-16-pro-case-onyx-black-product-26578",
+          "item_image_url": "https://brosbg.com/uploads/ringke-iphone-16-pro-case-onyx-black-product-big-26578-1-7876861372.jpg",
+          "price_currency": "BGN"
+        },
+        {
+          "item": "Ringke iPhone 16 Pro Case Onyx…",
+          "item_current_price": "39 лв.",
+          "item_page_url": "https://brosbg.com/ringke-iphone-16-pro-case-onyx-magnetic-black-product-26579",
+          "item_image_url": "https://brosbg.com/uploads/ringke-iphone-16-pro-case-onyx-magnetic-black-product-big-26579-1-3142834622.jpg",
+          "price_currency": "BGN"
+        }
+      ]
+    },
+    {
+      "domain": "smartx.bg",
+      "extracted_data": [
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 128GB, White Titanium",
+          "item_current_price": "2,745.90 лв. с ДДС",
+          "item_page_url": "/products/smartfon-apple-iphone-16-pro-128gb-white-titanium?_pos=1&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/MYNE3SXA_MYNE3SXA-00_500x500.jpg?v=1739127931",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 128GB, Desert Titanium",
+          "item_current_price": "2,886.90 лв. с ДДС",
+          "item_page_url": "/products/smartfon-apple-iphone-16-pro-128gb-desert-titanium?_pos=2&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/smartfon-apple-iphone-16-pro-128gb-desert-titanium-414_500x500.webp?v=1732662535",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 128GB Teal",
+          "item_current_price": "1,885.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-128gb-teal?_pos=3&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefon-apple-iphone-16-128gb-teal-382_512x512.webp?v=1731938461",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 Pro 128GB Natural Titanium",
+          "item_current_price": "2,835.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-pro-128gb-natural-titanium?_pos=4&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobile-telefon-apple-iphone-16-pro-128gb-natural-titanium-687_512x512.webp?v=1731939558",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 Pro 128GB Desert Titanium",
+          "item_current_price": "2,617.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-pro-128gb-desert-titanium?_pos=5&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefon-apple-iphone-16-pro-128gb-desert-titanium-178_512x512.webp?v=1731939520",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 Pro 128GB White Titanium",
+          "item_current_price": "2,822.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-pro-128gb-white-titanium?_pos=6&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefon-apple-iphone-16-pro-128gb-white-titanium-670_512x512.webp?v=1731939483",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 Pro 128GB Black Titanium",
+          "item_current_price": "2,917.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-pro-128gb-black-titanium?_pos=7&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefon-apple-iphone-16-pro-128gb-black-titanium-815_512x512.webp?v=1731939448",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 128GB Pink",
+          "item_current_price": "2,126.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-128gb-pink?_pos=8&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefon-apple-iphone-16-128gb-pink-842_512x512.webp?v=1731938380",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 128GB Ultramarine",
+          "item_current_price": "2,126.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-128gb-ultramarine?_pos=9&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefon-apple-iphone-16-128gb-ultramarine-885_512x512.webp?v=1731938423",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 128GB White",
+          "item_current_price": "2,126.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-128gb-white?_pos=10&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefon-apple-iphone-16-128gb-white-144_512x512.webp?v=1731938339",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 128GB Black",
+          "item_current_price": "2,126.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-128gb-black?_pos=11&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefon-apple-iphone-16-128gb-black-700_512x512.webp?v=1731938298",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 Plus 128GB Teal",
+          "item_current_price": "2,406.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-plus-128gb-teal?_pos=12&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefen-apple-iphone-16-plus-128gb-teal-904_512x512.webp?v=1731939044",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 Plus 128GB Pink",
+          "item_current_price": "2,235.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-plus-128gb-pink?_pos=13&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefen-apple-iphone-16-plus-128gb-pink-737_512x512.webp?v=1731938965",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 Plus 128GB White",
+          "item_current_price": "2,406.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-plus-128gb-white?_pos=14&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefon-apple-iphone-16-plus-128gb-white-758_512x512.webp?v=1731938926",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Мобилен телефон, Apple iPhone 16 Plus 128GB Ultramarine",
+          "item_current_price": "2,406.90 лв. с ДДС",
+          "item_page_url": "/products/mobilen-telefon-apple-iphone-16-plus-128gb-ultramarine?_pos=15&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/mobilen-telefon-apple-iphone-16-plus-128gb-ultramarine-478_512x512.webp?v=1731939003",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 512GB, White Titanium",
+          "item_current_price": "3,475.90 лв. с ДДС",
+          "item_page_url": "/products/smartfon-apple-iphone-16-pro-512gb-white-titanium?_pos=16&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/MYNN3SXA_MYNN3SXA-00_500x500.jpg?v=1741791324",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 256GB, White Titanium",
+          "item_current_price": "3,211.90 лв. с ДДС",
+          "item_page_url": "/products/smartfon-apple-iphone-16-pro-256gb-white-titanium?_pos=17&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/smartfon-apple-iphone-16-pro-256gb-white-titanium-559_500x500.webp?v=1732661685",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Кейс Torras Pstand Series за iPhone 16 Pro Max, сив",
+          "item_current_price": "46.90 лв. с ДДС",
+          "item_page_url": "/products/keis-torras-pstand-series-za-iphone-16-pro-max-siv?_pos=18&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/keys-torras-pstand-series-za-iphone-16-pro-max-siv-626_512x512.webp?v=1738447523",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Проследяващо устройство, Apple AirTag 1бр",
+          "item_current_price": "77.90 лв. с ДДС",
+          "item_page_url": "/products/prosledyavashto-ustroistvo-apple-airtag-1br?_pos=19&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/prosledavaso-ustrojstvo-apple-airtag-1br-486_500x500.webp?v=1725580758",
+          "price_currency": "лв",
+          "item_available": "няма наличност"
+        },
+        {
+          "item": "Калъф Baseus Simple за iPad Pro(2018/2020/2021/2022) 12.9\", прозрачен",
+          "item_current_price": "18.90 лв. с ДДС",
+          "item_page_url": "/products/etui-ochronne-baseus-simple-pad-pro-2018-2020-2021-2022-12-9-przezroczyste?_pos=20&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/kal-f-baseus-simple-za-ipad-pro-2018-2020-2021-2022-12-9-prozracen-966_512x512.webp?v=1725643237",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Калъф Baseus Simple за iPad Air4/Air5 10.9\"/Pad Pro(2021/2022) 11\", прозрачен",
+          "item_current_price": "17.90 лв. с ДДС",
+          "item_page_url": "/products/etui-ochronne-baseus-simple-pad-air4-air5-10-9-pad-pro-2021-2022-11-przezroczyste?_pos=21&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/kal-f-baseus-simple-za-ipad-air4-air5-10-9-pad-pro-2021-2022-11-prozracen-297_512x512.webp?v=1725643100",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Калъф Baseus Simple за iPad (2017/2018) 9.7\", прозрачен",
+          "item_current_price": "18.90 лв. с ДДС",
+          "item_page_url": "/products/etui-ochronne-baseus-simple-pad-2017-2018-9-7-przezroczyste?_pos=22&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/kal-f-baseus-simple-za-ipad-2017-2018-9-7-prozracen-870_512x512.webp?v=1725643088",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Калъф, Apple iPhone 16 Pro Clear Case with MagSafe",
+          "item_current_price": "119.90 лв. с ДДС",
+          "item_page_url": "/products/kalaf-apple-iphone-16-pro-clear-case-with-magsafe?_pos=23&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/kalff-apple-iphone-16-pro-clear-case-with-magsafe-114_512x512.webp?v=1731949612",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        },
+        {
+          "item": "Калъф, Apple iPhone 16 Plus Silicone Case with MagSafe - Black",
+          "item_current_price": "119.90 лв. с ДДС",
+          "item_page_url": "/products/kalaf-apple-iphone-16-plus-silicone-case-with-magsafe-black?_pos=24&_sid=85015c264&_ss=r",
+          "item_image_url": "//www.smartx.bg/cdn/shop/files/kalf-apple-iphone-16-plus-silicone-case-with-magsafe-black-795_512x512.webp?v=1731950207",
+          "price_currency": "лв",
+          "item_available": "в наличност"
+        }
+      ]
+    },
+    {
+      "domain": "allgsm.eu",
+      "extracted_data": [
+        {
+          "item": "Apple iPhone 16 Pro 128GB",
+          "item_current_price": "2095",
+          "price_currency": "00",
+          "item_page_url": "https://allgsm.eu/apple-iphone-16-pro-128gb",
+          "item_image_url": "https://buybest.bg/storage/public/uploads/media-manager/app-modules-shop-models-product/1971/7430/A_iphone-16-pro-black.png"
+        }
+      ]
+    },
+    {
+      "domain": "technomarket.bg",
+      "extracted_data": [
+        {
+          "data_product": "09224311",
+          "item": "IPHONE 16 PRO 128GB DESERT TITANIUM",
+          "item_current_price": "2,289лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-128gb-desert-titanium-09224311",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224311/66e1547ad7a9b.jpg.webp"
+        },
+        {
+          "data_product": "09224312",
+          "item": "IPHONE 16 PRO 128GB NATURAL TITANIUM",
+          "item_current_price": "2,289лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-128gb-natural-titanium-09224312",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224312/66e1549584035.jpg.webp"
+        },
+        {
+          "data_product": "09224313",
+          "item": "IPHONE 16 PRO 128GB WHITE TITANIUM",
+          "item_current_price": "2,289лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-128gb-white-titanium-09224313",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224313/66e154aac68d2.jpg.webp"
+        },
+        {
+          "data_product": "09224310",
+          "item": "IPHONE 16 PRO 128GB BLACK TITANIUM",
+          "item_current_price": "2,289лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-128gb-black-titanium-09224310",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224310/66e1546531501.jpg.webp"
+        },
+        {
+          "data_product": "09224328",
+          "item": "IPHONE 16 PRO MAX 1TB DESERT TITANIUM",
+          "item_current_price": "3,789лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-1tb-desert-titanium-09224328",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224328/66e155f00b073.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224330",
+          "item": "IPHONE 16 PRO MAX 1TB WHITE TITANIUM",
+          "item_current_price": "3,789лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-1tb-white-titanium-09224330",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224330/66e15632536f9.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224327",
+          "item": "IPHONE 16 PRO MAX 1TB BLACK TITANIUM",
+          "item_current_price": "3,789лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-1tb-black-titanium-09224327",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224327/66e15615d6c12.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224338",
+          "item": "IPHONE 16 PRO MAX 512GB WHITE TITANIUM",
+          "item_current_price": "3,295лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-512gb-white-titanium-09224338",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224338/66e156cc00427.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224329",
+          "item": "IPHONE 16 PRO MAX 1TB NATURAL TITANIUM",
+          "item_current_price": "3,789лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-1tb-natural-titanium-09224329",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224329/66e155dd2f833.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224336",
+          "item": "IPHONE 16 PRO MAX 512GB DESERT TITANIUM",
+          "item_current_price": "3,295лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-512gb-desert-titanium-09224336",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224336/66e1569fc5bcd.jpg.webp"
+        },
+        {
+          "data_product": "09224334",
+          "item": "IPHONE 16 PRO MAX 256GB WHITE TITANIUM",
+          "item_current_price": "2,745лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-256gb-white-titanium-09224334",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224334/66e1567a808e5.jpg.webp"
+        },
+        {
+          "data_product": "09224335",
+          "item": "IPHONE 16 PRO MAX 512GB BLACK TITANIUM",
+          "item_current_price": "3,295лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-512gb-black-titanium-09224335",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224335/66e1568cc0367.jpg.webp"
+        },
+        {
+          "data_product": "09224331",
+          "item": "IPHONE 16 PRO MAX 256GB BLACK TITANIUM",
+          "item_current_price": "2,745лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-256gb-black-titanium-09224331",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224331/66e1564747ff0.jpg.webp"
+        },
+        {
+          "data_product": "09224333",
+          "item": "IPHONE 16 PRO MAX 256GB NATURAL TITANIUM",
+          "item_current_price": "2,745лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-256gb-natural-titanium-09224333",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224333/66e15669d41e3.jpg.webp"
+        },
+        {
+          "data_product": "09224337",
+          "item": "IPHONE 16 PRO MAX 512GB NATURAL TITANIUM",
+          "item_current_price": "3,295лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-512gb-natural-titanium-09224337",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224337/66e156b670395.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224332",
+          "item": "IPHONE 16 PRO MAX 256GB DESERT TITANIUM",
+          "item_current_price": "2,745лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-max-256gb-desert-titanium-09224332",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224332/66e1565716e66.jpg.webp"
+        },
+        {
+          "data_product": "09224317",
+          "item": "IPHONE 16 PRO 1TB WHITE TITANIUM",
+          "item_current_price": "3,579лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-1tb-white-titanium-09224317",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224317/66e154ff45072.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224325",
+          "item": "IPHONE 16 PRO 512GB WHITE TITANIUM",
+          "item_current_price": "3,099лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-512gb-white-titanium-09224325",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224325/66e155856f2ad.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224314",
+          "item": "IPHONE 16 PRO 1TB BLACK TITANIUM",
+          "item_current_price": "3,579лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-1tb-black-titanium-09224314",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224314/66e154bc3bbbc.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224315",
+          "item": "IPHONE 16 PRO 1TB DESERT TITANIUM",
+          "item_current_price": "3,579лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-1tb-desert-titanium-09224315",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224315/66e154cd20080.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224316",
+          "item": "IPHONE 16 PRO 1TB NATURAL TITANIUM",
+          "item_current_price": "3,579лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-1tb-natural-titanium-09224316",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224316/66e154de4b3e8.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224323",
+          "item": "IPHONE 16 PRO 512GB DESERT TITANIUM",
+          "item_current_price": "3,099лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-512gb-desert-titanium-09224323",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224323/66e155656f3cc.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224324",
+          "item": "IPHONE 16 PRO 512GB NATURAL TITANIUM",
+          "item_current_price": "3,099лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-512gb-natural-titanium-09224324",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224324/66e1557460674.jpg.webp",
+          "item_available": "последни бройки"
+        },
+        {
+          "data_product": "09224318",
+          "item": "IPHONE 16 PRO 256GB BLACK TITANIUM",
+          "item_current_price": "2,579лв.",
+          "item_page_url": "/telefoni/apple-iphone-16-pro-256gb-black-titanium-09224318",
+          "item_image_url": "https://cdn.technomarket.bg/ng/240/uploads/library/product/09224318/66e15513ae0fb.jpg.webp"
+        }
+      ]
+    },
+    {
+      "domain": "plasico.bg",
+      "extracted_data": []
+    },
+    {
+      "domain": "amco.bg",
+      "extracted_data": []
+    },
+    {
+      "domain": "moven.bg",
+      "extracted_data": []
+    },
+    {
+      "domain": "timobile.bg",
+      "extracted_data": [
+        {
+          "item": "Apple iPhone 16 Pro 128GB",
+          "item_current_price": "2800.00лв.",
+          "item_page_url": "https://www.timobile.bg/p/apple-iphone-16-pro-128gb/",
+          "item_image_url": "https://www.timobile.bg/wp-content/uploads/2024/09/iphone_16new.jpg",
+          "price_currency": "лв."
+        }
+      ]
+    },
+    {
+      "domain": "jarcomputers.com",
+      "extracted_data": [
+        {
+          "item": "Смартфон Apple iPhone 16 Pro (Desert Titanium), поддържа 2 SIM карти, 6.3\" (16.00cm) Super Retina XDR OLED Dolby Vision 120Hz дисплей, шестядрен Apple A18 Pro 4.04GHz, 8GB RAM, 128GB Flash памет, 48 + 12 + 48 & 12 Mpix камери, iOS, 199g",
+          "price_currency": "лв",
+          "item_page_url": "https://www.jarcomputers.com/apple-iphone-16-pro-desert-titanium-128gb-mynf3zd-prod-tkgsmapplemynf3zda.html",
+          "item_image_url": "https://p.jarcomputers.com/350x350/b9/apple-iphone-16-pro-max-tkgsmapplemynf3zda_350x350.webp",
+          "item_available": "налично във външен склад"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro (Natural Titanium), поддържа 2 SIM карти, 6.3\" (16.00cm) Super Retina XDR OLED Dolby Vision 120Hz дисплей, шестядрен Apple A18 Pro 4.04GHz, 8GB RAM, 128GB Flash памет, 48 + 12 + 48 & 12 Mpix камери, iOS, 199g",
+          "price_currency": "лв",
+          "item_page_url": "https://www.jarcomputers.com/apple-iphone-16-pro-natural-titanium-128gb-myng3zd-prod-tkgsmapplemyng3zda.html",
+          "item_image_url": "https://p.jarcomputers.com/350x350/54/apple-iphone-16-pro-max-tkgsmapplemyng3zda_350x350.webp",
+          "item_available": "внос по заявка"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro (White Titanium), поддържа 2 SIM карти, 6.3\" (16.00cm) Super Retina XDR OLED Dolby Vision 120Hz дисплей, шестядрен Apple A18 Pro 4.04GHz, 8GB RAM, 128GB Flash памет, 48 + 12 + 48 & 12 Mpix камери, iOS, 199g",
+          "price_currency": "лв",
+          "item_page_url": "https://www.jarcomputers.com/apple-iphone-16-pro-white-titanium-128gb-myne3zda-prod-tkgsmapplemyne3zda.html",
+          "item_image_url": "https://p.jarcomputers.com/350x350/2e/apple-iphone-16-pro-max-tkgsmapplemyne3zda_350x350.webp",
+          "item_available": "внос по заявка"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro (Black Titanium), поддържа 2 SIM карти, 6.3\" (16.00cm) Super Retina XDR OLED Dolby Vision 120Hz дисплей, шестядрен Apple A18 Pro 4.04GHz, 8GB RAM, 128GB Flash памет, 48 + 12 + 48 & 12 Mpix камери, iOS, 199g",
+          "price_currency": "лв",
+          "item_page_url": "https://www.jarcomputers.com/apple-iphone-16-pro-black-titanium-128gb-prod-tkgsmapplemynd3zda.html",
+          "item_image_url": "https://p.jarcomputers.com/350x350/c9/apple-iphone-16-pro-max-tkgsmapplemynd3zda_350x350.webp",
+          "item_available": "внос по заявка"
+        },
+        {
+          "item": "Мобилен телефон Apple iPhone 15 Pro 6.1’’, 8GB, 128GB White Titanium",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-15-pro-61-8gb-128gb-white-titanium-sprod-2565708.html",
+          "item_image_url": "https://p.jarcomputers.com/simages/0b/mobilen-telefon-apple-iphone-15-pro-61-8gb-128gb-white-titanium0b9ed580511a9a2f0846ee044fc59fcd.jpeg"
+        },
+        {
+          "item": "Мобилен телефон APPLE IPHONE 14 PRO MAX 6.7  6GB 128GB Space Black",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-14-pro-max-67-6gb-128gb-space-black--sprod-2516549.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/eb867cf62a4aa8a66814113f1cae0d92"
+        },
+        {
+          "item": "Мобилен телефон APPLE IPHONE 14 PRO MAX 6.7'' 6GB 128GB Gold",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-14-pro-max-67-6gb-128gb-gold--sprod-2511626.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/cf93be927c07968c398a5ec87d5552de"
+        },
+        {
+          "item": "Мобилен телефон APPLE IPHONE 14 PRO 6.1'' 6GB 128GB Deep Purple",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-14-pro-61-6gb-128gb-deep-purple--sprod-2511624.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/432831dcaef1f1872f607f982f0d7778"
+        },
+        {
+          "item": "Мобилен телефон APPLE IPHONE 14 PRO 6.1'' 6GB 128GB Space Black",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-14-pro-61-6gb-128gb-space-black--sprod-2511623.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/ab7788020c8f7eac35b280733f183151"
+        },
+        {
+          "item": "Мобилен телефон APPLE IPHONE 14 PRO MAX 6.7  6GB 128GB Deep Purple",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-14-pro-max-67-6gb-128gb-deep-purple--sprod-2384958.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/6729e94587733097e57abc7bd2123b34"
+        },
+        {
+          "item": "Смартфон APPLE iPhone 14 Pro Max, 6GB 128GB Black - MQ9P3RX/A",
+          "item_page_url": "https://www.jarcomputers.com/smartfon-apple-iphone-14-pro-max-6gb-128gb-black-mq9p3rxa-sprod-2250016.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/524db4255c84ac6688b6cbf65d902fed"
+        },
+        {
+          "item": "Мобилен телефон APPLE IPHONE 13 PRO 6.1  6GB 128GB Sierra Blue",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-13-pro-61-6gb-128gb-sierra-blue--sprod-1428832.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/1a74ca3f43df6bc251d4bcff71e39fef"
+        },
+        {
+          "item": "Мобилен телефон Apple iPhone 14 Pro Max - silver - 5G smartphone - 1 TB - GSM",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-14-pro-max-silver-5g-smartphone-1-tb-gsm-sprod-2079746.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/6b6ff099ee2f46102f4e8cbacfb4bd98"
+        },
+        {
+          "item": "Мобилен телефон Apple iPhone 14 Pro Max - space black - 5G smartphone - 1 TB - GSM",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-14-pro-max-space-black-5g-smartphone-1-tb-gsm-sprod-2079745.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/06c76b604063dc5cf6842e0d879a4993"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16e 128GB White md1r4 , 128 GB",
+          "item_page_url": "https://www.jarcomputers.com/smartfon-apple-iphone-16e-128gb-white-md1r4-128-gb-sprod-4266824.html",
+          "item_image_url": "https://p.jarcomputers.com/simages/5b/smartfon-apple-iphone-16e-128gb-white-md1r4-128-gb5bee4bc0e6d9252ec4ca68dd746249cf.jpeg"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16e 128GB Black md1q4 , 128 GB",
+          "item_page_url": "https://www.jarcomputers.com/smartfon-apple-iphone-16e-128gb-black-md1q4-128-gb-sprod-4266823.html",
+          "item_image_url": "https://p.jarcomputers.com/simages/bd/smartfon-apple-iphone-16e-128gb-black-md1q4-128-gbbdb2d9b01fc16804423da4ff7ae161b4.jpeg"
+        },
+        {
+          "item": "Apple iPhone 14 Pro 128GB Space Black -  (К)  - MPXV3ZD/A (8 дни доставкa)",
+          "item_page_url": "https://www.jarcomputers.com/apple-iphone-14-pro-128gb-space-black-k-mpxv3zda-8-dni-dostavka-sprod-2564476.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/6a5a3a764aa9c43a31404744f6b62e70"
+        },
+        {
+          "item": "Apple iPhone 14 Pro Max 17 cm (6.7\") Dual SIM iOS 16 5G 128 GB Gold -  (К)  - MQ9R3ZD/A (8 дни доставкa)",
+          "item_page_url": "https://www.jarcomputers.com/apple-iphone-14-pro-max-17-cm-67-dual-sim-ios-16-5g-128-gb-gold-k-mq9r3zda-8-dni-dostavka-sprod-2497257.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/53b3e1b0907f9a93fdda3e48254f7345"
+        },
+        {
+          "item": "Apple iPhone 14 Pro Max 17 cm (6.7\") Dual SIM iOS 16 5G 128 GB Black -  (К)  - MQ9P3ZD/A (8 дни доставкa)",
+          "item_page_url": "https://www.jarcomputers.com/apple-iphone-14-pro-max-17-cm-67-dual-sim-ios-16-5g-128-gb-black-k-mq9p3zda-8-dni-dostavka-sprod-2496239.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/03b7453142b68372ee0fe9529b30dd60"
+        },
+        {
+          "item": "Apple iPhone 14 Pro 15.5 cm (6.1\") Dual SIM iOS 16 5G 128 GB Purple -  (К)  - MQ0G3ZD/A (8 дни доставкa)",
+          "item_page_url": "https://www.jarcomputers.com/apple-iphone-14-pro-155-cm-61-dual-sim-ios-16-5g-128-gb-purple-k-mq0g3zda-8-dni-dostavka-sprod-2496236.html",
+          "item_image_url": "https://www.jarcomputers.com/suppproduct/image/9858cbf63d4bcddfcb1019912caa36fc"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro 128GB Titanium Black",
+          "item_page_url": "https://www.jarcomputers.com/smartfon-apple-iphone-16-pro-128gb-titanium-black-sprod-4155371.html",
+          "item_image_url": "https://www.jarcomputers.com/images/loading2.gif?ts=1748995200"
+        },
+        {
+          "item": "Мобилен телефон Apple iPhone 16 Pro, 6.3’’, 8GB RAM, 128GB, Natural Titanium  MYNG3__/A",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-16-pro-63-8gb-ram-128gb-natural-titanium-myng3__a-sprod-3247084.html",
+          "item_image_url": "https://www.jarcomputers.com/images/loading2.gif?ts=1748995200"
+        },
+        {
+          "item": "Мобилен телефон Apple iPhone 16 Pro, 6.3’’, 8GB RAM, 128GB, White Titanium  MYNE3__/A",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-16-pro-63-8gb-ram-128gb-white-titanium-myne3__a-sprod-3247083.html",
+          "item_image_url": "https://www.jarcomputers.com/images/loading2.gif?ts=1748995200"
+        },
+        {
+          "item": "Мобилен телефон Apple iPhone 16 Pro 6.3'', 8GB RAM, 128GB SSD, Black Titanium  MYND3__/A",
+          "item_page_url": "https://www.jarcomputers.com/mobilen-telefon-apple-iphone-16-pro-63-8gb-ram-128gb-ssd-black-titanium-mynd3__a-sprod-3207703.html",
+          "item_image_url": "https://www.jarcomputers.com/images/loading2.gif?ts=1748995200"
+        },
+        {
+          "item": "Смартфон Apple iPhone XR (червен), поддържа 2 sim карти, 6.1\" (15.49 cm) Liquid Retina HD LCD display, шестядрен A12 Bionic, 3GB RAM, 128GB Flash памет, 12.0 & 7.0 Mpix camera, iOS 12, 194g",
+          "item_page_url": "https://www.jarcomputers.com/apple-iphone-xr-128gb-product-red-prod-tkgsmapplemrye2sea.html",
+          "item_image_url": "https://www.jarcomputers.com/images/loading2.gif?ts=1748995200"
+        },
+        {
+          "item": "Смартфон Apple iPhone 13 Pro (зелен), 6.1\" (15.49 cm) Super Retina XDR OLED 120Hz дисплей, шестядрен Apple A15 Bionic 3.22 GHz, 6GB RAM, 128GB Flash памет, 12.0 + 12.0 + 12.0 & 12.0 MPix камера, iOS, 204g",
+          "item_page_url": "https://www.jarcomputers.com/smartfon-apple-iphone-13-pro-6-gb-128-gb-zelen-prod-tkgsmapplemne23hua.html",
+          "item_image_url": "https://www.jarcomputers.com/images/loading2.gif?ts=1748995200"
+        },
+        {
+          "item": "Смартфон Apple iPhone 14 Pro Max (лилав), поддържа 2 sim карти, 6.7\" (17.02 cm) LTPO Super Retina XDR OLED, 120Hz дисплей, шестядрен Apple A15 Bionic 3.23 GHz, 6GB RAM, 128GB Flash памет, 48.0 + 12.0 + 12.0 & 12.0 MPix камера, iOS",
+          "item_page_url": "https://www.jarcomputers.com/apple-iphone-14-pro-max-128gb-deep-purple-prod-tkgsmapplemq9t3rxa.html",
+          "item_image_url": "https://www.jarcomputers.com/images/loading2.gif?ts=1748995200"
+        }
+      ]
+    },
+    {
+      "domain": "drmobi.bg",
+      "extracted_data": [
+        {
+          "item": "Apple iPhone 16 Pro 128GB",
+          "item_current_price": "2179.00лв.",
+          "item_page_url": "https://drmobi.bg/p/apple-iphone-16-pro-128gb/",
+          "item_image_url": "https://drmobi.bg/wp-content/uploads/2024/12/apple-iphone-16-pro-2-1.jpg",
+          "price_currency": "лв."
+        },
+        {
+          "item": "APPLE IPHONE 15 PLUS 512GB",
+          "item_current_price": "2099.00лв.",
+          "item_page_url": "https://drmobi.bg/p/apple-iphone-15-plus-512gb/",
+          "item_image_url": "https://drmobi.bg/wp-content/uploads/2023/10/apple-iphone-15-2.jpg",
+          "price_currency": "лв."
+        },
+        {
+          "item": "APPLE IPHONE 15 PLUS 256GB",
+          "item_current_price": "1899.00лв.",
+          "item_page_url": "https://drmobi.bg/p/apple-iphone-15-plus-256gb/",
+          "item_image_url": "https://drmobi.bg/wp-content/uploads/2023/10/apple-iphone-15-2.jpg",
+          "price_currency": "лв."
+        },
+        {
+          "item": "APPLE IPHONE 15 PLUS 128GB",
+          "item_current_price": "1679.00лв.",
+          "item_page_url": "https://drmobi.bg/p/apple-iphone-15-plus-128gb/",
+          "item_image_url": "https://drmobi.bg/wp-content/uploads/2023/10/apple-iphone-15-2.jpg",
+          "price_currency": "лв."
+        }
+      ]
+    },
+    {
+      "domain": "bestbuy.bg",
+      "extracted_data": [
+        {
+          "item": "Apple iPhone 16 Pro 128GB",
+          "item_page_url": "https://buybest.bg/apple-iphone-16-pro-128gb",
+          "item_image_url": "https://buybest.bg/storage/public/uploads/media-manager/app-modules-shop-models-product/1971/7430/A_iphone-16-pro-black.png",
+          "item_current_price": "2095",
+          "price_currency": "00"
+        }
+      ]
+    },
+    {
+      "domain": "ardes.bg",
+      "extracted_data": [
+        {
+          "data_sku": "MYND3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16 Pro, 8GB, 128GB, Black Titanium",
+          "item_current_price": "228900лв",
+          "item_page_url": "/product/apple-iphone-16-pro-8gb-128gb-black-titanium-mynd3zd-a-434543",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 8GB, 128GB, Black Titanium"
+        },
+        {
+          "data_sku": "MYNF3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16 Pro, 8GB, 128GB, Desert Titanium",
+          "item_current_price": "228900лв",
+          "item_page_url": "/product/apple-iphone-16-pro-8gb-128gb-desert-titanium-mynf3zd-a-434545",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 8GB, 128GB, Desert Titanium"
+        },
+        {
+          "data_sku": "MYNE3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16 Pro, 8GB, 128GB, White Titanium",
+          "item_current_price": "228900лв",
+          "item_page_url": "/product/apple-iphone-16-pro-8gb-128gb-white-titanium-myne3zd-a-434544",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 8GB, 128GB, White Titanium"
+        },
+        {
+          "data_sku": "MYNG3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16 Pro, 8GB, 128GB, Natural Titanium",
+          "item_current_price": "227900лв",
+          "item_page_url": "/product/apple-iphone-16-pro-8gb-128gb-natural-titanium-myng3zd-a-434546",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Pro, 8GB, 128GB, Natural Titanium"
+        },
+        {
+          "data_sku": "MYE93ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16, 8GB, 128GB, White",
+          "item_current_price": "168900лв",
+          "item_page_url": "/product/apple-iphone-16-8gb-128gb-white-mye93zd-a-434599",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 8GB, 128GB, White"
+        },
+        {
+          "data_sku": "MYEA3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16, 8GB, 128GB, Pink",
+          "item_current_price": "168900лв",
+          "item_page_url": "/product/apple-iphone-16-8gb-128gb-pink-myea3zd-a-434598",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 8GB, 128GB, Pink"
+        },
+        {
+          "data_sku": "MD1Q4ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16e, 8GB, 128GB, Black",
+          "item_current_price": "139900лв",
+          "item_page_url": "/product/apple-iphone-16e-8gb-128gb-black-md1q4zd-a-461261",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16e, 8GB, 128GB, Black"
+        },
+        {
+          "data_sku": "MYED3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16, 8GB, 128GB, Teal",
+          "item_current_price": "168900лв",
+          "item_page_url": "/product/apple-iphone-16-8gb-128gb-teal-myed3zd-a-434601",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 8GB, 128GB, Teal"
+        },
+        {
+          "data_sku": "MXVX3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16 Plus, 8GB, 128GB, Ultramarine",
+          "item_current_price": "198900лв",
+          "item_page_url": "/product/apple-iphone-16-plus-8gb-128gb-ultramarine-mxvx3zd-a-434614",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Plus, 8GB, 128GB, Ultramarine"
+        },
+        {
+          "data_sku": "MD1R4ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16e, 8GB, 128GB, White",
+          "item_current_price": "139900лв",
+          "item_page_url": "/product/apple-iphone-16e-8gb-128gb-white-md1r4zd-a-461263",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16e, 8GB, 128GB, White"
+        },
+        {
+          "data_sku": "MYE73ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16, 8GB, 128GB, Black",
+          "item_current_price": "168900лв",
+          "item_page_url": "/product/apple-iphone-16-8gb-128gb-black-mye73zd-a-434597",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 8GB, 128GB, Black"
+        },
+        {
+          "data_sku": "MXVU3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16 Plus, 8GB, 128GB, Black",
+          "item_current_price": "198900лв",
+          "item_page_url": "/product/apple-iphone-16-plus-8gb-128gb-black-mxvu3zd-a-434616",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Plus, 8GB, 128GB, Black"
+        },
+        {
+          "data_sku": "MXVY3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16 Plus, 8GB, 128GB, Teal",
+          "item_current_price": "198900лв",
+          "item_page_url": "/product/apple-iphone-16-plus-8gb-128gb-teal-mxvy3zd-a-434613",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Plus, 8GB, 128GB, Teal"
+        },
+        {
+          "data_sku": "MD1Q4ZD/A_R",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16e, 8GB, 128GB, Black - ремаркетиран",
+          "item_current_price": "129900лв",
+          "item_page_url": "/product/apple-iphone-16e-8gb-128gb-black-remarketiran-md1q4zd-a-r-466852",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16e, 8GB, 128GB, Black - ремаркетиран"
+        },
+        {
+          "data_sku": "MXVV3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16 Plus, 8GB, 128GB, White",
+          "item_current_price": "198900лв",
+          "item_page_url": "/product/apple-iphone-16-plus-8gb-128gb-white-mxvv3zd-a-434615",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Plus, 8GB, 128GB, White"
+        },
+        {
+          "data_sku": "MXVW3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16 Plus, 8GB, 128GB, Pink",
+          "item_current_price": "198900лв",
+          "item_page_url": "/product/apple-iphone-16-plus-8gb-128gb-pink-mxvw3zd-a-434617",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16 Plus, 8GB, 128GB, Pink"
+        },
+        {
+          "data_sku": "MYEC3ZD/A",
+          "data_cat": "Смартфони",
+          "item": "Смартфон Apple iPhone 16, 8GB, 128GB, Ultramarine",
+          "item_current_price": "168900лв",
+          "item_page_url": "/product/apple-iphone-16-8gb-128gb-ultramarine-myec3zd-a-434600",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Смартфон Apple iPhone 16, 8GB, 128GB, Ultramarine"
+        },
+        {
+          "data_sku": "5715685002977",
+          "data_cat": "Калъфи и протектори за мобилни телефони",
+          "item": "Стъклен протектор за камера PanzerGlass PicturePerfect за Apple iPhone 16 Pro/ 16 Pro Max",
+          "item_current_price": "3000лв",
+          "item_page_url": "/product/panzerglass-pictureperfect-za-apple-iphone-16-pro-16-pro-max-5715685002977-452542",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Стъклен протектор за камера PanzerGlass PicturePerfect за Apple iPhone 16 Pro/ 16 Pro Max"
+        },
+        {
+          "data_sku": "MYYK3ZM/A",
+          "data_cat": "Калъфи и протектори за мобилни телефони",
+          "item": "Гръб Apple Silicone MagSafe за Apple iPhone 16 Pro, Denim",
+          "item_current_price": "11300лв",
+          "item_page_url": "/product/apple-silicone-magsafe-za-apple-iphone-16-pro-denim-myyk3zm-a-436532",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Гръб Apple Silicone MagSafe за Apple iPhone 16 Pro, Denim"
+        },
+        {
+          "data_sku": "MDFY4ZM/A",
+          "data_cat": "Калъфи и протектори за мобилни телефони",
+          "item": "Гръб Apple Silicone MagSafe за Apple iPhone 16 Pro, Tangerine",
+          "item_current_price": "10500лв",
+          "item_page_url": "/product/apple-silicone-magsafe-za-apple-iphone-16-pro-tangerine-mdfy4zm-a-464168",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Гръб Apple Silicone MagSafe за Apple iPhone 16 Pro, Tangerine"
+        },
+        {
+          "data_sku": "MDG04ZM/A",
+          "data_cat": "Калъфи и протектори за мобилни телефони",
+          "item": "Гръб Apple Silicone MagSafe за Apple iPhone 16 Pro, Aquamarine",
+          "item_current_price": "10500лв",
+          "item_page_url": "/product/apple-silicone-magsafe-za-apple-iphone-16-pro-aquamarine-mdg04zm-a-464169",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Гръб Apple Silicone MagSafe за Apple iPhone 16 Pro, Aquamarine"
+        },
+        {
+          "data_sku": "MDFX4ZM/A",
+          "data_cat": "Калъфи и протектори за мобилни телефони",
+          "item": "Гръб Apple Silicone MagSafe за Apple iPhone 16 Pro, Peony",
+          "item_current_price": "10500лв",
+          "item_page_url": "/product/apple-silicone-magsafe-za-apple-iphone-16-pro-peony-mdfx4zm-a-464167",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Гръб Apple Silicone MagSafe за Apple iPhone 16 Pro, Peony"
+        },
+        {
+          "data_sku": "5715685003035",
+          "data_cat": "Калъфи и протектори за мобилни телефони",
+          "item": "Стъклен протектор за камера PanzerGlass Hoops за Apple iPhone 16 Pro/ 16 Pro Max",
+          "item_current_price": "3000лв",
+          "item_page_url": "/product/panzerglass-hoops-za-apple-iphone-16-pro-16-pro-max-5715685003035-452541",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Стъклен протектор за камера PanzerGlass Hoops за Apple iPhone 16 Pro/ 16 Pro Max"
+        },
+        {
+          "data_sku": "MYYQ3ZM/A",
+          "data_cat": "Калъфи и протектори за мобилни телефони",
+          "item": "Гръб Apple Silicone MagSafe за Apple iPhone 16 Pro, Star Fruit",
+          "item_current_price": "10500лв",
+          "item_page_url": "/product/apple-silicone-magsafe-za-apple-iphone-16-pro-star-fruit-myyq3zm-a-436562",
+          "price_currency": "лв"
+        },
+        {
+          "item": "Гръб Apple Silicone MagSafe за Apple iPhone 16 Pro, Star Fruit"
+        }
+      ]
+    },
+    {
+      "domain": "lowprice.bg",
+      "extracted_data": [
+        {
+          "item": "Apple iPhone 16 Pro 128GB 8GB 5G-Black Titanium",
+          "item_page_url": "/bg/telefoni/apple-iphone-16-pro-128gb-8gb-5g-black-titanium",
+          "item_image_url": "https://lowprice.bg:443/backend_images_core/products/thumb-400/601-700/black_675_1.jpg",
+          "price_currency": "BGN",
+          "item_available": "добавете в любимикупидобавете за сравнение"
+        },
+        {
+          "item": "Apple iPhone 16 Pro 128GB 8GB 5G-Desert Titanium",
+          "item_page_url": "/bg/telefoni/apple-iphone-16-pro-128gb-8gb-5g-desert-titanium",
+          "item_image_url": "https://lowprice.bg:443/backend_images_core/products/thumb-400/601-700/desert titanium_674_1.jpg",
+          "price_currency": "BGN",
+          "item_available": "добавете в любимикупидобавете за сравнение"
+        },
+        {
+          "item": "Apple iPhone 16 Pro 128GB 8GB 5G-Natural Titanium",
+          "item_page_url": "/bg/telefoni/apple-iphone-16-pro-128gb-8gb-5g-natural-titanium",
+          "item_image_url": "https://lowprice.bg:443/backend_images_core/products/thumb-400/601-700/natural titanium_673_1.jpg",
+          "price_currency": "BGN",
+          "item_available": "добавете в любимикупидобавете за сравнение"
+        },
+        {
+          "item": "Apple iPhone 16 Pro 128GB 8GB 5G-White Titanium",
+          "item_page_url": "/bg/telefoni/apple-iphone-16-pro-128gb-8gb-5g-white-titanium",
+          "item_image_url": "https://lowprice.bg:443/backend_images_core/products/thumb-400/601-700/white titanium_672_1.jpg",
+          "price_currency": "BGN",
+          "item_available": "добавете в любимикупидобавете за сравнение"
+        },
+        {
+          "item": "Apple iPhone 16 Pro 128GB 8GB 5G",
+          "item_page_url": "/bg/telefoni/apple-iphone-16-pro-128gb-8gb-5g",
+          "item_image_url": "https://lowprice.bg:443/backend_images_core/products/thumb-400/601-700/all_671_1.jpg",
+          "price_currency": "BGN",
+          "item_available": "добавете в любимикупидобавете за сравнение"
+        }
+      ]
+    },
+    {
+      "domain": "bestpc.bg",
+      "extracted_data": [
+        {
+          "item": "APPLE iPhone 16 Pro 128GB Desert Titanium, 6.1\" Super Retina XDR",
+          "item_current_price": "2429.00",
+          "item_page_url": "https://bestpc.bg/bg/smartphones-smartfoni/apple/apple-iphone-16-pro-128gb-desert-titanium-6.1-super-retina-xdr-419703",
+          "item_image_url": "https://bestpc.bg/images/no-preview.jpg",
+          "price_currency": "BGN",
+          "item_available": "последни бройки"
+        },
+        {
+          "item": "Apple iPhone 16 Pro 128GB Desert Titanium",
+          "item_current_price": "2259.00",
+          "item_page_url": "https://bestpc.bg/bg/smartphones-smartfoni/apple/apple-iphone-16-pro-128gb-desert-titanium-421255",
+          "item_image_url": "https://bestpc.bg/images/no-preview.jpg",
+          "price_currency": "BGN"
+        },
+        {
+          "item": "Apple, 6 клетки, 10.8V, 5200mAh, Заместител",
+          "item_current_price": "106.90",
+          "item_page_url": "https://bestpc.bg/bg/baterii-battery-za-laptop/apple/apple-6-kletki-10.8v-5200mah-zamestitel-400222",
+          "item_image_url": "https://bestpc.bg/images/no-preview.jpg",
+          "price_currency": "BGN"
+        },
+        {
+          "item": "TNB Кабел, USB - Lightning, 1.5 m, син",
+          "item_current_price": "30.90",
+          "item_page_url": "https://bestpc.bg/bg/cabeli-cables/tnb/tnb-kabel-usb-lightning-1.5-m-sin-285915",
+          "item_image_url": "https://bestpc.bg/images/no-preview.jpg",
+          "price_currency": "BGN",
+          "item_available": "последни бройки"
+        },
+        {
+          "item": "TNB Зарядно за кола, USB Type C, 20 W, кабел USB Type C - Lightning",
+          "item_current_price": "55.90",
+          "item_page_url": "https://bestpc.bg/bg/cabeli-cables/tnb/tnb-zarqdno-za-kola-usb-type-c-20-w-kabel-usb-type-c-lightning-285902",
+          "item_image_url": "https://bestpc.bg/images/no-preview.jpg",
+          "price_currency": "BGN",
+          "item_available": "последни бройки"
+        },
+        {
+          "item": "Безжично зарядно устройство двойно Belkin BoostCharge, 15W, черен",
+          "item_current_price": "91.90",
+          "item_page_url": "https://bestpc.bg/bg/smartphone-accessories/belkin/bezzhichno-zarqdno-ustrojstvo-dvojno-belkin-boostcharge-15w-cheren-430115",
+          "item_image_url": "https://bestpc.bg/images/no-preview.jpg",
+          "price_currency": "BGN"
+        },
+        {
+          "item": "Външна батерия Belkin Magsafe (2500 mAh), Черна",
+          "item_current_price": "88.90",
+          "item_page_url": "https://bestpc.bg/bg/vanshni-baterii-powerbank/belkin/vynshna-bateriq-belkin-magsafe-2500-mah-cherna-429747",
+          "item_image_url": "https://bestpc.bg/images/no-preview.jpg",
+          "price_currency": "BGN"
+        },
+        {
+          "item": "Външна батерия Belkin Magsafe (2500 mAh), Бяла",
+          "item_current_price": "88.90",
+          "item_page_url": "https://bestpc.bg/bg/vanshni-baterii-powerbank/belkin/vynshna-bateriq-belkin-magsafe-2500-mah-bqla-429748",
+          "item_image_url": "https://bestpc.bg/images/no-preview.jpg",
+          "price_currency": "BGN",
+          "item_available": "последни бройки"
+        },
+        {
+          "item": "Adaptor Apple Dock -Micro USB2.0 BF, AA0019",
+          "item_current_price": "20.00",
+          "item_page_url": "https://bestpc.bg/bg/wifi-cards-adapters/logilink/adaptor-apple-dock-micro-usb2.0-bf-aa0019-99033",
+          "item_image_url": "https://bestpc.bg/images/no-preview.jpg",
+          "price_currency": "BGN"
+        },
+        {
+          "item": "Стойка за Mac Notebooks Belkin,  iPhone Mount с MagSafe, черен",
+          "item_current_price": "63.90",
+          "item_page_url": "https://bestpc.bg/bg/smartphone-accessories/belkin/stojka-za-mac-notebooks-belkin-iphone-mount-s-magsafe-cheren-429752",
+          "item_image_url": "https://bestpc.bg/images/no-preview.jpg",
+          "price_currency": "BGN",
+          "item_available": "последни бройки"
+        }
+      ]
+    }
+  ]
+}

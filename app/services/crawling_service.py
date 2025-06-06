@@ -87,7 +87,8 @@ class CrawlingService(ICrawlingService):
             await self.start_browser()
 
             all_websites = await self.repo.get_websites_by_category_id(category_id)
-            websites = [site for site in all_websites if site.name == "Stantek"]
+            #websites = [site for site in all_websites if site.schema]
+            websites = [site for site in all_websites if site.name == "ARDES"]
             print(f"[crawl4ai] Found {len(websites)} websites with schema for category {category_id}")
 
             async with AsyncWebCrawler() as crawler:
@@ -105,9 +106,21 @@ class CrawlingService(ICrawlingService):
 
                 # Crawl concurrently as before
                 async def crawl(site, html):
-                    run_config = CrawlerRunConfig(
-                        extraction_strategy=JsonCssExtractionStrategy(site.schema, verbose=True),
-                    )
+                    # Initialize run_config as None or with default behavior
+                    run_config = None
+
+                    # Determine extraction strategy based on schema type
+                    if site.schema_type == "css":
+                        run_config = CrawlerRunConfig(
+                            extraction_strategy=JsonCssExtractionStrategy(site.schema, verbose=True),
+                        )
+                    elif site.schema_type == "xpath":
+                        run_config = CrawlerRunConfig(
+                            extraction_strategy=JsonXPathExtractionStrategy(site.schema, verbose=True),
+                        )
+                    else:
+                        print(f"[Warning] Unsupported schema_type for site {site.domain}: {site.schema_type}")
+                        return None  # Optionally return here if the schema type is not supported
                     try:
                         raw_url = f"raw:{html}"
                         result = await crawler.arun(url=raw_url, config=run_config)
@@ -220,7 +233,45 @@ class CrawlingService(ICrawlingService):
         )
 
         # Update and save
+        site.schema_type = "css"
         site.schema = css_schema
+        site.schema_timestamp = datetime.now()
+
+        self.repo.db.add(site)
+        await self.repo.db.commit()
+
+    async def generate_json_xpath_strategy(self, website_id: UUID, html: str) -> None:
+        # Get website from DB
+        site: Website = await self.repo.get_website_by_id(website_id)
+        print(f"🌐 Generating schema for website: {site.domain}")
+
+        if not site:
+            raise ValueError(f"Website with ID {website_id} not found.")
+
+        # Generate schema using LLM
+        xpath_schema = JsonCssExtractionStrategy.generate_schema(
+            html,
+            schema_type="css",
+            llm_config=self.create_llm_config("openai/gpt-4o", self.openai_api_key),
+            query=(
+                "Analyze this eCommerce HTML page and generate a JSON schema for extracting products. "
+                "Each object should represent a single product and should contain the following fields: "
+                "`item`, `item_current_price`, `item_page_url`, `item_image_url`, `price_currency`, and `item_available`."
+                "`item` should be a string that contains the full name of the product, brand and model"
+                "`item_current_price` should be the current price of the product, be careful sometimes the price is not in a single element, usually we have a price, then seperate floating part of the price"
+                "Ensure that `item_current_price` gets the newest and most relevant price for the item, the type should be text"
+                "Include item_available if there is an idicator for availability, look for text like 'налично', 'в наличност', 'изчерпано', 'available', 'out of stock' etc. Don't include if not clear idicator is present. "
+                "Create selectors that are as universal as possible, so they can be used for any item on the page. Make sure you are specific enough so that the correct data is extracted."
+                "Make it as universal as possible, so it can be used for any item on the page."
+                "Ensure you get the price currency where it is BGN or ЛВ (Bulgarian Lev) "
+            ),
+        )
+
+        print("Generated XPATH schema:", xpath_schema)
+
+        # Update and save
+        site.schema_type = "xpath"
+        site.schema = xpath_schema
         site.schema_timestamp = datetime.now()
 
         self.repo.db.add(site)
