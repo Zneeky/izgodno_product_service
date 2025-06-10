@@ -3,12 +3,12 @@ import re
 from slugify import slugify
 from app.models.category import Category
 from app.models.product_variation import ProductVariation
-from app.schemas.product import ParsedProductResponse, ParsedProductWithVariationResponse, ProductBaseModel, ProductPriceOut
+from app.schemas.product import ParsedProductResponse, ParsedProductWithVariationResponse, ProductBaseModel, ProductLookupRequest, ProductOfferDto, ProductPriceOut, ProductResultDto
 from app.services.interfaces.crawling_service_interface import ICrawlingService
 from app.services.interfaces.parser_service_interface import IParserService
 from app.services.interfaces.llm_service_interface import ILLMService
 from app.crud.product_repository import ProductRepository
-from app.services.utils import generate_sku
+import aio_pika, asyncio
 from deep_translator import GoogleTranslator
 from rapidfuzz import process, fuzz
 from rapidfuzz.fuzz import partial_ratio
@@ -253,6 +253,7 @@ class ParserService(IParserService):
         )
 
         await self.repo.save_best_offers_to_db(best_offers, product_data.variation_id)
+        self.send_product_result(best_offers)
         return best_offers
 
     async def match_variation(self, fields: dict, variations: list[ProductVariation]) -> ProductVariation | None:
@@ -424,3 +425,42 @@ class ParserService(IParserService):
                 })
 
         return final_result
+    
+    async def handle_lookup_request(self, request: ProductLookupRequest):
+        try:
+            # Step 1: Match product + variation
+            parsed_product = await self.handle_product_parsing(request.productName)
+
+            # Step 2: Find best offers
+            offers = await self.parse_product_and_find_best_offer(parsed_product)
+
+            # Step 3: Build response DTO to match .NET contract
+            result = ProductResultDto(
+                userId=request.userId,
+                requestId=request.requestId,
+                title=f"{parsed_product.brand} {parsed_product.model} {parsed_product.variation}",
+                offers=[
+                    ProductOfferDto(
+                        store=offer.domain,
+                        price=offer.item_current_price,
+                        url=offer.item_page_url
+                    ) for offer in offers
+                ]
+            )
+
+            # Step 4: Send to RabbitMQ
+            await self.send_product_result(result.model_dump())
+
+            print(f"✅ Result sent for request {request.requestId}")
+        
+        except Exception as e:
+            print(f"❌ Failed to process product lookup: {e}")
+    
+    async def send_product_result(self, result):
+        connection = await aio_pika.connect_robust("amqp://guest:guest@localhost/")
+        channel = await connection.channel()
+        await channel.default_exchange.publish(
+            aio_pika.Message(body=json.dumps(result).encode()),
+            routing_key="product.result"
+        )
+        await connection.close()

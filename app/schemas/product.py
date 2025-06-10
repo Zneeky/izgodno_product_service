@@ -3,9 +3,23 @@ from uuid import UUID
 from pydantic import BaseModel, ConfigDict
 from typing import Any, Dict, List, Optional
 
-class ProductNameRequest(BaseModel):
-    name: str
+class ProductLookupRequest(BaseModel):
+    requestId: Optional[UUID]
+    userId: Optional[str]
+    productName: str
+    source: str
+    timestamp: datetime
 
+class ProductOfferDto(BaseModel):
+    store: str
+    price: float
+    url: str
+
+class ProductResultDto(BaseModel):
+    userId: str
+    requestId: UUID
+    title: str
+    offers: List[ProductOfferDto]
 
 class ParsedProductResponse(BaseModel):
     id: UUID
