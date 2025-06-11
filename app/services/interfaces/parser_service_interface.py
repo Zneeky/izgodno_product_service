@@ -1,6 +1,6 @@
 # interfaces/parser_service_interface.py
 from abc import ABC, abstractmethod
-from app.schemas.product import ParsedProductWithVariationResponse
+from app.schemas.product import ParsedProductWithVariationResponse, ProductLookupRequest
 
 class IParserService(ABC):
     @abstractmethod
@@ -9,6 +9,10 @@ class IParserService(ABC):
 
     @abstractmethod
     async def parse_product_and_find_best_offer(self, product_data: ParsedProductWithVariationResponse):
+        pass
+
+    @abstractmethod
+    async def handle_lookup_request(self, request: ProductLookupRequest):
         pass
 
     

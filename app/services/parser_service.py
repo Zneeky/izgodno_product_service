@@ -1,6 +1,8 @@
+from datetime import datetime
 import json
 import re
 from slugify import slugify
+from app.messaging.publisher import publish_message
 from app.models.category import Category
 from app.models.product_variation import ProductVariation
 from app.schemas.product import ParsedProductResponse, ParsedProductWithVariationResponse, ProductBaseModel, ProductLookupRequest, ProductOfferDto, ProductPriceOut, ProductResultDto
@@ -178,14 +180,30 @@ class ParserService(IParserService):
         )
 
     async def parse_product_and_find_best_offer(self, product_data: ParsedProductWithVariationResponse):
-        offer_results_db = await self.repo.get_recent_prices_for_variation(product_data.variation_id)
-        if offer_results_db:
-            print(f"🗃️ Found {len(offer_results_db)} recent offers in DB for variation {product_data.variation_id}")
-            return [ProductPriceOut.model_validate(offer) for offer in offer_results_db]
-        
         brand = product_data.brand
         model = product_data.model
         variation = product_data.variation
+
+        offer_results_db = await self.repo.get_recent_prices_for_variation(product_data.variation_id)
+        if offer_results_db:
+            print(f"🗃️ Found {len(offer_results_db)} recent offers in DB for variation {product_data.variation_id}")
+            original_product = {
+                "brand": brand,
+                "model": model,
+                "variation": variation
+            }
+            best_offers = [
+                {
+                    "domain": offer.website.domain,
+                    "item": offer.variation.variation_name,
+                    "item_page_url": offer.url,
+                    "item_current_price": offer.price
+                }
+                for offer in offer_results_db
+            ]
+            print(best_offers)
+            return best_offers
+        
         category_id = product_data.category_id
         query = f"{brand} {model} {variation}"
 
@@ -253,7 +271,6 @@ class ParserService(IParserService):
         )
 
         await self.repo.save_best_offers_to_db(best_offers, product_data.variation_id)
-        self.send_product_result(best_offers)
         return best_offers
 
     async def match_variation(self, fields: dict, variations: list[ProductVariation]) -> ProductVariation | None:
@@ -428,6 +445,7 @@ class ParserService(IParserService):
     
     async def handle_lookup_request(self, request: ProductLookupRequest):
         try:
+            print("Handling")
             # Step 1: Match product + variation
             parsed_product = await self.handle_product_parsing(request.productName)
 
@@ -441,26 +459,31 @@ class ParserService(IParserService):
                 title=f"{parsed_product.brand} {parsed_product.model} {parsed_product.variation}",
                 offers=[
                     ProductOfferDto(
-                        store=offer.domain,
-                        price=offer.item_current_price,
-                        url=offer.item_page_url
+                        store=offer["domain"],
+                        price=offer["item_current_price"],
+                        url=offer["item_page_url"]
                     ) for offer in offers
                 ]
             )
 
             # Step 4: Send to RabbitMQ
-            await self.send_product_result(result.model_dump())
+            await self.send_product_result(result)
 
             print(f"✅ Result sent for request {request.requestId}")
         
         except Exception as e:
             print(f"❌ Failed to process product lookup: {e}")
     
-    async def send_product_result(self, result):
-        connection = await aio_pika.connect_robust("amqp://guest:guest@localhost/")
-        channel = await connection.channel()
-        await channel.default_exchange.publish(
-            aio_pika.Message(body=json.dumps(result).encode()),
-            routing_key="product.result"
+    async def send_product_result(self, result: ProductResultDto):
+        await publish_message(
+            queue_name="product.result",
+            message_body=result.model_dump(),
+            message_type="IzgodnoUserService.DTO.MessageModels:ProductResultDto"
         )
-        await connection.close()
+
+    def default_json_encoder(self, obj):
+        if isinstance(obj, UUID):
+            return str(obj)
+        if isinstance(obj, datetime):
+            return obj.isoformat()
+        raise TypeError(f"Type {type(obj)} not serializable")

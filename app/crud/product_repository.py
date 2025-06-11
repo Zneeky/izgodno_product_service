@@ -156,9 +156,16 @@ class ProductRepository(AbstractRepository[Product]):
     ) -> List[ProductPrice]:
         time_threshold = datetime.now(timezone.utc) - timedelta(hours=hours)
 
-        stmt = select(ProductPrice).where(
-            ProductPrice.variation_id == variation_id,
-            ProductPrice.timestamp >= time_threshold
+        stmt = (
+            select(ProductPrice)
+            .options(
+                joinedload(ProductPrice.website),
+                joinedload(ProductPrice.variation)
+            )
+            .where(
+                ProductPrice.variation_id == variation_id,
+                ProductPrice.timestamp >= time_threshold
+            )
         )
 
         result = await self.db.execute(stmt)
