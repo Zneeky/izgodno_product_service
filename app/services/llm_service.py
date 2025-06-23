@@ -1,10 +1,7 @@
 from groq import Groq
-import httpx
 import json
 import re
-
 from openai import OpenAI
-from regex import match
 from app.services.interfaces.llm_service_interface import ILLMService
 from app.core.config import settings
 from app.services.llm_logger import log_llm_decision
@@ -184,20 +181,27 @@ class LLMService(ILLMService):
     Only return the JSON array. No explanations. No comments.
     """
 
-        response = self.groq.chat.completions.create(
-            model="meta-llama/llama-4-scout-17b-16e-instruct",
-            messages=[{
-                "role": "user",
-                "content": prompt
-            }],
-            temperature=0.3,
-            max_tokens=2048
+        # response = self.groq.chat.completions.create(
+        #     model="meta-llama/llama-4-scout-17b-16e-instruct",
+        #     messages=[{
+        #         "role": "user",
+        #         "content": prompt
+        #     }],
+        #     temperature=0.3,
+        #     max_tokens=2048
+        # )
+
+        # content = response.choices[0].message.content.strip()
+        # print("📦 Best Offer Selection Output:", content)
+
+        response = self.openai.responses.create(
+            model="gpt-4o-mini",
+            input=prompt,
+            temperature=0.1
         )
 
-        content = response.choices[0].message.content.strip()
-        print("📦 Best Offer Selection Output:", content)
-
-        # Parse and return structured list
+        content = response.output_text
+        print("🌐 GPT-4o Discovered Variations:\n", content)
         best_offers = self.extract_json_structued_list(content)
         log_llm_decision(original_product, offers, best_offers)
         return best_offers

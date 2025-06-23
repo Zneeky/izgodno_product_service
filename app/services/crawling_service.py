@@ -64,7 +64,7 @@ class CrawlingService(ICrawlingService):
             print(f"🌐 Fetching with JS: {url}")
             await page.goto(url)  # Increase timeout if needed
 
-            wait_time = 10000 if cloudflare_route_detected else 500
+            wait_time = 10000 if cloudflare_route_detected else 100
             print(f"⏳ Waiting for {wait_time / 1000} seconds...")
             await page.wait_for_timeout(wait_time)
 
@@ -87,8 +87,8 @@ class CrawlingService(ICrawlingService):
             await self.start_browser()
 
             all_websites = await self.repo.get_websites_by_category_id(category_id)
-            #websites = [site for site in all_websites if site.schema]
-            websites = [site for site in all_websites if site.name == "ARDES"]
+            websites = [site for site in all_websites if site.schema]
+            #websites = [site for site in all_websites if site.name == "ARDES"]
             print(f"[crawl4ai] Found {len(websites)} websites with schema for category {category_id}")
 
             async with AsyncWebCrawler() as crawler:
@@ -216,7 +216,7 @@ class CrawlingService(ICrawlingService):
         # Generate schema using LLM
         css_schema = JsonCssExtractionStrategy.generate_schema(
             html,
-            llm_config=self.create_llm_config("groq/meta-llama/llama-4-scout-17b-16e-instruct", self.groq_api_key),
+            llm_config=self.create_llm_config("openai/gpt-4o", self.openai_api_key),
             query=(
                 "Analyze this eCommerce HTML page and generate a JSON schema for extracting products. "
                 "Each object should represent a single product and should contain the following fields: "

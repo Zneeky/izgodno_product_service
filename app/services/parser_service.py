@@ -1,5 +1,6 @@
 from datetime import datetime
 import json
+from pathlib import Path
 import re
 from slugify import slugify
 from app.messaging.publisher import publish_message
@@ -208,7 +209,18 @@ class ParserService(IParserService):
         query = f"{brand} {model} {variation}"
 
         # Step 1: Call crawling service to get data from different websites
-        search_results = await self.read_sample_data_from_file("productOffers.json") # await self.crawling_service.crawl_all_search_pages(category_id, query)
+        #search_results = await self.read_sample_data_from_file("search_results.json") # await self.crawling_service.crawl_all_search_pages(category_id, query)
+        search_results = await self.crawling_service.crawl_all_search_pages(category_id, query)
+        # output_dir = Path("debug_offers")
+        # output_dir.mkdir(exist_ok=True)
+
+        # Timestamped filename for uniqueness
+        # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        # filename = output_dir / f"search_results_{timestamp}.json"
+
+        # Save search_results to file
+        # with open(filename, "w", encoding="utf-8") as f:
+        #     json.dump(search_results, f, ensure_ascii=False, indent=2)
         
         matching_results = []
         domain_grouped_data = {}
@@ -223,6 +235,9 @@ class ParserService(IParserService):
                 price = product.get('item_current_price')
                 price_currency = product.get('price_currency')
                 image_url = product.get('item_image_url')
+
+                if not all([item, price, item_page_url]):
+                    continue
 
                 # Step 3: Extract and compare product info
                 match_found = self.extract_and_compare_words(
@@ -393,8 +408,8 @@ class ParserService(IParserService):
         # Check if every token from reference appears in either the item or URL
         for token in normalized_reference:
             if token not in combined_tokens:
-                print(f"❌ Token '{token}' not found in item or URLs")
-                print(f"  - Tokens: {combined_tokens}")
+                #print(f"❌ Token '{token}' not found in item or URLs")
+                #print(f"  - Tokens: {combined_tokens}")
                 return False
 
         return True
@@ -406,6 +421,8 @@ class ParserService(IParserService):
         """
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
+
+        return data
 
         final_result = []
 
@@ -451,6 +468,7 @@ class ParserService(IParserService):
 
             # Step 2: Find best offers
             offers = await self.parse_product_and_find_best_offer(parsed_product)
+            offers.sort(key=lambda offer: offer["item_current_price"])
 
             # Step 3: Build response DTO to match .NET contract
             result = ProductResultDto(
