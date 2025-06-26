@@ -219,11 +219,22 @@ class LLMService(ILLMService):
 
         A **variation** is a specific version of the same product that differs in an attribute that significantly affects its price or performance (e.g., storage size, RAM, processor, screen size, included accessories). Do **not** treat color, minor design tweaks, or packaging as separate variations unless they directly impact the product’s value.
         Use your reasoning to determine the **smallest set of meaningful variations**. Only return distinct configurations where a buyer would pay a significantlly different price.
+        We already have a definite model and brand, so do not add more to the model. Just focus on the variations that exist for this exact model and brand. The model should not differ even slightly.
+        For example by a varation I mean:
+        - different storage capacity (e.g., 128GB vs 256GB)
+        - different RAM size (e.g., 8GB vs 16GB)
+        - different processor (e.g., Intel i5 vs i7)
+        - different screen size (e.g., 13-inch vs 15-inch)
+        - think of the category of the product you are searching for and what would make sense to have variations for that category.
+        
+        Anything that would make a buyer pay a different price for the same product, but with different configuration. But the brand and model should remain the same.
+        For example (Apple iPhone 16 and Apple iPhone 16 Pro are not variations, they are different models. But Apple iPhone 16 with 128GB storage and Apple iPhone 16 with 256GB storage are variations of the same model).
+        Apply the same logic to other products like laptops, monitors, or whatever it would make sense to have variations.
 
         Sources to consult:
-        - Official product pages (search for "{brand}")
-        - Retailers like Emag.bg, Ozone.bg, Amazon.com, BestBuy, Target, Walmart, Notino, Sephora, etc.
-        - Product comparison/review sites 
+        - Official product pages (search for "{brand} {model}")
+        - Product comparison/review sites like GSMArena, Notebookcheck, etc.
+        - E-commerce sites like Amazon, eBay, Walmart,
 
         Return a JSON array of objects, each representing a variation, keep the variation amount as low as possible
         - objects with two keys:
@@ -241,7 +252,7 @@ class LLMService(ILLMService):
         """
 
         response = self.openai.responses.create(
-            model="gpt-4o-mini",
+            model="gpt-4o",
             input=prompt,
             tools=[
                 {

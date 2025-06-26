@@ -285,7 +285,6 @@ class ParserService(IParserService):
             offers = matching_results
         )
 
-        await self.repo.save_best_offers_to_db(best_offers, product_data.variation_id)
         return best_offers
 
     async def match_variation(self, fields: dict, variations: list[ProductVariation]) -> ProductVariation | None:
@@ -468,6 +467,7 @@ class ParserService(IParserService):
 
             # Step 2: Find best offers
             offers = await self.parse_product_and_find_best_offer(parsed_product)
+            # offers = [{"domain": "example.com", "item": "Example Item", "item_current_price": 99.99, "item_page_url": "https://example.com/item"}]  # Placeholder for actual offers
             offers.sort(key=lambda offer: offer["item_current_price"])
 
             # Step 3: Build response DTO to match .NET contract
@@ -487,6 +487,7 @@ class ParserService(IParserService):
             # Step 4: Send to RabbitMQ
             await self.send_product_result(result)
 
+            await self.repo.save_best_offers_to_db(offers, parsed_product.variation_id)
             print(f"✅ Result sent for request {request.requestId}")
         
         except Exception as e:

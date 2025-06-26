@@ -113,10 +113,14 @@ class CrawlingService(ICrawlingService):
                     if site.schema_type == "css":
                         run_config = CrawlerRunConfig(
                             extraction_strategy=JsonCssExtractionStrategy(site.schema, verbose=True),
+                            markdown_generator=None,
+                            cache_mode=CacheMode.BYPASS,
                         )
                     elif site.schema_type == "xpath":
                         run_config = CrawlerRunConfig(
                             extraction_strategy=JsonXPathExtractionStrategy(site.schema, verbose=True),
+                            markdown_generator=None,
+                            cache_mode=CacheMode.BYPASS,
                         )
                     else:
                         print(f"[Warning] Unsupported schema_type for site {site.domain}: {site.schema_type}")
