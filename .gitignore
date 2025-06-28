@@ -3,6 +3,10 @@ venv/
 .venv
 venv.bak/
 
+#VSCode settings
+vscode/
+.vscode
+./.vscode/
 # Python cache and compiled files
 __pycache__/
 *.py[cod]
@@ -21,3 +25,5 @@ logs/
 # Ignore Chrome TMP files
 tmp-chrome-profile/
 tmp-chrome-profile-*/
+
+page.har
