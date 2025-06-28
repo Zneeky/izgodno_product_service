@@ -15,17 +15,23 @@ import aio_pika, asyncio
 from deep_translator import GoogleTranslator
 from rapidfuzz import process, fuzz
 from rapidfuzz.fuzz import partial_ratio
+from nltk.stem import PorterStemmer
 
 from uuid import UUID
 
 NEW_CATEGORY_PARENT_ID = UUID("cf8384df-f073-477f-b2fb-e5643eeb974e")
+STRICT_VARIATION_CATEGORIES = ['Men\'s Perfume', 'Women\'s Perfume', 'Perfume', 'Men\'s Fragrance', 'Women\'s Fragrance']
 
 class ParserService(IParserService):
     def __init__(self, repo: ProductRepository, llm_service: ILLMService, crawling_service: ICrawlingService):
         self.repo = repo
         self.llm_service = llm_service
         self.crawling_service = crawling_service
+        self.stemmer = PorterStemmer()
 
+    def stem_tokens(self, tokens: list[str]) -> set[str]:
+        return {self.stemmer.stem(token) for token in tokens}
+    
     def translate_to_english(self, text: str) -> str:
         return GoogleTranslator(source='bg', target='en').translate(text)
     
@@ -134,7 +140,7 @@ class ParserService(IParserService):
                     brand = brand,
                     model = model,
                     sku = matched_variation.sku,
-                    variation = matched_variation.variation_key,
+                    variation = matched_variation.variation_name,
                     category_name = product.category.name if product.category else None,
                     category_id = product.category.id
                 )
@@ -144,8 +150,12 @@ class ParserService(IParserService):
         # Step 4: Product doesn't exist — create product and variation
         print("📦 Product does not exist. Let's create it")
 
-        variations = await self.llm_service.get_variations_from_web(brand, model)
         category = await self.get_or_create_category(category_path)
+        if category.name in STRICT_VARIATION_CATEGORIES:
+            print(f"⚠️ Strict category detected: {category.name}. Using LLM to get variations.")
+            variations = [{"name": f"{brand} {model}", "variation": f"perfume"}]  
+        else:
+            variations = await self.llm_service.get_variations_from_web(brand, model)
 
         # Create the base Product
         new_product = await self.repo.create_product(
@@ -175,7 +185,7 @@ class ParserService(IParserService):
             variation_id = created_variations[0].id,
             brand = new_product.brand,
             model = new_product.model,
-            variation = created_variations[0].variation_key,
+            variation = created_variations[0].variation_name,
             category_name = category.name if category else None,
             category_id = category.id
         )
@@ -203,10 +213,10 @@ class ParserService(IParserService):
                 for offer in offer_results_db
             ]
             print(best_offers)
-            return best_offers
+            return best_offers, True  # True indicates we got results from DB
         
         category_id = product_data.category_id
-        query = f"{brand} {model} {variation}"
+        query = [f"{brand}", f"{model}" ,f"{variation}"]
 
         # Step 1: Call crawling service to get data from different websites
         #search_results = await self.read_sample_data_from_file("search_results.json") # await self.crawling_service.crawl_all_search_pages(category_id, query)
@@ -240,12 +250,13 @@ class ParserService(IParserService):
                     continue
 
                 # Step 3: Extract and compare product info
-                match_found = self.extract_and_compare_words(
+                match_found = await self.extract_and_compare_words(
                     brand=brand,
                     model=model,
                     variation=variation,
                     item=item,
                     item_page_url=item_page_url,
+                    domain=domain,
                     item_image_url=image_url
                 )
 
@@ -285,7 +296,7 @@ class ParserService(IParserService):
             offers = matching_results
         )
 
-        return best_offers
+        return best_offers, False  # False indicates we got results from LLM matching
 
     async def match_variation(self, fields: dict, variations: list[ProductVariation]) -> ProductVariation | None:
         brand = fields.get("brand", "").lower().strip()
@@ -390,27 +401,52 @@ class ParserService(IParserService):
         # Convert to lowercase and split into tokens
         return url.lower().split()
     
-    def extract_and_compare_words(self, brand: str, model: str, variation: str, item: str, item_page_url: str, item_image_url: str = None) -> bool:
+    async def extract_and_compare_words(self, brand: str, model: str, variation: str, item: str, item_page_url: str, domain: str,item_image_url: str = None) -> bool:
         """
         Extract and compare the words in the product name (item) and URL (item_page_url) to check for the presence of
         the brand, model, and variation.
         """
-        # Combine and normalize
-        reference_text = f"{brand} {model} {variation}"
-        normalized_reference = self.normalize_text(reference_text)  # ['apple', 'iphone', '16', 'pro', '128gb']
-        # Normalize both the item (product name) and item_page_url (URL)
+        website = await self.repo.get_website_by_domain(domain)
+
+        if website is None:
+            reference_text = f"{variation}"
+        elif website.search_pattern == "brand and model":
+            reference_text = f"{brand} {model}"
+        elif website.search_pattern == "model":
+            reference_text = f"{model}"
+        else:
+            reference_text = f"{variation}"
+
+        normalized_reference = self.normalize_text(reference_text)
         normalized_item = self.normalize_text(item)
         normalized_item_url = self.normalize_url(item_page_url)
-        normalized_item_image_url = self.normalize_url(item_image_url or "")  # safe fallback for None
+        normalized_item_image_url = self.normalize_url(item_image_url or "")
 
-        combined_tokens = set(normalized_item + normalized_item_url + normalized_item_image_url)
-        # Check if every token from reference appears in either the item or URL
+        combined_tokens = normalized_item + normalized_item_url + normalized_item_image_url
+        token_set = set(combined_tokens)
+        bigrams = {combined_tokens[i] + combined_tokens[i + 1] for i in range(len(combined_tokens) - 1)}
+        direct_token_space = token_set.union(bigrams)
+
+        # First pass: exact match
+        all_matched = True
         for token in normalized_reference:
-            if token not in combined_tokens:
-                #print(f"❌ Token '{token}' not found in item or URLs")
-                #print(f"  - Tokens: {combined_tokens}")
+            if token not in direct_token_space:
+                all_matched = False
+                break
+
+        if all_matched:
+            return True
+
+        # Fallback: stemmed comparison
+        stemmed_reference = self.stem_tokens(normalized_reference)
+        stemmed_token_space = self.stem_tokens(list(direct_token_space))
+
+        for token in stemmed_reference:
+            if token not in stemmed_token_space:
+                print(f"❌ Token '{token}' not found in stemmed fallback space")
                 return False
 
+        print("✅ Match succeeded via fallback stemming")
         return True
     
     async def read_sample_data_from_file(self, file_path: str):
@@ -466,7 +502,7 @@ class ParserService(IParserService):
             parsed_product = await self.handle_product_parsing(request.productName)
 
             # Step 2: Find best offers
-            offers = await self.parse_product_and_find_best_offer(parsed_product)
+            offers, from_db = await self.parse_product_and_find_best_offer(parsed_product)
             # offers = [{"domain": "example.com", "item": "Example Item", "item_current_price": 99.99, "item_page_url": "https://example.com/item"}]  # Placeholder for actual offers
             offers.sort(key=lambda offer: offer["item_current_price"])
 
@@ -486,8 +522,8 @@ class ParserService(IParserService):
 
             # Step 4: Send to RabbitMQ
             await self.send_product_result(result)
-
-            await self.repo.save_best_offers_to_db(offers, parsed_product.variation_id)
+            if not from_db:
+                await self.repo.save_best_offers_to_db(offers, parsed_product.variation_id)
             print(f"✅ Result sent for request {request.requestId}")
         
         except Exception as e:

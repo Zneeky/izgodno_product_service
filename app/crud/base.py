@@ -41,4 +41,6 @@ class AbstractRepository(ABC, Generic[T]):
 
     @abstractmethod
     async def save_best_offers_to_db(self, flat_offers: list[dict], variation_id: UUID) -> List[T]: ...
+
+    async def get_website_by_domain(self, domain: str) -> T | None: ...
     

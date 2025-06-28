@@ -14,7 +14,7 @@ class Website(Base):
     domain = Column(String, unique=True, index=True)
     logo_url = Column(String, nullable=True)
     search_url = Column(String, nullable=True)
-    particular_search_path = Column(Boolean)
+    search_pattern = Column(String, nullable=True)  # e.g., "model", "variation", "brand and model"
     affiliate_link = Column(String, nullable=True)
     affiliate_id = Column(String, nullable=True)
     schema = Column(JSONB, nullable=True)

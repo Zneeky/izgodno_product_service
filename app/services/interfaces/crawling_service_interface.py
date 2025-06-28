@@ -7,7 +7,7 @@ class ICrawlingService(ABC):
         pass
 
     @abstractmethod
-    async def crawl_all_search_pages(self, category_id: UUID, query: str) -> list[dict]:
+    async def crawl_all_search_pages(self, category_id: UUID, query: list[str]) -> list[dict]:
         pass
 
     @abstractmethod

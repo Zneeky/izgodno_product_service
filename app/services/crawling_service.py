@@ -77,7 +77,7 @@ class CrawlingService(ICrawlingService):
 
         return html
     
-    async def crawl_all_search_pages(self, category_id: UUID, query: str) -> list[dict]:
+    async def crawl_all_search_pages(self, category_id: UUID, query: list[str]) -> list[dict]:
         try:
             # Acquire the semaphore with timeout manually
             semaphore_acquired = await asyncio.wait_for(browser_semaphore.acquire(), timeout=30)  # 30 seconds timeout
@@ -88,15 +88,22 @@ class CrawlingService(ICrawlingService):
 
             all_websites = await self.repo.get_websites_by_category_id(category_id)
             websites = [site for site in all_websites if site.schema]
-            #websites = [site for site in all_websites if site.name == "ARDES"]
+            #websites = [site for site in all_websites if site.name == "Zivada"]
             print(f"[crawl4ai] Found {len(websites)} websites with schema for category {category_id}")
 
             async with AsyncWebCrawler() as crawler:
 
                 # Concurrently fetch HTML pages using the same browser context
                 async def fetch_html(site):
-                    url = f"{site.search_url}{query}"
+                    if site.search_pattern == "model":
+                        url =  f"{site.search_url}{query[1]}"
+                    elif site.search_pattern == "brand and model":
+                        url = f"{site.search_url}{query[0]} {query[1]}"
+                    else:
+                        url = f"{site.search_url}{query[2]}"
+
                     html = await self.fetch_raw_html_search_page(url)
+                    print(f"[crawl4ai] Fetched HTML for {site.domain} with length {len(html)}")
                     return (site, html)
 
                 fetch_tasks = [fetch_html(site) for site in websites]
@@ -129,6 +136,7 @@ class CrawlingService(ICrawlingService):
                         raw_url = f"raw:{html}"
                         result = await crawler.arun(url=raw_url, config=run_config)
                         if result.success:
+                            print(result.extracted_content)
                             return {
                                 "domain": site.domain,
                                 "extracted_data": json.loads(result.extracted_content)

@@ -170,3 +170,8 @@ class ProductRepository(AbstractRepository[Product]):
 
         result = await self.db.execute(stmt)
         return result.scalars().all()
+    
+    async def get_website_by_domain(self, domain: str) -> Website | None:
+        stmt = select(Website).where(Website.domain == domain.lower())
+        result = await self.db.execute(stmt)
+        return result.scalars().first()

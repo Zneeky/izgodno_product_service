@@ -195,7 +195,7 @@ class LLMService(ILLMService):
         # print("📦 Best Offer Selection Output:", content)
 
         response = self.openai.responses.create(
-            model="gpt-4o-mini",
+            model="gpt-4o",
             input=prompt,
             temperature=0.1
         )
