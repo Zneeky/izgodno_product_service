@@ -141,6 +141,7 @@ class ProductRepository(AbstractRepository[Product]):
                 currency = currency,
                 url = url,
                 in_stock = "available",
+                offer_name = item_name,
                 offer_metadata = {"item": item_name}
             )
 

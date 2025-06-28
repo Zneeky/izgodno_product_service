@@ -18,6 +18,7 @@ class ProductPrice(Base):
     in_stock = Column(String, default="unknown")  # e.g. "yes", "no", "unknown"
     shipping_cost = Column(Float, nullable=True)
     offer_metadata = Column(JSONB, nullable=True)  # e.g. {"delivery": "2-3 days"}
+    offer_name = Column(String, nullable=True)
 
     timestamp = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
 

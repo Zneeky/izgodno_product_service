@@ -12,6 +12,7 @@ class ProductLookupRequest(BaseModel):
 
 class ProductOfferDto(BaseModel):
     store: str
+    name: str
     price: float
     url: str
 

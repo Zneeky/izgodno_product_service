@@ -44,15 +44,22 @@ class LLMService(ILLMService):
         Only return the JSON. Do not add any other text or comments. Use only english.
         """
 
-        completion = self.groq.chat.completions.create(
-            model=self.groq_model,
-            messages=[{
-                "role": "user",
-                "content": prompt
-            }]
+        # completion = self.groq.chat.completions.create(
+        #     model="meta-llama/llama-4-scout-17b-16e-instruct",
+        #     messages=[{
+        #         "role": "user",
+        #         "content": prompt
+        #     }]
+        # )
+
+        # content = completion.choices[0].message.content.strip()
+        response = self.openai.responses.create(
+            model="gpt-4o",
+            input=prompt,
+            temperature=0.1
         )
 
-        content = completion.choices[0].message.content.strip()
+        content = response.output_text
         print("🔍 LLM Raw Output:", content)
         return self.extract_json_from_response(content)
 
@@ -96,15 +103,22 @@ class LLMService(ILLMService):
         """
 
         # using specific model for comparison
-        response = self.groq.chat.completions.create(
-            model="meta-llama/llama-4-scout-17b-16e-instruct",
-            messages=[{
-                "role": "user",
-                "content": comparison_prompt
-            }]
+        # response = self.groq.chat.completions.create(
+        #     model="meta-llama/llama-4-scout-17b-16e-instruct",
+        #     messages=[{
+        #         "role": "user",
+        #         "content": comparison_prompt
+        #     }]
+        # )
+
+        # content = response.choices[0].message.content.strip()
+        response = self.openai.responses.create(
+            model="gpt-4o",
+            input=comparison_prompt,
+            temperature=0.1
         )
 
-        content = response.choices[0].message.content.strip()
+        content = response.output_text
         print("🤖 LLM Match Check Output:", content)
         llm_result = self.extract_json_structued_list(content)
         log_llm_decision(new_product, existing_products, llm_result)
@@ -201,7 +215,7 @@ class LLMService(ILLMService):
         )
 
         content = response.output_text
-        print("🌐 GPT-4o Discovered Variations:\n", content)
+        print("🌐 GPT-4o Selected Products:\n", content)
         best_offers = self.extract_json_structued_list(content)
         log_llm_decision(original_product, offers, best_offers)
         return best_offers

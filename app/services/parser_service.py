@@ -20,7 +20,7 @@ from nltk.stem import PorterStemmer
 from uuid import UUID
 
 NEW_CATEGORY_PARENT_ID = UUID("cf8384df-f073-477f-b2fb-e5643eeb974e")
-STRICT_VARIATION_CATEGORIES = ['Men\'s Perfume', 'Women\'s Perfume', 'Perfume', 'Men\'s Fragrance', 'Women\'s Fragrance']
+STRICT_VARIATION_CATEGORIES = ['Men\'s Perfume', 'Women\'s Perfume', 'Perfume', 'Men\'s Fragrance', 'Women\'s Fragrance', 'Fragrance', 'Unisex Fragrances', 'Fragrances']
 
 class ParserService(IParserService):
     def __init__(self, repo: ProductRepository, llm_service: ILLMService, crawling_service: ICrawlingService):
@@ -206,7 +206,7 @@ class ParserService(IParserService):
             best_offers = [
                 {
                     "domain": offer.website.domain,
-                    "item": offer.variation.variation_name,
+                    "item": offer.offer_name,
                     "item_page_url": offer.url,
                     "item_current_price": offer.price
                 }
@@ -306,6 +306,7 @@ class ParserService(IParserService):
         # Step 1: Direct matching (specs or SKU)
         for v in variations:
             name = (v.variation_name or "").lower().strip()
+            print(f"🔍 Checking variation: {name} (SKU: {v.sku})")
             if name == expected_full:
                 print("✅ Exact variation_name match:", v.variation_name)
                 return v
@@ -443,7 +444,7 @@ class ParserService(IParserService):
 
         for token in stemmed_reference:
             if token not in stemmed_token_space:
-                print(f"❌ Token '{token}' not found in stemmed fallback space")
+                # print(f"❌ Token '{token}' not found in stemmed fallback space")
                 return False
 
         print("✅ Match succeeded via fallback stemming")
@@ -514,6 +515,7 @@ class ParserService(IParserService):
                 offers=[
                     ProductOfferDto(
                         store=offer["domain"],
+                        name=offer["item"],
                         price=offer["item_current_price"],
                         url=offer["item_page_url"]
                     ) for offer in offers
@@ -522,7 +524,7 @@ class ParserService(IParserService):
 
             # Step 4: Send to RabbitMQ
             await self.send_product_result(result)
-            if not from_db:
+            if not from_db and len(offers) > 0:
                 await self.repo.save_best_offers_to_db(offers, parsed_product.variation_id)
             print(f"✅ Result sent for request {request.requestId}")
         

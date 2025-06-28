@@ -1,6 +1,6 @@
 import uuid
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy import Column, String, ForeignKey, DateTime
+from sqlalchemy import Column, String, ForeignKey, DateTime, UniqueConstraint
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import relationship
 from datetime import datetime, timezone
@@ -19,4 +19,8 @@ class Product(Base):
 
     category = relationship("Category", back_populates="products")
     variations = relationship("ProductVariation", back_populates="product", cascade="all, delete")
+
+    __table_args__ = (
+        UniqueConstraint("name", "category_id", "brand", name="uq_product_name_category_brand"),
+    )
     
