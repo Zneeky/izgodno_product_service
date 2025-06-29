@@ -22,9 +22,12 @@ class LLMService(ILLMService):
 
         Your output must include:
 
-        1. **"brand"** – Brand/manufacturer.
+        1. **"brand"** – Brand name. Use the most specific and consumer-facing brand, which is often the child brand (e.g., "Emporio Armani" instead of "Giorgio Armani Emporio Armani"). If multiple brand-like names are in the title, choose the one directly tied to the product line.
         2. **"model"** – Model name
-        3. **"category"** – General category like Smartphone, Mobile Phone, Laptop, Monitor, Lotion, Headphones etc.
+        3. **"category"** – Determine the general category of the product by identifying what the item fundamentally is.    
+                            Ignore marketing terms, features, or demographic targeting. 
+                            Use broad, singular category names like “Laptop”, “Perfume”, or “Smartphone”. 
+                            Do not include subcategories like “Gaming Laptop” or descriptors like “Wireless”.
         4. **"attributes"** – Extract every detail 
 
 
@@ -87,7 +90,7 @@ class LLMService(ILLMService):
 
         You will be given a new product and a list of existing products in the database that share the same brand and model.
 
-        Your job is to decide, for each existing product, whether the new product is effectively the same product.
+        Your job is to decide, which one of the existing products best matches the entry. Check the characteristics neatly and decide.
 
         Return a valid JSON array of match decisions. Each object must have:
         - `"match"` (true/false)
@@ -252,7 +255,7 @@ class LLMService(ILLMService):
 
         Return a JSON array of objects, each representing a variation, keep the variation amount as low as possible
         - objects with two keys:
-        • `"name"`: The title of the variation, including brand
+        • `"name"`: The title of the variation, including brand. The name should not include descriptors like "Storage", instead just use GB or TB, just the product name as it would appear in a store.
         • `"variation"`:  the specific differentiating part that distinguishes this variation from the others
         [
             {{

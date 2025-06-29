@@ -36,7 +36,7 @@ class CrawlingService(ICrawlingService):
         self.context = await self.playwright.chromium.launch_persistent_context(
                     user_data_dir="",
                     channel="chrome",
-                    headless=False, 
+                    headless=False,  # Set to False for maximum compatibility with websites
                     no_viewport=True,
                     record_har_path=HER_PATH,)
 

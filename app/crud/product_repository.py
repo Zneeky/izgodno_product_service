@@ -77,7 +77,11 @@ class ProductRepository(AbstractRepository[Product]):
         return new_cat
     
     async def get_variations_by_product_id(self, product_id: UUID) -> list[ProductVariation]:
-        stmt = select(ProductVariation).where(ProductVariation.product_id == product_id)
+        stmt = (
+            select(ProductVariation)
+            .where(ProductVariation.product_id == product_id)
+            .options(joinedload(ProductVariation.product).selectinload(Product.category))  # 👈 eager load `.product`
+        )
         result = await self.db.execute(stmt)
         return result.scalars().all()
 
@@ -90,8 +94,14 @@ class ProductRepository(AbstractRepository[Product]):
         )
         self.db.add(variation)
         await self.db.commit()
-        await self.db.refresh(variation)
-        return variation
+        # Re-fetch variation with product and product.category eagerly loaded
+        stmt = (
+            select(ProductVariation)
+            .where(ProductVariation.id == variation.id)
+            .options(joinedload(ProductVariation.product).selectinload(Product.category))
+        )
+        result = await self.db.execute(stmt)
+        return result.scalar_one()
     
     async def get_website_by_id(self, website_id: UUID) -> Website | None:
         stmt = select(Website).where(Website.id == website_id)

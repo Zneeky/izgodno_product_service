@@ -176,19 +176,32 @@ class ParserService(IParserService):
             )
             created_variations.append(variation)
 
-        print(f"✅ Created {len(created_variations)} variations for product")
         for v in created_variations:
             print(f"  - Variation: {v.variation_name} (SKU: {v.sku})")
         
-        return ParsedProductWithVariationResponse(
-            product_id = new_product.id,
-            variation_id = created_variations[0].id,
-            brand = new_product.brand,
-            model = new_product.model,
-            variation = created_variations[0].variation_name,
-            category_name = category.name if category else None,
-            category_id = category.id
-        )
+        matched_variation = await self.match_variation(fields, created_variations)
+        if matched_variation:
+            print("✅ Matched with a variation")
+            return ParsedProductWithVariationResponse(
+                product_id = new_product.id,
+                variation_id = matched_variation.id,
+                brand = new_product.brand,
+                model = new_product.model,
+                sku = matched_variation.sku,
+                variation = matched_variation.variation_name,
+                category_name = category.name,
+                category_id =  category.id
+            )
+        else:
+            return ParsedProductWithVariationResponse(
+                product_id = new_product.id,
+                variation_id = created_variations[0].id,
+                brand = new_product.brand,
+                model = new_product.model,
+                variation = created_variations[0].variation_name,
+                category_name = category.name if category else None,
+                category_id = category.id
+            )
 
     async def parse_product_and_find_best_offer(self, product_data: ParsedProductWithVariationResponse):
         brand = product_data.brand
